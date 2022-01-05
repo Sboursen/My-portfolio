@@ -61,12 +61,14 @@ h1 span {
   color: #172b4d;
   text-align: center;
 }
+
 .contact-me {
   display: flex;
   width: 100%;
   flex-direction: column;
   align-content: flex-start;
 }
+
 h3 {
   color: rgb(118, 132, 255);
   margin: 10px 0;
