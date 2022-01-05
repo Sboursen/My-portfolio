@@ -1,67 +1,79 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
 
 :root {
-	--background-color: #e5e5e5;
+  --background-color: #e5e5e5;
 }
+
 html {
-	background-color: white;
+  background-color: white;
 }
+
 body {
-	box-sizing: content-box;
-	width: 375px;
-	height: 652px;
-	padding: 10px 24px;
-	background-color: var(--background-color);
-	font-weight: 600;
-	font-size: 20px;
-	font-family: "Inter", sans-serif;
+  box-sizing: content-box;
+  width: 375px;
+  height: 652px;
+  padding: 10px 24px;
+  background-color: var(--background-color);
+  font-weight: 600;
+  font-size: 20px;
+  font-family: "Inter", sans-serif;
 }
+
 header {
-	height: 48px;
+  height: 48px;
 }
+
 nav {
-	margin: 0px;
-	display: flex;
-	justify-content: space-between;
-	background-color: var(--background-color);
-	background-color: transparent;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--background-color);
+  background-color: transparent;
 }
+
 .headline-section {
-	background-image: url(/resources/headline-section-background.svg);
-	display: flex;
-	flex-direction: column;
+  background-image: url(/resources/headline-section-background.svg);
+  display: flex;
+  flex-direction: column;
 }
+
 h1 {
-	font-size: 40px;
-	font-weight: 700;
-	text-align: center;
-	color: rgb(23, 43, 77);
-	width: 327px;
+  font-size: 40px;
+  font-weight: 700;
+  text-align: center;
+  color: rgb(23, 43, 77);
+  width: 327px;
 }
+
 h1 span {
-	color: rgb(0, 191, 126);
+  color: rgb(0, 191, 126);
 }
+
 .supporting-text {
-	width: 327px;
-	font-size: 20px;
-	font-weight: 400;
-	color: #172b4d;
+  width: 327px;
+  font-size: 20px;
+  font-weight: 400;
+  color: #172b4d;
 }
+
 h3 {
-	color: rgb(118, 132, 255);
-	margin: 10px 0px;
+  color: rgb(118, 132, 255);
+  margin: 10px 0;
 }
+
 ul {
-	list-style-type: none;
-	margin: 0px;
-	padding: 0px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
+
 .contact-me ul {
-	display: flex;
-	gap: 20px;
-	justify-content: center;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
 }
+
 .contact-me a {
-	height: 20px;
-	width: 20px;
+  height: 20px;
+  width: 20px;
 }
