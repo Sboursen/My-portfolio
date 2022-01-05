@@ -25,6 +25,20 @@ nav {
 	background-color: var(--background-color);
 	background-color: transparent;
 }
+.headline-section {
+	background-image: url(/resources/headline-section-background.svg);
+	display: flex;
+	flex-direction: column;
+}
+h1 {
+	font-size: 40px;
+	font-weight: 700;
+	text-align: center;
+	color: rgb(23, 43, 77);
+}
+h1 span {
+	color: rgb(0, 191, 126);
+}
 ul {
 	list-style-type: none;
 	margin: 0px;
