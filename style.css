@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
+
+:root {
+	--background-color: #e5e5e5;
+}
+html {
+	background-color: white;
+}
+body {
+	max-width: 375px;
+	max-height: 648px;
+	padding: 10px 24px;
+	background-color: var(--background-color);
+	font-weight: 600;
+	font-size: 20px;
+	font-family: "Inter", sans-serif;
+}
+header {
+	height: 48px;
+}
+nav {
+	margin: 0px;
+	display: flex;
+	justify-content: space-between;
+	background-color: var(--background-color);
+	background-color: transparent;
+}
+ul {
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+}
