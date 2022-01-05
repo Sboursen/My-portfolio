@@ -1,11 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
 
 :root {
-  --background-color: #e5e5e5;
+  --background-color: rgb(255, 255, 255);
 }
 
 html {
-  background-color: white;
+  background-color: grey;
+  display: flex;
+  justify-content: center;
 }
 
 body {
