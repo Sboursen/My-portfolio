@@ -47,6 +47,10 @@ h1 span {
 	font-weight: 400;
 	color: #172b4d;
 }
+h3 {
+	color: rgb(118, 132, 255);
+	margin: 10px 0px;
+}
 ul {
 	list-style-type: none;
 	margin: 0px;
