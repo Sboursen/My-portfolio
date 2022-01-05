@@ -4,7 +4,7 @@
 
 > Welcome to my portfolio on github !!!
 
-![screenshot](./app_screenshot.png)
+![screenshot](resources/app_screenshot.png)
 
 Please checking frequently to see what's new
 
@@ -15,7 +15,7 @@ Please checking frequently to see what's new
 
 ## Live Demo
 
-[Live Demo Link](https://livedemo.com)
+[Live Demo Link](https://sboursen.github.io/My-portfolio/)
 
 👤 **Soufiane Boursen**
 
