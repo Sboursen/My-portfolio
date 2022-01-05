@@ -38,6 +38,7 @@ nav {
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 98%;
 }
 
 h1 {
