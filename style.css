@@ -7,8 +7,9 @@ html {
 	background-color: white;
 }
 body {
-	max-width: 375px;
-	max-height: 648px;
+	box-sizing: content-box;
+	width: 375px;
+	height: 652px;
 	padding: 10px 24px;
 	background-color: var(--background-color);
 	font-weight: 600;
@@ -50,4 +51,13 @@ ul {
 	list-style-type: none;
 	margin: 0px;
 	padding: 0px;
+}
+.contact-me ul {
+	display: flex;
+	gap: 20px;
+	justify-content: center;
+}
+.contact-me a {
+	height: 20px;
+	width: 20px;
 }
