@@ -13,7 +13,7 @@ html {
 body {
   box-sizing: content-box;
   width: 375px;
-  height: 690px;
+  height: 800px;
   padding: 10px 24px;
   background-color: var(--background-color);
   font-weight: 600;
@@ -87,4 +87,15 @@ ul {
 .contact-me a {
   height: 20px;
   width: 20px;
+}
+
+.next-button {
+  height: 36px;
+  width: 36px;
+  border: 2px solid lightgrey;
+  border-radius: 50%;
+  background-image: url(/resources/next-section-icon.png);
+  background-repeat: no-repeat;
+  background-position: 50%;
+  margin-top: 90px;
 }
