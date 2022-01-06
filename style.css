@@ -136,7 +136,6 @@ nav {
   align-content: center;
   justify-content: stretch;
   background-color: rgb(234, 241, 238);
-  height: 475px;
   width: 100%;
   border: 1px solid #d0d9d4;
   border-radius: 10px;
@@ -145,8 +144,63 @@ nav {
 .project-image {
   justify-self: flex-start;
   min-height: 252px;
+  border-radius: 8px;
+  margin: 16px;
   background-color: transparent;
-  background-image: url(/resources/project-image1.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
 }
 
+.project-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-content: center;
+  gap: 10px;
+  border-radius: 10px;
+  background-color: var(--background-color);
+}
 
+.project-info ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.project-title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 600;
+  color: #3a4a42;
+  margin-top: 16px;
+}
+
+.project-languages {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+
+.project-languages li {
+  padding: 8px 12px;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 16px;
+  letter-spacing: 3%;
+  border-radius: 4px;
+  background-color: rgb(234, 241, 238);
+}
+
+.project-button {
+  background-color: #36b37f;
+  color: white;
+  border-radius: 4px;
+  padding: 12px;
+  margin: 24px auto;
+  width: fit-content;
+}
+
+.project1 {
+  background-image: url(./resources/project-image1.png);
+}
