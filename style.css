@@ -13,7 +13,7 @@
 body {
   box-sizing: content-box;
   height: 1000px;
-  padding: 10px 24px;
+  padding-top: 10px;
   background-color: var(--background-color);
   font-weight: 600;
   font-size: 20px;
@@ -25,7 +25,7 @@ header {
 }
 
 nav {
-  margin: 0;
+  margin: 0 20px;
   display: flex;
   justify-content: space-between;
   background-color: var(--background-color);
@@ -38,12 +38,15 @@ nav {
   background-size: cover;
   height: 700px;
   padding-top: 50px;
-  padding-left: 5%;
-  padding-right: 5%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
+}
+
+.headline-section > * {
+  padding-left: 7%;
+  padding-right: 7%;
 }
 
 .hello {
@@ -102,5 +105,6 @@ nav {
   background-image: url(/resources/next-section-icon.png);
   background-repeat: no-repeat;
   background-position: 50%;
+  padding: 0;
   margin-top: 90px;
 }
