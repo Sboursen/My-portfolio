@@ -20,7 +20,8 @@ body {
   font-size: 20px;
   font-family: "Inter", sans-serif;
 }
-/*||button-style------------------------------------------------*/
+
+/* ||button-style------------------------------------------------ */
 .button {
   background-color: #36b37f;
   color: white;
@@ -29,7 +30,7 @@ body {
 }
 
 .button:hover {
-  box-shadow: 0px 8px 16px 0px #36b37f3d;
+  box-shadow: 0 8px 16px 0 #36b37f3d;
   cursor: pointer;
 }
 
@@ -38,7 +39,8 @@ body {
   cursor: pointer;
 }
 
-/*||header-----------------------------------------------------*/
+/* ||header----------------------------------------------------- */
+
 header {
   height: 48px;
 }
@@ -51,7 +53,7 @@ nav {
   background-color: transparent;
 }
 
-/*||headline-section---------------------------------------------*/
+/* ||headline-section--------------------------------------------- */
 .headline-section {
   background-image: url(./resources/headline-section-background.svg);
   background-repeat: no-repeat;
@@ -129,7 +131,7 @@ nav {
   margin-top: 90px;
 }
 
-/*||works-section------------------------------------------------*/
+/* ||works-section------------------------------------------------ */
 .works {
   margin: 40px 25px 30px;
   display: grid;
@@ -232,7 +234,7 @@ nav {
   background-image: url(./resources/project-image4.png);
 }
 
-/*||about-me-section------------------------------------------------*/
+/* ||about-me-section------------------------------------------------ */
 
 .about-me {
   margin-top: calc(60px - 30px);
@@ -286,12 +288,9 @@ nav {
 }
 
 .about-me-card .card-title {
-  font-family: Inter;
   font-size: 24px;
-  font-style: normal;
   font-weight: 600;
   line-height: 32px;
-  letter-spacing: 0em;
   color: #344563;
 }
 
@@ -304,7 +303,7 @@ nav {
   justify-content: center;
   align-content: center;
   border-radius: 50%;
-  box-shadow: 0px 16px 24px 0px #252f8914;
+  box-shadow: 0 16px 24px 0 #252f8914;
 }
 
 .about-me-icon img {
