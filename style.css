@@ -220,8 +220,10 @@ nav {
 
 .button:hover {
   box-shadow: 0px 8px 16px 0px #36b37f3d;
+  cursor: pointer;
 }
 
 .button:active {
   background: #008552;
+  cursor: pointer;
 }
