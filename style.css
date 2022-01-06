@@ -4,6 +4,12 @@
   --background-color: rgb(255, 255, 255);
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box;
+}
+
 html {
   background-color: grey;
   display: flex;
@@ -13,7 +19,7 @@ html {
 body {
   box-sizing: content-box;
   width: 375px;
-  height: 800px;
+  height: 1000px;
   padding: 10px 24px;
   background-color: var(--background-color);
   font-weight: 600;
@@ -35,13 +41,15 @@ nav {
 
 .headline-section {
   background-image: url(/resources/headline-section-background.svg);
+  height: 700px;
+  padding-top: 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 98%;
+  justify-content: space-around;
 }
 
-h1 {
+.hello {
   font-size: 40px;
   font-weight: 700;
   text-align: center;
@@ -49,7 +57,7 @@ h1 {
   width: 327px;
 }
 
-h1 span {
+.hello span {
   color: rgb(0, 191, 126);
   text-align: center;
 }
@@ -69,20 +77,17 @@ h1 span {
   align-content: flex-start;
 }
 
-h3 {
+.lets-connect {
   color: rgb(118, 132, 255);
-  margin: 10px 0;
+  padding: 40px 0 10px 50px;
   align-self: flex-start;
 }
 
-ul {
+.contact-me ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
-}
-
-.contact-me ul {
-  margin-top: 20px;
+  margin-top: 10px;
   display: flex;
   gap: 20px;
   justify-content: center;
