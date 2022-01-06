@@ -217,3 +217,7 @@ nav {
 .project4 {
   background-image: url(./resources/project-image4.png);
 }
+
+.button:hover {
+  box-shadow: 0px 8px 16px 0px #36b37f3d;
+}
