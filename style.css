@@ -2,6 +2,7 @@
 
 :root {
   --background-color: rgb(255, 255, 255);
+  --support-text-color: #172b4d;
 }
 
 * {
@@ -84,7 +85,7 @@ nav {
   max-width: 600px;
   font-size: 20px;
   font-weight: 400;
-  color: #172b4d;
+  color: var(--support-text-color);
   text-align: center;
 }
 
@@ -131,7 +132,6 @@ nav {
 /*||works-section------------------------------------------------*/
 .works {
   margin: 40px 25px 30px;
-  padding-bottom: 24px;
   display: grid;
   grid-template-rows: auto auto repeat(4, 1fr);
   gap: 24px;
@@ -157,7 +157,7 @@ nav {
   background-color: rgb(234, 241, 238);
   width: 100%;
   border: 1px solid #d0d9d4;
-  border-radius: 10px;
+  border-radius: 8px;
 }
 
 .project-image {
@@ -235,22 +235,103 @@ nav {
 /*||about-me-section------------------------------------------------*/
 
 .about-me {
-  margin: 40px 25px 30px;
-  padding-bottom: 24px;
+  margin-top: calc(60px - 30px);
+  padding-bottom: 40px;
   display: grid;
   grid-template-rows: auto repeat(3, 1fr);
   gap: 24px;
-  justify-items: center;
-}
-
-.with-cool-background {
   background-image: url(./resources/about-me-section-background.svg);
   background-repeat: no-repeat;
   background-size: 100% auto;
-  height: 700px;
-  padding-top: 50px;
+}
+
+.about-me > * {
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+.text-section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
+  gap: 24px;
+  padding-top: 60px;
+  padding-bottom: calc(60px - 24px);
+}
+
+.text-section > * {
+  margin: 0 7%;
+}
+
+.text-section .supporting-text {
+  color: var(--support-text-color);
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 32px;
+  line-height: 132%;
+}
+
+.text-section .resume-button {
+  padding: 12px;
+}
+
+.about-me-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(234, 241, 238);
+  border: 1px solid #d0d9d4;
+  border-radius: 8px;
+  gap: 24px;
+}
+
+.about-me-card .card-title {
+  font-family: Inter;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 32px;
+  letter-spacing: 0em;
+  color: #344563;
+}
+
+.about-me-icon {
+  margin-top: 20px;
+  margin-bottom: calc(64px - 24px);
+  height: 80px;
+  width: 80px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  border-radius: 50%;
+  box-shadow: 0px 16px 24px 0px #252f8914;
+}
+
+.about-me-icon img {
+  object-fit: contain;
+}
+
+.about-me-card ul {
+  list-style-type: none;
+  margin: 0;
+  margin-bottom: 24px;
+  padding: 0;
+}
+
+.card-list {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card-list li {
+  padding: 12px;
+  background-color: white;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  color: #36b37e;
 }
