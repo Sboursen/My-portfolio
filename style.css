@@ -19,6 +19,24 @@ body {
   font-size: 20px;
   font-family: "Inter", sans-serif;
 }
+/*||button-style------------------------------------------------*/
+.button {
+  background-color: #36b37f;
+  color: white;
+  border-radius: 4px;
+  width: fit-content;
+}
+
+.button:hover {
+  box-shadow: 0px 8px 16px 0px #36b37f3d;
+  cursor: pointer;
+}
+
+.button:active {
+  background: #008552;
+  cursor: pointer;
+}
+
 /*||header-----------------------------------------------------*/
 header {
   height: 48px;
@@ -194,12 +212,8 @@ nav {
 }
 
 .project-button {
-  background-color: #36b37f;
-  color: white;
-  border-radius: 4px;
   padding: 12px;
   margin: 24px auto;
-  width: fit-content;
 }
 
 .project1 {
@@ -216,14 +230,4 @@ nav {
 
 .project4 {
   background-image: url(./resources/project-image4.png);
-}
-
-.button:hover {
-  box-shadow: 0px 8px 16px 0px #36b37f3d;
-  cursor: pointer;
-}
-
-.button:active {
-  background: #008552;
-  cursor: pointer;
 }
