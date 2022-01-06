@@ -4,9 +4,15 @@
 
 > Welcome to my portfolio on github !!!
 
-![screenshot](resources/app_screenshot.png)
+![screenshot](resources/app-screenshot-hello-section.png)
 
-Please checking frequently to see what's new
+<details>
+  <summary>Please click to view more sections</summary>
+  
+Works section     |About me section
+:----------------:|:-------------------------:|
+![](./resources/app-screenshot-works-section.png)    |  ![](./resources/app-screenshot-about-me-section.png) 
+</details>
 
 ## Built With
 
