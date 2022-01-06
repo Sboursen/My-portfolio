@@ -19,7 +19,7 @@ body {
   font-size: 20px;
   font-family: "Inter", sans-serif;
 }
-
+/*||header-----------------------------------------------------*/
 header {
   height: 48px;
 }
@@ -32,6 +32,7 @@ nav {
   background-color: transparent;
 }
 
+/*||headline-section---------------------------------------------*/
 .headline-section {
   background-image: url(./resources/headline-section-background.svg);
   background-repeat: no-repeat;
@@ -108,3 +109,44 @@ nav {
   padding: 0;
   margin-top: 90px;
 }
+
+/*||works-section------------------------------------------------*/
+.works {
+  margin: 40px 25px 30px;
+  display: grid;
+  grid-template-rows: auto auto repeat(4, 1fr);
+  gap: 24px;
+  justify-items: center;
+}
+
+.title {
+  font-size: 40px;
+  font-weight: 700;
+  text-align: center;
+  color: #172b4d;
+}
+
+.works > img {
+  margin-bottom: calc(62px - 24px);
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: stretch;
+  background-color: rgb(234, 241, 238);
+  height: 475px;
+  width: 100%;
+  border: 1px solid #d0d9d4;
+  border-radius: 10px;
+}
+
+.project-image {
+  justify-self: flex-start;
+  min-height: 252px;
+  background-color: transparent;
+  background-image: url(/resources/project-image1.png);
+}
+
+
