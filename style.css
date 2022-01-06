@@ -231,3 +231,26 @@ nav {
 .project4 {
   background-image: url(./resources/project-image4.png);
 }
+
+/*||about-me-section------------------------------------------------*/
+
+.about-me {
+  margin: 40px 25px 30px;
+  padding-bottom: 24px;
+  display: grid;
+  grid-template-rows: auto repeat(3, 1fr);
+  gap: 24px;
+  justify-items: center;
+}
+
+.with-cool-background {
+  background-image: url(./resources/about-me-section-background.svg);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  height: 700px;
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
