@@ -113,6 +113,7 @@ nav {
 /*||works-section------------------------------------------------*/
 .works {
   margin: 40px 25px 30px;
+  padding-bottom: 24px;
   display: grid;
   grid-template-rows: auto auto repeat(4, 1fr);
   gap: 24px;
@@ -203,4 +204,16 @@ nav {
 
 .project1 {
   background-image: url(./resources/project-image1.png);
+}
+
+.project2 {
+  background-image: url(./resources/project-image2.png);
+}
+
+.project3 {
+  background-image: url(./resources/project-image3.png);
+}
+
+.project4 {
+  background-image: url(./resources/project-image4.png);
 }
