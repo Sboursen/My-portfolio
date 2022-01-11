@@ -226,13 +226,14 @@
       <div class="email">
         <label for="mail"></label>
         <input type="email" name="mail" id="mail"
-          placeholder="Email" required>
+          placeholder="Email" required
+          pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
       </div>
       <div class="message">
         <label for="message"></label>
         <textarea name="message" id="message"
           placeholder="Enter text here" required
-          maxlength="500"></textarea>
+          maxlength="500" minlength="10"></textarea>
       </div>
 
       <button type="submit" class="submit-button button">Get
