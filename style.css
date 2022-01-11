@@ -344,3 +344,105 @@ nav {
   letter-spacing: 0.03em;
   color: #36b37e;
 }
+
+/* ||contact-form--------------------------------------------- */
+.contact-form {
+  margin-top: calc(60px - 30px);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  background-image: url(./resources/illustration-contact-form.svg);
+  background-repeat: no-repeat;
+  background-size: 25% 25%;
+  background-position: right -10px bottom 250px;
+}
+
+.contact-form > * {
+  margin-left: 24px;
+  margin-right: 24px;
+}
+
+.footer-text {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+
+.footer-text p.supporting-text {
+  align-self: center;
+  max-width: 600px;
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--support-text-color);
+  text-align: center;
+  padding: 10px;
+}
+
+.form {
+  justify-self: stretch;
+  display: flex;
+  flex-direction: column;
+}
+
+.form div {
+  display: flex;
+  padding: 12px;
+}
+
+.submit-button {
+  padding: 12px;
+  align-self: center;
+}
+
+.form input,
+.form textarea {
+  width: 100%;
+  border: 1px solid #d0d9d4;
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding: 16px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 24px;
+}
+
+.form textarea {
+  padding: 12px;
+  min-height: 90px;
+}
+
+.form input::placeholder {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 24px;
+}
+
+.form textarea::placeholder {
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0;
+  text-align: left;
+  color: #091e42;
+}
+
+.contact-form .contact-me {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  width: calc(100% - 48px);
+}
+
+.my-email {
+  color: #42526e;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px;
+  letter-spacing: 0;
+  text-align: center;
+  height: 200px;
+}

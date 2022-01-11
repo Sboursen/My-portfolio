@@ -9,9 +9,9 @@
 <details>
   <summary>Please click to view more sections</summary>
   
-Works section     |About me section
-:----------------:|:-------------------------:|
-![](./resources/app-screenshot-works-section.png)    |  ![](./resources/app-screenshot-about-me-section.png) 
+Works section     |About me section |Contact me section
+:----------------:|:-------------------------:|:------------------------------:
+![](./resources/app-screenshot-works-section.png)    |  ![](./resources/app-screenshot-about-me-section.png)  | ![](./resources/app-screenshot-contact-me-section.png) 
 </details>
 
 ## Built With
