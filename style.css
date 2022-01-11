@@ -348,14 +348,14 @@ nav {
 /* ||contact-form--------------------------------------------- */
 .contact-form {
   margin-top: calc(60px - 30px);
-  padding-bottom: 40px;
   display: grid;
   grid-template-rows: auto auto;
   gap: 24px;
   background-image: url(./resources/illustration-contact-form.svg);
   background-repeat: no-repeat;
   background-size: 100% auto;
-  align-content: center;
+  align-items: center;
+  justify-items: center;
 }
 
 .contact-form > * {
@@ -380,6 +380,7 @@ nav {
 }
 
 .form {
+  justify-self: stretch;
   display: flex;
   flex-direction: column;
 }
@@ -389,11 +390,6 @@ nav {
   padding: 12px;
 }
 
-.form input,
-.form textarea {
-  width: 100%;
-}
-
 .submit-button {
   padding: 12px;
   align-self: center;
@@ -401,6 +397,7 @@ nav {
 
 .form input,
 .form textarea {
+  width: 100%;
   border: 1px solid #d0d9d4;
   box-sizing: border-box;
   border-radius: 4px;
@@ -428,10 +425,11 @@ nav {
   font-style: normal;
   font-weight: 400;
   line-height: 24px;
-  letter-spacing: 0em;
+  letter-spacing: 0;
   text-align: left;
   color: #091e42;
 }
+
 .contact-form .contact-me {
   display: flex;
   flex-direction: column;
@@ -445,8 +443,7 @@ nav {
   font-style: normal;
   font-weight: 400;
   line-height: 32px;
-  letter-spacing: 0em;
+  letter-spacing: 0;
   text-align: center;
   height: 200px;
-  text-align: center;
 }
