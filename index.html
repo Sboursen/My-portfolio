@@ -199,7 +199,7 @@
         </ul>
       </div>
     </section>
-    <footer>
+    <footer class="contact-form">
       <div class="footer-text">
         <h2 class="title">About me</h2>
         <p class="supporting-text">I can help you build a
@@ -209,11 +209,12 @@
           see and have a project you need coded,
           don’t hesitate to contact me.</p>
       </div>
-      <form action="./"  method="post">
+      <form action="./" method="post" class="form">
         <div class="full-name">
           <label for="name"></label>
           <input type="text" name="full-name" id="name"
-            placeholder="Full name" required minlength="2" maxlength="30">
+            placeholder="Full name" required minlength="2"
+            maxlength="30">
         </div>
         <div class="email">
           <label for="mail"></label>
@@ -223,9 +224,10 @@
         <div class="message">
           <label for="message"></label>
           <textarea name="message" id="message"
-            placeholder="Enter text here" required maxlength="500"></textarea>
+            placeholder="Enter text here" required
+            maxlength="500"></textarea>
         </div>
-        
+
         <button type="submit"
           class="submit-button button">Get in
           touch</button>

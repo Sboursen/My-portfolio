@@ -346,6 +346,46 @@ nav {
 }
 
 /* ||contact-form--------------------------------------------- */
+.contact-form {
+  margin-top: calc(60px - 30px);
+  padding-bottom: 40px;
+  display: grid;
+  grid-template-rows: auto auto;
+  gap: 24px;
+  background-image: url(./resources/illustration-contact-form.svg);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  align-content: center;
+}
+
+.contact-form > * {
+  margin-left: 24px;
+  margin-right: 24px;
+}
+
+.footer-text p {
+  max-width: 600px;
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--support-text-color);
+  text-align: center;
+  padding: 10px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form div {
+  display: flex;
+  padding: 12px;
+}
+
+.form input, .form textarea {
+  width: 100%;
+}
+
 .submit-button {
   padding: 12px;
 }
