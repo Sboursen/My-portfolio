@@ -344,3 +344,8 @@ nav {
   letter-spacing: 0.03em;
   color: #36b37e;
 }
+
+/* ||contact-form--------------------------------------------- */
+.submit-button {
+  padding: 12px;
+}
