@@ -363,7 +363,14 @@ nav {
   margin-right: 24px;
 }
 
-.footer-text p {
+.footer-text {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+
+.footer-text p.supporting-text {
+  align-self: center;
   max-width: 600px;
   font-size: 20px;
   font-weight: 400;
@@ -389,9 +396,11 @@ nav {
 
 .submit-button {
   padding: 12px;
+  align-self: center;
 }
 
-.form input, .form textarea {
+.form input,
+.form textarea {
   border: 1px solid #d0d9d4;
   box-sizing: border-box;
   border-radius: 4px;
@@ -402,14 +411,42 @@ nav {
   line-height: 24px;
 }
 
-.form textarea{
+.form textarea {
   padding: 12px;
-  min-height: 300px;
+  min-height: 90px;
 }
 
-input[placeholder] {
+.form input::placeholder {
   font-style: normal;
   font-weight: normal;
   font-size: 15px;
   line-height: 24px;
+}
+
+.form textarea::placeholder {
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #091e42;
+}
+.contact-form .contact-me {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  width: calc(100% - 48px);
+}
+
+.my-email {
+  color: #42526e;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px;
+  letter-spacing: 0em;
+  text-align: center;
+  height: 200px;
+  text-align: center;
 }
