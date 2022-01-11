@@ -382,10 +382,34 @@ nav {
   padding: 12px;
 }
 
-.form input, .form textarea {
+.form input,
+.form textarea {
   width: 100%;
 }
 
 .submit-button {
   padding: 12px;
+}
+
+.form input, .form textarea {
+  border: 1px solid #d0d9d4;
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding: 16px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 24px;
+}
+
+.form textarea{
+  padding: 12px;
+  min-height: 300px;
+}
+
+input[placeholder] {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 24px;
 }
