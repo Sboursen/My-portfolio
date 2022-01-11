@@ -353,7 +353,8 @@ nav {
   gap: 24px;
   background-image: url(./resources/illustration-contact-form.svg);
   background-repeat: no-repeat;
-  background-size: 100% auto;
+  background-size: 25% 25%;
+  background-position: right -30px bottom 250px;
   align-items: center;
   justify-items: center;
 }
