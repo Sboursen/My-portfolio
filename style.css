@@ -348,15 +348,13 @@ nav {
 /* ||contact-form--------------------------------------------- */
 .contact-form {
   margin-top: calc(60px - 30px);
-  display: grid;
-  grid-template-rows: auto auto;
+  display: flex;
+  flex-direction: column;
   gap: 24px;
   background-image: url(./resources/illustration-contact-form.svg);
   background-repeat: no-repeat;
   background-size: 25% 25%;
-  background-position: right -30px bottom 250px;
-  align-items: center;
-  justify-items: center;
+  background-position: right -10px bottom 250px;
 }
 
 .contact-form > * {
