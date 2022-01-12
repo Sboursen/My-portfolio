@@ -14,7 +14,6 @@ body {
   position: relative;
   box-sizing: content-box;
   width: 100%;
-  padding-top: 10px;
   background-color: var(--background-color);
   font-weight: 600;
   font-size: 20px;
@@ -66,7 +65,7 @@ header {
   display: flex;
   position: relative;
   z-index: 1;
-  margin-top: -100vh;
+  margin-top: calc(18px - 100vh);
 }
 
 nav {
@@ -232,6 +231,7 @@ nav > div {
   display: flex;
   gap: 8px;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .project-languages li {
@@ -494,6 +494,7 @@ nav > div {
   .works {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(4, auto);
+    margin: 142px;
   }
 
   .works .title,
