@@ -467,3 +467,31 @@ nav > div {
   text-align: center;
   height: 200px;
 }
+/* |||----------------------------desktop-support---------- */
+@media only screen and (max-width: 992px) {
+  header nav.desktop {
+    display: none;
+  }
+}
+
+header nav.desktop ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  color: rgb(56, 63, 100);
+  font-weight: 600;
+  font-size: 15px;
+}
+
+@media only screen and (min-width: 992px) {
+  header nav.mobile {
+    display: none;
+  }
+  header nav.desktop {
+    display: block;
+    background-color: transparent;
+  }
+}
