@@ -29,6 +29,17 @@ Works section     |About me section |Contact me section
 - Twitter: [@sboursen_dev](https://twitter.com/sboursen_dev)
 - LinkedIn: [LinkedIn](https://linkedin.com/in/sboursen)
 
+## Contributors
+
+> Many thanks to these amazing people who helped me
+> in this project 🙏🙏🙏
+
+👤 **Ridwan Diallo**
+
+- GitHub: @githubridwan
+- Twitter: @twitterridwan
+- LinkedIn: LinkedIn
+
 ## Show your support
 
 Give a ⭐️ if you like my portfolio!
