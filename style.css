@@ -540,10 +540,6 @@ nav > div {
     grid-column: -3 / -1;
   }
 
-  .contact-form .indicator {
-    display: none;
-  }
-
   .contact-form {
     background-image: url(./resources/contact-me-desktop-bg.svg);
     background-repeat: no-repeat;
@@ -560,6 +556,16 @@ nav > div {
   .form .submit-button {
     align-self: flex-start;
     margin-left: 12px;
+  }
+  .contact-form .contact-me {
+    padding-top: 15 0px;
+  }
+  .contact-form .lets-connect,
+  .contact-form p.my-email {
+    display: none;
+  }
+  .contact-form .indicator {
+    display: none;
   }
 }
 
