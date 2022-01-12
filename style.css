@@ -281,9 +281,6 @@ nav > div {
   display: grid;
   grid-template-rows: auto repeat(3, 1fr);
   gap: 24px;
-  background-image: url(./resources/about-me-section-background.svg);
-  background-repeat: no-repeat;
-  background-size: 100% auto;
 }
 
 .about-me > * {
@@ -298,6 +295,10 @@ nav > div {
   gap: 24px;
   padding-top: 60px;
   padding-bottom: calc(60px - 24px);
+  background-image: url(./resources/about-me-section-background.svg);
+  background-repeat: no-repeat;
+  background-size: 100vh 100vw;
+  background-position-x: left;
 }
 
 .text-section > * {
@@ -499,6 +500,22 @@ nav > div {
 
   .works .title,
   .works > img {
+    grid-column: 1 / -1;
+  }
+
+  .about-me {
+    margin: 142px;
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+  .about-me > * {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .about-me .text-section {
     grid-column: 1 / -1;
   }
 }
