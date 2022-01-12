@@ -27,6 +27,7 @@
       </ul>
     </nav>
   </header>
+
   <Main>
     <section class="headline-section">
 
@@ -248,41 +249,43 @@
     </section>
 
   </Main>
+
   <footer class="contact-form">
-    <div class="footer-text">
-      <h2 class="title">Contact Me</h2>
+    <h2 class="title">Contact Me</h2>
+    <div class="footer-content">
       <p class="supporting-text">I can help you build a
         product , feature or website Look
         through some of my work and experience! If you
         like what you
         see and have a project you need coded,
         don’t hesitate to contact me.</p>
-    </div>
-    <form action="https://formspree.io/f/mjvlgbrr"
-      method="post" class="form">
-      <div class="full-name">
-        <label for="name"></label>
-        <input type="text" name="full-name" id="name"
-          placeholder="Full name" required minlength="2"
-          maxlength="30">
-      </div>
-      <div class="email">
-        <label for="mail"></label>
-        <input type="email" name="mail" id="mail"
-          placeholder="Email" required
-          pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
-      </div>
-      <div class="message">
-        <label for="message"></label>
-        <textarea name="message" id="message"
-          placeholder="Enter text here" required
-          maxlength="500" minlength="10"></textarea>
-      </div>
+      <form action="https://formspree.io/f/mjvlgbrr"
+        method="post" class="form">
+        <div class="full-name">
+          <label for="name"></label>
+          <input type="text" name="full-name" id="name"
+            placeholder="Full name" required minlength="2"
+            maxlength="30">
+        </div>
+        <div class="email">
+          <label for="mail"></label>
+          <input type="email" name="mail" id="mail"
+            placeholder="Email" required
+            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+        </div>
+        <div class="message">
+          <label for="message"></label>
+          <textarea name="message" id="message"
+            placeholder="Enter text here" required
+            maxlength="500" minlength="10"></textarea>
+        </div>
 
-      <button type="submit" class="submit-button button">Get
-        in
-        touch</button>
-    </form>
+        <button type="submit"
+          class="submit-button button">Get
+          in
+          touch</button>
+      </form>
+    </div>
 
     <div class="contact-me">
       <h3 class="lets-connect">Let's connect</h3>
@@ -322,7 +325,8 @@
       </ul>
       <p class="my-email">dev.sboursen@gmail.com</p>
     </div>
-    <img src="./resources/Light.svg" alt="indicator">
+    <img class="indicator" src="./resources/Light.svg"
+      alt="indicator">
   </footer>
 
 </body>

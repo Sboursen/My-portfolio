@@ -232,6 +232,8 @@ nav > div {
   gap: 8px;
   justify-content: center;
   flex-wrap: wrap;
+  padding-right: 5px;
+  padding-left: 5px;
 }
 
 .project-languages li {
@@ -353,8 +355,10 @@ nav > div {
 .about-me-card ul {
   list-style-type: none;
   margin: 0;
-  margin-bottom: 24px;
   padding: 0;
+  margin-bottom: 24px;
+  padding-right: 5px;
+  padding-left: 5px;
 }
 
 .card-list {
@@ -392,20 +396,20 @@ nav > div {
   margin-right: 24px;
 }
 
-.footer-text {
+.footer-content {
   display: flex;
   flex-direction: column;
   align-content: center;
 }
 
-.footer-text p.supporting-text {
+.footer-content .supporting-text {
   align-self: center;
-  max-width: 600px;
+  max-width: 400px;
   font-size: 20px;
   font-weight: 400;
   color: var(--support-text-color);
   text-align: center;
-  padding: 10px;
+  padding: 20px;
 }
 
 .form {
@@ -534,6 +538,28 @@ nav > div {
   .about-me .about-me-card:nth-child(4) {
     margin-right: 142px;
     grid-column: -3 / -1;
+  }
+
+  .contact-form .indicator {
+    display: none;
+  }
+
+  .contact-form {
+    background-image: url(./resources/contact-me-desktop-bg.svg);
+    background-repeat: no-repeat;
+    background-size: 105vw 50%;
+    background-position: center bottom;
+  }
+  .footer-content {
+    flex-direction: row;
+    margin: 40px 134px;
+  }
+  .form {
+    width: 600px;
+  }
+  .form .submit-button {
+    align-self: flex-start;
+    margin-left: 12px;
   }
 }
 
