@@ -24,10 +24,10 @@ body {
 .header-hello-background {
   background-image: url(./resources/headline-section-responsive-background.svg);
   background-repeat: no-repeat;
-  background-size: 230% 160vh;
-  background-position: bottom -20vh left calc(50% + 40px);
+  background-size: 230% 150vh;
+  background-position: bottom -10vh left calc(50% + 40px);
   min-height: 100vh;
-  width: 100vw;
+  width: 100%;
   z-index: -1;
 }
 
