@@ -523,7 +523,8 @@ nav > div {
 
   .about-me .text-section {
     grid-column: 1 / -1;
-    background-image: url(./resources/about-me-desktop-bg-right.svg),
+    background-image:
+      url(./resources/about-me-desktop-bg-right.svg),
       url(./resources/about-me-desktop-bg-left.svg);
     background-repeat: no-repeat, no-repeat;
     background-size: auto 40%, auto 20%;
@@ -551,11 +552,13 @@ nav > div {
   }
 
   .contact-form {
-    background-image: url(./resources/contact-me-desktop-bg-left.svg),
+    background-image:
+      url(./resources/contact-me-desktop-bg-left.svg),
       url(./resources/contact-me-desktop-bg-right.svg);
     background-repeat: no-repeat, no-repeat;
     background-size: 30% auto, 20% 70%;
-    background-position: left -30px bottom 70px,
+    background-position:
+      left -30px bottom 70px,
       right -30px bottom 70px;
     min-height: 100vh;
     justify-content: space-between;
@@ -573,10 +576,10 @@ nav > div {
   }
 
   .footer-content .supporting-text {
-    font-size: 20px;
+    font-size: 30px;
     font-weight: 700;
     line-height: 52px;
-    max-width: 50%;
+    max-width: 40%;
     text-align: right;
     align-self: flex-start;
     padding-top: 0;
