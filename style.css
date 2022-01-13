@@ -445,6 +445,7 @@ nav > div {
 .form textarea {
   padding: 12px;
   min-height: 90px;
+  border: 1px solid #60c095;
 }
 
 .form input::placeholder {
@@ -452,6 +453,7 @@ nav > div {
   font-weight: normal;
   font-size: 15px;
   line-height: 24px;
+  color: #6b778c;
 }
 
 .form textarea::placeholder {
@@ -584,6 +586,12 @@ nav > div {
   .form .submit-button {
     align-self: flex-start;
     margin-left: 12px;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+    text-align: center;
   }
 
   .contact-form .contact-me {
