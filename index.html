@@ -11,21 +11,30 @@
 </head>
 
 <body>
+  <div class="header-hello-background"></div>
   <header>
-    <nav>
+    <nav class="mobile">
       <div class="welcome">Welcome</div>
       <div class="menu-button">
         <img src="./resources/menu-icon.svg" alt="menu">
       </div>
     </nav>
+    <nav class="desktop">
+      <ul class="desktop-header-list">
+        <li>Portfolio</li>
+        <li>About</li>
+        <li>Contact</li>
+      </ul>
+    </nav>
   </header>
+
   <Main>
     <section class="headline-section">
 
       <h1 class="hello">Hey there. I'm Soufiane
         <br>
         <span>
-          I'm a software developer
+          I'm a software engineer
         </span>
       </h1>
       <p class="supporting-text">I can help you build a
@@ -147,16 +156,47 @@
             Project</button>
         </div>
       </div>
+      <div class="project-card">
+        <div class="project-image project5"></div>
+        <div class="project-info">
+          <h3 class="project-title">Multi-Post Stories
+            <br> Gain+Glory
+          </h3>
+          <ul class="project-languages">
+            <li>Ruby on rails</li>
+            <li>JavaScript</li>
+            <li>Html</li>
+            <li>Css</li>
+          </ul>
+          <button class="project-button button"
+            type="button">See
+            Project</button>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="project-image project6"></div>
+        <div class="project-info">
+          <h3 class="project-title">Multi-Post Stories
+            <br> Gain+Glory
+          </h3>
+          <ul class="project-languages">
+            <li>Ruby on rails</li>
+            <li>JavaScript</li>
+            <li>Html</li>
+            <li>Css</li>
+          </ul>
+          <button class="project-button button"
+            type="button">See
+            Project</button>
+        </div>
+      </div>
     </section>
     <section class="about-me">
       <div class="text-section">
         <h2 class="title">About me</h2>
-        <p class="supporting-text">I can help you build a
-          product , feature or website Look
-          through some of my work and experience! If you
-          like what you
-          see and have a project you need coded,
-          don’t hesitate to contact me.</p>
+        <p class="supporting-text">I'm always interested in
+          hearing about new projects, so if
+          you'd like to chat please get in touch.</p>
         <button class="resume-button button"
           type="button">Get my Resume
         </button>
@@ -206,41 +246,40 @@
     </section>
 
   </Main>
-  <footer class="contact-form">
-    <div class="footer-text">
-      <h2 class="title">Contact Me</h2>
-      <p class="supporting-text">I can help you build a
-        product , feature or website Look
-        through some of my work and experience! If you
-        like what you
-        see and have a project you need coded,
-        don’t hesitate to contact me.</p>
-    </div>
-    <form action="https://formspree.io/f/mjvlgbrr"
-      method="post" class="form">
-      <div class="full-name">
-        <label for="name"></label>
-        <input type="text" name="full-name" id="name"
-          placeholder="Full name" required minlength="2"
-          maxlength="30">
-      </div>
-      <div class="email">
-        <label for="mail"></label>
-        <input type="email" name="mail" id="mail"
-          placeholder="Email" required
-          pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
-      </div>
-      <div class="message">
-        <label for="message"></label>
-        <textarea name="message" id="message"
-          placeholder="Enter text here" required
-          maxlength="500" minlength="10"></textarea>
-      </div>
 
-      <button type="submit" class="submit-button button">Get
-        in
-        touch</button>
-    </form>
+  <footer class="contact-form">
+    <h2 class="title">Contact Me</h2>
+    <div class="footer-content">
+      <p class="supporting-text">I'm always interested in
+        hearing about new projects, so if
+        you'd like to chat please get in touch.</p>
+      <form action="https://formspree.io/f/mjvlgbrr"
+        method="post" class="form">
+        <div class="full-name">
+          <label for="name"></label>
+          <input type="text" name="full-name" id="name"
+            placeholder="Full name" required minlength="2"
+            maxlength="30">
+        </div>
+        <div class="email">
+          <label for="mail"></label>
+          <input type="email" name="mail" id="mail"
+            placeholder="Email" required
+            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+        </div>
+        <div class="message">
+          <label for="message"></label>
+          <textarea name="message" id="message"
+            placeholder="Enter text here" required
+            maxlength="500" minlength="10"></textarea>
+        </div>
+
+        <button type="submit"
+          class="submit-button button">Get
+          in
+          touch</button>
+      </form>
+    </div>
 
     <div class="contact-me">
       <h3 class="lets-connect">Let's connect</h3>
@@ -280,7 +319,8 @@
       </ul>
       <p class="my-email">dev.sboursen@gmail.com</p>
     </div>
-    <img src="./resources/Light.svg" alt="indicator">
+    <img class="indicator" src="./resources/Light.svg"
+      alt="indicator">
   </footer>
 
 </body>
