@@ -23,6 +23,8 @@ Works section     |About me section |Contact me section
 
 [Live Demo Link](https://sboursen.github.io/My-portfolio/)
 
+## Authors
+
 👤 **Soufiane Boursen**
 
 - GitHub: [@Sboursen](https://github.com/Sboursen)
