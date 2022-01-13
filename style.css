@@ -513,6 +513,8 @@ nav > div {
     grid-template-rows: repeat(2, auto);
     grid-template-columns: 142px repeat(3, 1fr) 142px;
     gap: 24px;
+    min-height: 90vh;
+    justify-content: space-around;
   }
 
   .about-me .text-section {
