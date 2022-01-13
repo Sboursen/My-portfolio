@@ -551,7 +551,6 @@ nav > div {
   }
 
   .contact-form {
-    /* background-image: url(./resources/contact-me-desktop-bg.svg); */
     background-image: url(./resources/contact-me-desktop-bg-left.svg),
       url(./resources/contact-me-desktop-bg-right.svg);
     background-repeat: no-repeat, no-repeat;
@@ -559,7 +558,11 @@ nav > div {
     background-position: left -30px bottom 70px,
       right -30px bottom 70px;
     min-height: 100vh;
-    justify-content: space-around;
+    justify-content: space-between;
+  }
+
+  .contact-form .title {
+    padding-top: 60px;
   }
 
   .footer-content {
@@ -595,7 +598,17 @@ nav > div {
   }
 
   .contact-form .contact-me {
-    padding: 100px 0 20px;
+    width: 100%;
+    padding-top: 100px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .contact-form ul {
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top: 2px solid #dfe1e6;
   }
 
   .contact-form .lets-connect,
