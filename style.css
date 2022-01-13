@@ -66,6 +66,7 @@ header {
   position: relative;
   z-index: 1;
   margin-top: calc(18px - 100vh);
+  color: rgb(38, 55, 47);
 }
 
 nav {
@@ -80,7 +81,6 @@ nav {
 }
 
 nav > div {
-  height: fit-content;
   align-self: center;
 }
 
@@ -480,6 +480,7 @@ nav > div {
   text-align: center;
   height: 200px;
 }
+
 /* |||----------------------------desktop-support---------- */
 @media only screen and (max-width: 992px) {
   header nav.desktop {
@@ -519,13 +520,15 @@ nav > div {
 
   .about-me .text-section {
     grid-column: 1 / -1;
-    background-image: url(./resources/about-me-desktop-bg-right.svg),
+    background-image:
+      url(./resources/about-me-desktop-bg-right.svg),
       url(./resources/about-me-desktop-bg-left.svg);
     background-repeat: no-repeat, no-repeat;
     background-size: auto 40%, auto 20%;
     background-position: top right, bottom left;
     margin: 0;
   }
+
   .about-me .about-me-card {
     margin: 0;
   }
@@ -534,9 +537,11 @@ nav > div {
     margin-left: 142px;
     grid-column: 1 / 3;
   }
+
   .about-me .about-me-card:nth-child(3) {
     grid-column: 3 / 4;
   }
+
   .about-me .about-me-card:nth-child(4) {
     margin-right: 142px;
     grid-column: -3 / -1;
@@ -544,21 +549,25 @@ nav > div {
 
   .contact-form {
     /* background-image: url(./resources/contact-me-desktop-bg.svg); */
-    background-image: url(./resources/contact-me-desktop-bg-left.svg),
+    background-image:
+      url(./resources/contact-me-desktop-bg-left.svg),
       url(./resources/contact-me-desktop-bg-right.svg);
     background-repeat: no-repeat, no-repeat;
     background-size: 30% auto, 20% 70%;
-    background-position: left -30px bottom 70px,
+    background-position:
+      left -30px bottom 70px,
       right -30px bottom 70px;
     min-height: 100vh;
     justify-content: space-around;
   }
+
   .footer-content {
     flex-direction: row;
     margin: 40px 100px;
     box-sizing: border-box;
     width: calc(100% - 200px);
   }
+
   .footer-content .supporting-text {
     font-size: 20px;
     font-weight: 700;
@@ -568,20 +577,25 @@ nav > div {
     align-self: flex-start;
     padding-top: 0;
   }
+
   .form {
     width: 45%;
   }
+
   .form .submit-button {
     align-self: flex-start;
     margin-left: 12px;
   }
+
   .contact-form .contact-me {
     padding: 100px 0 20px;
   }
+
   .contact-form .lets-connect,
   .contact-form p.my-email {
     display: none;
   }
+
   .contact-form .indicator {
     display: none;
   }
