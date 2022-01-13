@@ -541,24 +541,40 @@ nav > div {
   }
 
   .contact-form {
-    background-image: url(./resources/contact-me-desktop-bg.svg);
-    background-repeat: no-repeat;
-    background-size: 105vw 50%;
-    background-position: center bottom;
+    /* background-image: url(./resources/contact-me-desktop-bg.svg); */
+    background-image: url(./resources/contact-me-desktop-bg-left.svg),
+      url(./resources/contact-me-desktop-bg-right.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-size: 30% auto, 20% 70%;
+    background-position: left -30px bottom 70px,
+      right -30px bottom 70px;
+    min-height: 100vh;
+    justify-content: space-around;
   }
   .footer-content {
     flex-direction: row;
-    margin: 40px 134px;
+    margin: 40px 100px;
+    box-sizing: border-box;
+    width: calc(100% - 200px);
+  }
+  .footer-content .supporting-text {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 52px;
+    max-width: 50%;
+    text-align: right;
+    align-self: flex-start;
+    padding-top: 0;
   }
   .form {
-    width: 600px;
+    width: 45%;
   }
   .form .submit-button {
     align-self: flex-start;
     margin-left: 12px;
   }
   .contact-form .contact-me {
-    padding-top: 15 0px;
+    padding: 100px 0 20px;
   }
   .contact-form .lets-connect,
   .contact-form p.my-email {
