@@ -658,3 +658,11 @@ header nav.desktop ul {
   border: 0.2px solid rgb(152, 108, 255);
   background-color: rgb(196, 170, 255);
 }
+
+/* ********************** */
+
+.supporting-text:hover{
+  transform: scale(1.07);
+  transition-duration: 1s;
+  transition-timing-function: ease-out;
+}
