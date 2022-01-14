@@ -530,7 +530,8 @@ a.next-button {
 
   .about-me .text-section {
     grid-column: 1 / -1;
-    background-image: url(./resources/about-me-desktop-bg-right.svg),
+    background-image: 
+      url(./resources/about-me-desktop-bg-right.svg),
       url(./resources/about-me-desktop-bg-left.svg);
     background-repeat: no-repeat, no-repeat;
     background-size: auto 40%, auto 20%;
@@ -558,7 +559,8 @@ a.next-button {
   }
 
   .contact-form {
-    background-image: url(./resources/contact-me-desktop-bg-left.svg),
+    background-image: 
+      url(./resources/contact-me-desktop-bg-left.svg),
       url(./resources/contact-me-desktop-bg-right.svg);
     background-repeat: no-repeat, no-repeat;
     background-size: 30% auto, 20% 70%;
