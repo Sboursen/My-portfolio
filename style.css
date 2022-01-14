@@ -523,8 +523,7 @@ nav > div {
 
   .about-me .text-section {
     grid-column: 1 / -1;
-    background-image:
-      url(./resources/about-me-desktop-bg-right.svg),
+    background-image: url(./resources/about-me-desktop-bg-right.svg),
       url(./resources/about-me-desktop-bg-left.svg);
     background-repeat: no-repeat, no-repeat;
     background-size: auto 40%, auto 20%;
@@ -552,13 +551,11 @@ nav > div {
   }
 
   .contact-form {
-    background-image:
-      url(./resources/contact-me-desktop-bg-left.svg),
+    background-image: url(./resources/contact-me-desktop-bg-left.svg),
       url(./resources/contact-me-desktop-bg-right.svg);
     background-repeat: no-repeat, no-repeat;
     background-size: 30% auto, 20% 70%;
-    background-position:
-      left -30px bottom 70px,
+    background-position: left -30px bottom 70px,
       right -30px bottom 70px;
     min-height: 100vh;
     justify-content: space-between;
@@ -635,4 +632,29 @@ header nav.desktop ul {
   font-weight: 600;
   font-size: 15px;
   background-color: transparent;
+}
+
+/*------------Animation and transitions--------------------*/
+.icon-animation > * {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  height: 20px;
+  width: 20px;
+}
+
+.icon-animation {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  padding: 10px;
+  border-radius: 50%;
+  border: 0.2px solid transparent;
+  transition: background-image 0.2s, border 0.8s;
+  transition-timing-function: ease;
+}
+
+.icon-animation:hover {
+  border: 0.2px solid rgb(152, 108, 255);
+  background-color: rgb(196, 170, 255);
 }
