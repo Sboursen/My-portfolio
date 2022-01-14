@@ -530,7 +530,7 @@ a.next-button {
 
   .about-me .text-section {
     grid-column: 1 / -1;
-    background-image: 
+    background-image:
       url(./resources/about-me-desktop-bg-right.svg),
       url(./resources/about-me-desktop-bg-left.svg);
     background-repeat: no-repeat, no-repeat;
@@ -559,12 +559,13 @@ a.next-button {
   }
 
   .contact-form {
-    background-image: 
+    background-image:
       url(./resources/contact-me-desktop-bg-left.svg),
       url(./resources/contact-me-desktop-bg-right.svg);
     background-repeat: no-repeat, no-repeat;
     background-size: 30% auto, 20% 70%;
-    background-position: left -30px bottom 70px,
+    background-position:
+      left -30px bottom 70px,
       right -30px bottom 70px;
     min-height: 100vh;
     justify-content: space-between;
@@ -692,8 +693,8 @@ header nav.desktop a:visited {
 .icon-animation.next-button:active {
   border-color: #24ffa4;
   background-color: rgb(171, 207, 195);
-  transition-timing-function: ease-out;
   transition: background-color 0.2s, border 0.8s;
+  transition-timing-function: ease-out;
 }
 
 .supporting-text:hover {
