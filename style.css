@@ -302,25 +302,35 @@ a.next-button {
 }
 
 .about-me > * {
-  margin-left: 25px;
-  margin-right: 25px;
+  margin-left: min(
+    calc(0.19 * (100vw - 375px) + 24px),
+    142px
+  );
+  margin-right: min(
+    calc(0.19 * (100vw - 375px) + 24px),
+    142px
+  );
 }
 
 .text-section {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: end;
   gap: 24px;
   padding-top: 60px;
   padding-bottom: calc(60px - 24px);
-  background-image: url(./resources/about-me-section-background.svg);
-  background-repeat: no-repeat;
-  background-size: 100% 100vw;
-  background-position: top 10px right;
+  background-image: url(./resources/about-me-desktop-bg-right.svg),
+    url(./resources/about-me-desktop-bg-left.svg);
+  background-repeat: no-repeat, no-repeat;
+  background-size: min(calc(10% + 45px), 120px) auto,
+    min(20%, 120px) auto;
+  background-position: top 20px right, bottom 36px left;
+  margin: 0;
 }
 
 .text-section > * {
-  margin: 0 7%;
+  margin: 0 min(calc(0.19 * (100vw - 375px) + 24px), 142px);
 }
 
 .text-section .supporting-text {
@@ -501,6 +511,7 @@ a.next-button {
 }
 
 /* |||desktop-support-------------------------------------- */
+
 @media only screen and (max-width: 992px) {
   header nav.desktop {
     display: none;
@@ -534,12 +545,12 @@ a.next-button {
 
   .about-me .text-section {
     grid-column: 1 / -1;
-    background-image: url(./resources/about-me-desktop-bg-right.svg),
+    /* background-image: url(./resources/about-me-desktop-bg-right.svg),
       url(./resources/about-me-desktop-bg-left.svg);
     background-repeat: no-repeat, no-repeat;
     background-size: auto 40%, auto 20%;
     background-position: top right, bottom left;
-    margin: 0;
+    margin: 0; */
   }
 
   .about-me .about-me-card {
