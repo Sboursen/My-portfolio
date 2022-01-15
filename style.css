@@ -170,9 +170,14 @@ a.next-button {
 
 /* ||works-section------------------------------------------------ */
 .works {
-  margin: 40px 25px 30px;
+  margin: 40px
+    min(calc(0.19 * (100vw - 375px) + 24px), 142px) 30px;
   display: grid;
-  grid-template-rows: auto auto repeat(4, 1fr);
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(240px, 1fr)
+  );
+  grid-auto-rows: auto;
   gap: 24px;
   justify-items: center;
 }
@@ -182,10 +187,14 @@ a.next-button {
   font-weight: 700;
   text-align: center;
   color: #172b4d;
+  grid-row: 1 / 2;
+  grid-column: 1 / -1;
 }
 
 .works > img {
   margin-bottom: calc(62px - 24px);
+  grid-row: 2 / 3;
+  grid-column: 1 / -1;
 }
 
 .project-card {
@@ -491,7 +500,7 @@ a.next-button {
   height: 200px;
 }
 
-/* |||----------------------------desktop-support---------- */
+/* |||desktop-support-------------------------------------- */
 @media only screen and (max-width: 992px) {
   header nav.desktop {
     display: none;
@@ -507,19 +516,14 @@ a.next-button {
     display: block;
   }
 
-  .works {
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(4, auto);
-    margin: 142px;
-  }
-
   .works .title,
   .works > img {
     grid-column: 1 / -1;
   }
 
   .about-me {
-    margin: 142px 0;
+    margin-top: 0;
+    margin-bottom: 0;
     display: grid;
     grid-template-rows: auto max-content;
     grid-template-columns: 142px repeat(3, 1fr) 142px;
@@ -530,8 +534,7 @@ a.next-button {
 
   .about-me .text-section {
     grid-column: 1 / -1;
-    background-image:
-      url(./resources/about-me-desktop-bg-right.svg),
+    background-image: url(./resources/about-me-desktop-bg-right.svg),
       url(./resources/about-me-desktop-bg-left.svg);
     background-repeat: no-repeat, no-repeat;
     background-size: auto 40%, auto 20%;
@@ -559,13 +562,11 @@ a.next-button {
   }
 
   .contact-form {
-    background-image:
-      url(./resources/contact-me-desktop-bg-left.svg),
+    background-image: url(./resources/contact-me-desktop-bg-left.svg),
       url(./resources/contact-me-desktop-bg-right.svg);
     background-repeat: no-repeat, no-repeat;
     background-size: 30% auto, 20% 70%;
-    background-position:
-      left -30px bottom 70px,
+    background-position: left -30px bottom 70px,
       right -30px bottom 70px;
     min-height: 100vh;
     justify-content: space-between;
@@ -645,8 +646,9 @@ nav.desktop ul {
 }
 
 nav.desktop a {
-  padding: 8px;
-  border-radius: 8px 8px 0 0;
+  padding: 4px 8px;
+  border-radius: 8px 8px;
+  color: inherit;
 }
 
 /* ------------Animations and transitions-------------------- */
