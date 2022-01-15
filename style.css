@@ -622,16 +622,13 @@ a.next-button {
 
   .contact-form ul {
     width: 100%;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
     border-top: 2px solid #dfe1e6;
   }
 
   .contact-form .lets-connect,
-  .contact-form p.my-email {
-    display: none;
-  }
-
+  .contact-form p.my-email,
   .contact-form .indicator {
     display: none;
   }
