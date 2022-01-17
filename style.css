@@ -170,18 +170,7 @@ a.next-button {
 
 /* ||works-section------------------------------------------------ */
 .works {
-  margin-top: 40px;
-  margin-left:
-    min(
-      calc(0.19 * (100vw - 375px) + 24px),
-      142px
-    );
-  margin-right:
-    min(
-      calc(0.19 * (100vw - 375px) + 24px),
-      142px
-    );
-  margin-bottom: 30px;
+  margin: 40px calc(0.19 * (100vw - 375px) + 24px) 30px;
   display: grid;
   grid-template-columns:
     repeat(
@@ -313,16 +302,8 @@ a.next-button {
 }
 
 .about-me > * {
-  margin-left:
-    min(
-      calc(0.19 * (100vw - 375px) + 24px),
-      142px
-    );
-  margin-right:
-    min(
-      calc(0.19 * (100vw - 375px) + 24px),
-      142px
-    );
+  margin-left: calc(0.19 * (100vw - 375px) + 24px);
+  margin-right: calc(0.19 * (100vw - 375px) + 24px);
 }
 
 .text-section {
@@ -337,15 +318,13 @@ a.next-button {
     url(./resources/about-me-desktop-bg-right.svg),
     url(./resources/about-me-desktop-bg-left.svg);
   background-repeat: no-repeat, no-repeat;
-  background-size:
-    min(calc(10% + 45px), 120px) auto,
-    min(20%, 120px) auto;
+  background-size: calc(10% + 45px) auto, 20% auto;
   background-position: top 20px right, bottom 36px left;
   margin: 0;
 }
 
 .text-section > * {
-  margin: 0 min(calc(0.19 * (100vw - 375px) + 24px), 142px);
+  margin: 0 calc(0.19 * (100vw - 375px) + 24px);
 }
 
 .text-section .supporting-text {
