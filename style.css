@@ -170,13 +170,24 @@ a.next-button {
 
 /* ||works-section------------------------------------------------ */
 .works {
-  margin: 40px
-    min(calc(0.19 * (100vw - 375px) + 24px), 142px) 30px;
+  margin-top: 40px;
+  margin-left:
+    min(
+      calc(0.19 * (100vw - 375px) + 24px),
+      142px
+    );
+  margin-right:
+    min(
+      calc(0.19 * (100vw - 375px) + 24px),
+      142px
+    );
+  margin-bottom: 30px;
   display: grid;
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(240px, 1fr)
-  );
+  grid-template-columns:
+    repeat(
+      auto-fit,
+      minmax(240px, 1fr)
+    );
   grid-auto-rows: auto;
   gap: 24px;
   justify-items: center;
@@ -302,14 +313,16 @@ a.next-button {
 }
 
 .about-me > * {
-  margin-left: min(
-    calc(0.19 * (100vw - 375px) + 24px),
-    142px
-  );
-  margin-right: min(
-    calc(0.19 * (100vw - 375px) + 24px),
-    142px
-  );
+  margin-left:
+    min(
+      calc(0.19 * (100vw - 375px) + 24px),
+      142px
+    );
+  margin-right:
+    min(
+      calc(0.19 * (100vw - 375px) + 24px),
+      142px
+    );
 }
 
 .text-section {
@@ -320,10 +333,12 @@ a.next-button {
   gap: 24px;
   padding-top: 60px;
   padding-bottom: calc(60px - 24px);
-  background-image: url(./resources/about-me-desktop-bg-right.svg),
+  background-image:
+    url(./resources/about-me-desktop-bg-right.svg),
     url(./resources/about-me-desktop-bg-left.svg);
   background-repeat: no-repeat, no-repeat;
-  background-size: min(calc(10% + 45px), 120px) auto,
+  background-size:
+    min(calc(10% + 45px), 120px) auto,
     min(20%, 120px) auto;
   background-position: top 20px right, bottom 36px left;
   margin: 0;
@@ -567,11 +582,13 @@ a.next-button {
   }
 
   .contact-form {
-    background-image: url(./resources/contact-me-desktop-bg-left.svg),
+    background-image:
+      url(./resources/contact-me-desktop-bg-left.svg),
       url(./resources/contact-me-desktop-bg-right.svg);
     background-repeat: no-repeat, no-repeat;
     background-size: 30% auto, 20% 70%;
-    background-position: left -30px bottom 70px,
+    background-position:
+      left -30px bottom 70px,
       right -30px bottom 70px;
     min-height: 100vh;
     justify-content: space-between;
