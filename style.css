@@ -46,7 +46,7 @@ button {
 }
 
 .button {
-  background-color: #36b37f;
+  background-color: hsl(160, 100%, 30%);
   border: 0.5px solid transparent;
   color: white;
   border-radius: 4px;
@@ -61,7 +61,7 @@ button {
 
 .button:active {
   border: 0.5px solid #172b4d;
-  background: #008552;
+  background: hsl(160, 100%, 36%);
   cursor: pointer;
 }
 
@@ -116,7 +116,7 @@ nav > div {
 }
 
 .hello span {
-  color: rgb(0, 191, 126);
+  color: hsl(160, 100%, 30%);
   text-align: center;
 }
 
