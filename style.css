@@ -42,6 +42,7 @@ a {
   top: 0;
   height: 100vh;
   width: 100%;
+  display: none;
   z-index: -2;
   flex-direction: column;
   background-color: var(--background-color);
@@ -122,6 +123,11 @@ a {
   justify-content: center;
   align-content: center;
   height: 60px;
+}
+
+.indicator img {
+  height: 10px;
+  max-width: 25%;
 }
 
 /* ||button-style------------------------------------------------ */

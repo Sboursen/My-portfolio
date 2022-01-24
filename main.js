@@ -14,15 +14,15 @@ const cancelMobileMenu = document.querySelector(
 
 const showMobileMenu = function (e) {
   if (e.currentTarget.classList.contains('menu-button')) {
-    mobileMenu.setAttribute('style', 'display: block;');
-    mobileMenu.setAttribute('style', 'z-index: 2;');
+    mobileMenu.style.display = 'flex';
+    mobileMenu.style['z-index'] = 2;
   }
 };
 
 const hideMobileMenu = function (e) {
   if (e.currentTarget.classList.contains('cancel')) {
-    mobileMenu.setAttribute('style', 'display: none;');
-    mobileMenu.setAttribute('style', 'z-index: -2;');
+    mobileMenu.style.display = 'none';
+    mobileMenu.style['z-index'] = -2;
   }
 };
 
