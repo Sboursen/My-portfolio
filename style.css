@@ -96,8 +96,7 @@ a {
 }
 
 .mobile-list li {
-  height: fit-content;
-  width: fit-content;
+  width: 100%;
   border: 2px solid #fff;
   border: 2px solid transparent;
   border-radius: 10px;
