@@ -56,7 +56,7 @@ a {
 }
 
 .cancel {
-  margin: 24px 24px auto auto;
+  margin: 11px 22px auto auto;
   padding: 12px;
   height: 32px;
   width: 32px;
@@ -189,7 +189,7 @@ nav > div {
   align-items: center;
   justify-content: center;
   position: relative;
-  z-index: 1;
+  z-index: 0;
   gap: 20px;
   min-height: calc(100vh - 48px);
 }
@@ -274,6 +274,7 @@ a.next-button {
 }
 
 .title {
+  margin-top: 80px;
   font-size: 40px;
   font-weight: 700;
   text-align: center;
@@ -387,7 +388,7 @@ a.next-button {
 .about-me {
   display: grid;
   grid-template-rows: auto repeat(3, max-content);
-  margin-top: calc(60px - 30px);
+  margin-top: 30px;
   padding-bottom: 40px;
   gap: 24px;
 }
@@ -493,7 +494,7 @@ a.next-button {
 
 /* ||contact-form--------------------------------------------- */
 .contact-form {
-  margin-top: calc(60px - 30px);
+  margin-top: 30px;
   display: flex;
   flex-direction: column;
   gap: 24px;
@@ -613,7 +614,12 @@ a.next-button {
   }
 
   header nav.desktop {
-    display: block;
+    display: flex;
+    height: max-content;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    justify-content: center;
   }
 
   .works .title,
@@ -669,7 +675,7 @@ a.next-button {
   }
 
   .contact-form .title {
-    padding-top: 60px;
+    padding-top: 20px;
   }
 
   .footer-content {
@@ -727,15 +733,19 @@ a.next-button {
 
 nav.desktop ul {
   list-style: none;
-  margin: 24px 0 0;
-  padding: 0;
+  margin: 0;
+  width: fit-content;
+  padding: 20px 40px;
+  border-radius: 0 0 20px 20px;
   display: flex;
   gap: 24px;
   justify-content: center;
   color: rgb(56 63 100);
   font-weight: 600;
   font-size: 15px;
+  background-color: var(--background-color);
   background-color: transparent;
+  backdrop-filter: blur(8px);
 }
 
 nav.desktop a {
