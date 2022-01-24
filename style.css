@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
 
 :root {
-  --background-color: rgb(255, 255, 255);
+  --background-color: #fff;
   --support-text-color: #172b4d;
 }
 
@@ -17,7 +17,7 @@ body {
   background-color: var(--background-color);
   font-weight: 600;
   font-size: 20px;
-  font-family: "Inter", sans-serif;
+  font-family: Inter, sans-serif;
 }
 
 a {
@@ -25,13 +25,105 @@ a {
 }
 
 .header-hello-background {
-  background-image: url(./resources/headline-section-responsive-background.svg);
+  position: absolute;
+  top: 0;
+  background-image: url("./resources/headline-section-responsive-background.svg");
   background-repeat: no-repeat;
   background-size: 230% 150vh;
   background-position: bottom -10vh left calc(50% + 40px);
   min-height: 100vh;
   width: 100%;
   z-index: -1;
+}
+
+/* ||mobile-menu-style-------------------------------------------- */
+.mobile-menu {
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  display: none;
+  z-index: -2;
+  flex-direction: column;
+  background-color: var(--background-color);
+  backdrop-filter: blur(4px);
+}
+
+.toolbar {
+  display: flex;
+  width: 100%;
+  justify-content: end;
+}
+
+.cancel {
+  margin: 24px 24px auto auto;
+  padding: 12px;
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  background-color: rgb(56 63 100);
+  background-image: url("./resources/cancel-icon.svg");
+  background-position: center;
+}
+
+.cancel:hover {
+  background-color: crimson;
+}
+
+.cancel:active {
+  border: 0.5px solid black;
+  background-color: rgb(248 34 77);
+  cursor: pointer;
+}
+
+.mobile-list {
+  list-style: none;
+  margin: 0 0 32px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  flex: 2 1;
+  gap: 40px;
+  border-radius: 0 0 40px 40px;
+  justify-content: flex-start;
+  color: #3a4a42;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 44px;
+  background-color: #fff;
+}
+
+.mobile-list li {
+  width: 100%;
+  border: 2px solid #fff;
+  border: 2px solid transparent;
+  border-radius: 10px;
+}
+
+.mobile-list a {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  text-decoration: none;
+  color: #3a4a42;
+}
+
+.indicator {
+  display: flex;
+  justify-self: end;
+  justify-content: center;
+  align-content: center;
+  height: 60px;
+}
+
+.indicator img {
+  height: 10px;
+  max-width: 25%;
+}
+
+.menu-button {
+  background-color: #096;
 }
 
 /* ||button-style------------------------------------------------ */
@@ -46,7 +138,7 @@ button {
 }
 
 .button {
-  background-color: hsl(160, 100%, 30%);
+  background-color: hsl(160deg 100% 30%);
   border: 0.5px solid transparent;
   color: white;
   border-radius: 4px;
@@ -61,7 +153,7 @@ button {
 
 .button:active {
   border: 0.5px solid #172b4d;
-  background: hsl(160, 100%, 36%);
+  background: hsl(160deg 100% 36%);
   cursor: pointer;
 }
 
@@ -72,8 +164,7 @@ header {
   display: flex;
   position: relative;
   z-index: 1;
-  margin-top: calc(18px - 100vh);
-  color: rgb(38, 55, 47);
+  color: rgb(38 55 47);
 }
 
 nav {
@@ -112,11 +203,11 @@ nav > div {
   font-size: 40px;
   font-weight: 700;
   text-align: center;
-  color: rgb(23, 43, 77);
+  color: rgb(23 43 77);
 }
 
 .hello span {
-  color: hsl(160, 100%, 30%);
+  color: hsl(160deg 100% 30%);
   text-align: center;
 }
 
@@ -136,9 +227,9 @@ nav > div {
 }
 
 .lets-connect {
-  color: rgb(118, 132, 255);
-  padding: 40px 0 10px calc(50% - 75px);
-  align-self: flex-start;
+  color: rgb(118 132 255);
+  padding: 40px 0 10px;
+  align-self: center;
 }
 
 .contact-me ul {
@@ -161,7 +252,7 @@ a.next-button {
   width: 36px;
   border: 2px solid lightgrey;
   border-radius: 50%;
-  background-image: url(./resources/next-section-icon.png);
+  background-image: url("./resources/next-section-icon.png");
   background-repeat: no-repeat;
   background-position: 50%;
   padding: 0;
@@ -202,7 +293,7 @@ a.next-button {
   flex-direction: column;
   align-content: center;
   justify-content: stretch;
-  background-color: rgb(234, 241, 238);
+  background-color: rgb(234 241 238);
   width: 100%;
   border: 1px solid #d0d9d4;
   border-radius: 8px;
@@ -259,7 +350,7 @@ a.next-button {
   line-height: 16px;
   letter-spacing: 3%;
   border-radius: 4px;
-  background-color: rgb(234, 241, 238);
+  background-color: rgb(234 241 238);
 }
 
 .project-button {
@@ -268,27 +359,27 @@ a.next-button {
 }
 
 .project1 {
-  background-image: url(./resources/project-image1.png);
+  background-image: url("./resources/project-image1.png");
 }
 
 .project2 {
-  background-image: url(./resources/project-image2.png);
+  background-image: url("./resources/project-image2.png");
 }
 
 .project3 {
-  background-image: url(./resources/project-image3.png);
+  background-image: url("./resources/project-image3.png");
 }
 
 .project4 {
-  background-image: url(./resources/project-image4.png);
+  background-image: url("./resources/project-image4.png");
 }
 
 .project5 {
-  background-image: url(./resources/project-image5.png);
+  background-image: url("./resources/project-image5.png");
 }
 
 .project6 {
-  background-image: url(./resources/project-image6.png);
+  background-image: url("./resources/project-image6.png");
 }
 
 /* ||about-me-section------------------------------------------------ */
@@ -315,8 +406,8 @@ a.next-button {
   padding-top: 60px;
   padding-bottom: calc(60px - 24px);
   background-image:
-    url(./resources/about-me-desktop-bg-right.svg),
-    url(./resources/about-me-desktop-bg-left.svg);
+    url("./resources/about-me-desktop-bg-right.svg"),
+    url("./resources/about-me-desktop-bg-left.svg");
   background-repeat: no-repeat, no-repeat;
   background-size: calc(10% + 45px) auto, 20% auto;
   background-position: top 20px right, bottom 36px left;
@@ -345,7 +436,7 @@ a.next-button {
   justify-content: flex-start;
   align-items: center;
   padding-bottom: 24px;
-  background-color: rgb(234, 241, 238);
+  background-color: rgb(234 241 238);
   border: 1px solid #d0d9d4;
   border-radius: 8px;
   gap: 24px;
@@ -406,7 +497,7 @@ a.next-button {
   display: flex;
   flex-direction: column;
   gap: 24px;
-  background-image: url(./resources/illustration-contact-form.svg);
+  background-image: url("./resources/illustration-contact-form.svg");
   background-repeat: no-repeat;
   background-size: 25% 25%;
   background-position: right -10px bottom 250px;
@@ -428,7 +519,7 @@ a.next-button {
   max-width: 500px;
   font-size: 30px;
   font-weight: 700;
-  color: rgb(29, 35, 78);
+  color: rgb(29 35 78);
   text-align: center;
   padding: 20px;
 }
@@ -517,6 +608,10 @@ a.next-button {
     display: none;
   }
 
+  .mobile-menu {
+    display: none;
+  }
+
   header nav.desktop {
     display: block;
   }
@@ -562,8 +657,8 @@ a.next-button {
 
   .contact-form {
     background-image:
-      url(./resources/contact-me-desktop-bg-left.svg),
-      url(./resources/contact-me-desktop-bg-right.svg);
+      url("./resources/contact-me-desktop-bg-left.svg"),
+      url("./resources/contact-me-desktop-bg-right.svg");
     background-repeat: no-repeat, no-repeat;
     background-size: 30% auto, 20% 70%;
     background-position:
@@ -632,12 +727,12 @@ a.next-button {
 
 nav.desktop ul {
   list-style: none;
-  margin: 0;
+  margin: 24px 0 0;
   padding: 0;
   display: flex;
   gap: 24px;
   justify-content: center;
-  color: rgb(56, 63, 100);
+  color: rgb(56 63 100);
   font-weight: 600;
   font-size: 15px;
   background-color: transparent;
@@ -645,19 +740,19 @@ nav.desktop ul {
 
 nav.desktop a {
   padding: 4px 8px;
-  border-radius: 8px 8px;
+  border-radius: 8px;
   color: inherit;
 }
 
 /* ------------Animations and transitions-------------------- */
 header nav.desktop a:hover {
-  background-color: rgb(175, 241, 219);
+  background-color: rgb(175 241 219);
   transition: background-color 0.2s;
   transition-timing-function: ease-out;
 }
 
 header nav.desktop a:visited {
-  color: rgb(56, 63, 100);
+  color: rgb(56 63 100);
 }
 
 .icon-animation > * {
@@ -678,13 +773,13 @@ header nav.desktop a:visited {
 }
 
 .icon-animation:hover {
-  background-color: rgb(164, 255, 225);
+  background-color: rgb(164 255 225);
   transition: background-color 0.2s;
   transition-timing-function: ease-out;
 }
 
 .icon-animation.next-button:hover {
-  background-color: rgb(164, 255, 225);
+  background-color: rgb(164 255 225);
   transition: background-color 0.2s;
   transition-timing-function: ease-out;
 }
@@ -692,7 +787,7 @@ header nav.desktop a:visited {
 .icon-animation:active,
 .icon-animation.next-button:active {
   border-color: #24ffa4;
-  background-color: rgb(171, 207, 195);
+  background-color: rgb(171 207 195);
   transition: background-color 0.2s, border 0.8s;
   transition-timing-function: ease-out;
 }
@@ -710,4 +805,18 @@ header nav.desktop a:visited {
   transform: scale(1.1);
   transition-duration: 20ms;
   transition-timing-function: ease-out;
+}
+
+.mobile-list li:hover {
+  background-color: rgb(175 241 219);
+  transition: background-color 0.2s;
+  transition-timing-function: ease-out;
+  cursor: pointer;
+}
+
+.mobile-list li:active {
+  background-color: rgb(214 255 241);
+  border: 2px solid rgb(31 22 22);
+  border: 2px solid rgb(38 55 47);
+  cursor: pointer;
 }
