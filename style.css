@@ -720,7 +720,7 @@ a.next-button {
 
 nav.desktop ul {
   list-style: none;
-  margin: 0;
+  margin: 24px 0 0 0;
   padding: 0;
   display: flex;
   gap: 24px;
