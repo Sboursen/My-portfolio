@@ -25,7 +25,6 @@ function hideMobileMenu(e) {
     mobileMenu.style['z-index'] = -2;
   }
 
-  console.log(e.currentTarget);
   if (
     e.currentTarget.parentNode.classList.contains(
       'mobile-list',
@@ -38,6 +37,4 @@ function hideMobileMenu(e) {
 
 mobileMenuButton.addEventListener('click', showMobileMenu);
 cancelMobileMenu.addEventListener('click', hideMobileMenu);
-mobileList.forEach((node) =>
-  node.addEventListener('click', hideMobileMenu),
-);
+mobileList.forEach((node) => node.addEventListener('click', hideMobileMenu));
