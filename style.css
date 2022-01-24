@@ -123,6 +123,10 @@ a {
   max-width: 25%;
 }
 
+.menu-button {
+  background-color: #009966;
+}
+
 /* ||button-style------------------------------------------------ */
 button {
   background: none;
