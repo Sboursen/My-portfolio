@@ -1037,6 +1037,7 @@ header nav.desktop a:visited {
     grid-row: 1;
     display: flex;
     justify-content: center;
+    justify-self: right;
     gap: 24px;
   }
 
