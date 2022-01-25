@@ -21,7 +21,7 @@
 </head>
 
 <body>
-
+  <!-- absolutely positioned elements -->
   <div class="header-hello-background"></div>
 
   <div class="mobile-menu">
@@ -47,6 +47,65 @@
         alt="Indicator">
     </div>
   </div>
+
+  <div class="project-details">
+    <div class="project-card">
+      <div class="project-image">
+        <div class="toolbar">
+          <button class="cancel" type="button"></button>
+        </div>
+        <img src="./resources/project-image1.png"
+          alt="featured project image">
+      </div>
+      <div class="project-info">
+        <h3 class="project-title">Multi-Post Stories
+          <br> Gain+Glory
+        </h3>
+        <ul class="project-languages">
+          <li>Ruby on rails</li>
+          <li>JavaScript</li>
+          <li>Html</li>
+          <li>Css</li>
+        </ul>
+        <p class="project-description">
+          Lorem Ipsum is simply dummy text of the printing
+          and
+          typesetting industry. Lorem Ipsum has been the
+          industry's
+          standard dummy text ever since the 1500s, when an
+          unknown
+          printer took a galley of type and scrambled it
+          1960s with
+          the release Lorem Ipsum is simply dummy text of
+          the
+          printing
+          and typesetting industry. Lorem Ipsum has been the
+          industry's standard dummy text ever since the
+          1500s, when an
+          unknown printer took a galley of type and
+          scrambled it 1960s
+          with the release
+        </p>
+        <div class="project-buttons">
+          <button class="project-button button live-button"
+            type="button">
+            <span>See Live</span>
+            <img src="./resources/live-icon.svg"
+              alt="Live icon">
+          </button>
+          <button
+            class="project-button button source-button"
+            type="button">
+            <span>See Source</span>
+            <img src="./resources/github-icon.svg"
+              alt="Github icon">
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!-- absolutely positioned elements -->
 
   <header>
     <nav class="mobile">
@@ -145,8 +204,8 @@
             <li>Html</li>
             <li>Css</li>
           </ul>
-          <button class="project-button button"
-            type="button">See
+          <button id='project-1'
+            class="project-button button" type="button">See
             Project</button>
         </div>
       </div>
@@ -163,7 +222,7 @@
             <li>Css</li>
           </ul>
           <button class="project-button button"
-            type="button">See
+            id="project-2" type="button">See
             Project</button>
         </div>
       </div>
@@ -180,7 +239,7 @@
             <li>Css</li>
           </ul>
           <button class="project-button button"
-            type="button">See
+            id="project-3" type="button">See
             Project</button>
         </div>
       </div>
@@ -197,7 +256,7 @@
             <li>Css</li>
           </ul>
           <button class="project-button button"
-            type="button">See
+            id="project-4" type="button">See
             Project</button>
         </div>
       </div>
@@ -214,7 +273,7 @@
             <li>Css</li>
           </ul>
           <button class="project-button button"
-            type="button">See
+            id="project-5" type="button">See
             Project</button>
         </div>
       </div>
@@ -231,7 +290,7 @@
             <li>Css</li>
           </ul>
           <button class="project-button button"
-            type="button">See
+            id="project-6" type="button">See
             Project</button>
         </div>
       </div>
@@ -311,7 +370,7 @@
           <label for="mail"></label>
           <input type="email" name="mail" id="mail"
             placeholder="Email" required
-            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+            pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
         </div>
         <div class="message">
           <label for="message"></label>
