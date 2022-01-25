@@ -599,11 +599,67 @@ a.next-button {
   position: absolute;
   top: 0;
   z-index: 4;
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
   box-sizing: border-box;
   min-height: 100vh;
   width: 100%;
-  padding: calc(0.1 * (100vmin - 375px) + 24px);
+  padding: calc(0.2 * (100vmin - 375px) + 24px);
   backdrop-filter: blur(8px);
+}
+
+.project-details .project-card {
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+  box-sizing: border-box;
+  padding: 16px;
+  background-color: var(--background-color);
+}
+
+.project-details .project-image {
+  box-sizing: border-box;
+  margin: 0;
+  height: auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-details .toolbar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 5;
+  margin: 0;
+  justify-self: flex-end;
+  width: 5vmin;
+  height: 5vmin;
+  max-width: 32px;
+  max-height: 32px;
+}
+
+.project-details .toolbar button {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  object-fit: contain;
+}
+
+.project-details .project-image img {
+  width: 100%;
+}
+
+.project-details .project-title {
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 44px;
+  text-align: left;
+  color: #1d234e;
 }
 
 /* ||desktop-support-------------------------------------- */
