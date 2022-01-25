@@ -104,11 +104,9 @@ const projectDetailsCancelButton = document.querySelector(
 function showProjectDetails(e) {
   const projectId = e.currentTarget.id;
 
-  projectDetails.querySelector('.project-title').innerHTML =
-    projectsDetailsData[projectId].title;
+  projectDetails.querySelector('.project-title').innerHTML = projectsDetailsData[projectId].title;
 
-  projectDetails.querySelector('.project-image img').src =
-    projectsDetailsData[projectId].featuredImage;
+  projectDetails.querySelector('.project-image img').src = projectsDetailsData[projectId].featuredImage;
 
   projectDetails.querySelector(
     '.project-languages',
@@ -126,8 +124,7 @@ function showProjectDetails(e) {
 
   projectDetails.querySelector(
     '.project-description',
-  ).textContent =
-    projectsDetailsData[projectId].description;
+  ).textContent = projectsDetailsData[projectId].description;
 
   projectDetails.style.display = 'block';
 }
@@ -136,9 +133,7 @@ function hideProjectDetails() {
   projectDetails.style.display = 'none';
 }
 
-seeProjectButtons.forEach((button) =>
-  button.addEventListener('click', showProjectDetails),
-);
+seeProjectButtons.forEach((button) => button.addEventListener('click', showProjectDetails));
 projectDetailsCancelButton.addEventListener(
   'click',
   hideProjectDetails,
@@ -160,7 +155,7 @@ let sectionHeights = projectSections.map((section) => {
   return sum;
 });
 const desktopMenu = document.querySelector('.desktop');
-document.querySelectorAll('.desktop li');
+const desktopMenuList = document.querySelectorAll('.desktop li');
 const mobileMenuButton = document.querySelector(
   '.mobile .menu-button',
 );
@@ -184,8 +179,8 @@ function showMobileMenu(e) {
 
 function hideMobileMenu(e) {
   if (
-    e.currentTarget.classList.contains('cancel') ||
-    e.currentTarget.parentNode.classList.contains(
+    e.currentTarget.classList.contains('cancel')
+    || e.currentTarget.parentNode.classList.contains(
       'mobile-list',
     )
   ) {
@@ -230,9 +225,7 @@ function spyOnScroll() {
 
 mobileMenuButton.addEventListener('click', showMobileMenu);
 cancelMobileMenu.addEventListener('click', hideMobileMenu);
-mobileMenuList.forEach((node) =>
-  node.addEventListener('click', hideMobileMenu),
-);
+mobileMenuList.forEach((node) => node.addEventListener('click', hideMobileMenu));
 window.addEventListener('scroll', hideMobileMenuOnScroll);
 window.addEventListener('scroll', spyOnScroll);
 window.addEventListener('resize', updateSectionsHeight);
