@@ -595,7 +595,7 @@ a.next-button {
 
 /* ||project-details-------------------------------------- */
 .project-details {
-  position: absolute;
+  position: fixed;
   top: 0;
   z-index: 4;
   display: flex;
@@ -698,17 +698,24 @@ a.next-button {
   justify-content: center;
   gap: 24px;
   align-self: center;
+  align-content: center;
+  
 }
 .project-details .project-buttons button {
   margin: 12px;
   display: flex;
   gap: 5px;
-  align-content: center;
+  align-items: center;
 }
 
 .project-details button span {
-  display: inline-block;
+  display: block;
 }
+
+.project-details button img {
+  display: block;
+}
+
 
 /* ||desktop-support-------------------------------------- */
 
@@ -884,7 +891,7 @@ a.next-button {
     margin: 12px;
     display: flex;
     gap: 5px;
-    align-content: center;
+    align-items: center;
   }
 
   .project-details button span {
