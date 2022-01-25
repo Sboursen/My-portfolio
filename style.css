@@ -595,14 +595,13 @@ a.next-button {
 
 /* ||project-details-------------------------------------- */
 .project-details {
+  display:none;
   position: fixed;
   top: 0;
   z-index: 4;
-  display: flex;
-  flex-direction: column;
-  justify-content: stretch;
+  overflow: auto;
   box-sizing: border-box;
-  min-height: 100vh;
+  height: 100%;
   width: 100%;
   padding: calc(0.2 * (100vmin - 375px) + 24px);
   backdrop-filter: blur(8px);

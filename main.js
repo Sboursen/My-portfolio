@@ -1,3 +1,49 @@
+
+const projects = [{
+  id: 'project-1',
+  name: 'Tonic',
+  featured_image: 'images/lg-Image1.png',
+  technologies: ['HTML', 'CSS', 'javascript', 'Github', 'Ruby', 'Bootsrap'],
+  live_link: '',
+  source_link: '',
+  description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam, fugiat maiores quam amet hic dolorum unde eaque explicabo sapiente asperiores voluptatibus vel. Neque deserunt sunt vel ducimus voluptatem tenetur quam incidunt esse sequi enim labore beatae iure minus dolorem nam commodi libero atque, voluptatum alias accusantium, molestiae maiores voluptatibus error. Cupiditate, enim nobis. Expedita deserunt et eaque quisquam nostrum ducimus quasi, accusantium facilis, quibusdam quia, accusamus excepturi voluptate minus consectetur dolore adipisci delectus! Facere officiis corrupti autem sequi quod atque?',
+},
+{
+  id: 'project-2',
+  name: 'Multi-Post Stories',
+  featured_image: 'images/image_4.png',
+  technologies: ['HTML', 'CSS', 'javascript'],
+  live_link: '',
+  source_link: '',
+  description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam, fugiat maiores quam amet hic dolorum unde eaque explicabo sapiente asperiores voluptatibus vel. Neque deserunt sunt vel ducimus voluptatem tenetur quam incidunt esse sequi enim labore beatae iure minus dolorem nam commodi libero atque, voluptatum alias accusantium, molestiae maiores voluptatibus error. Cupiditate, enim nobis. Expedita deserunt et eaque quisquam nostrum ducimus quasi, accusantium facilis, quibusdam quia, accusamus excepturi voluptate minus consectetur dolore adipisci delectus! Facere officiis corrupti autem sequi quod atque?',
+},
+{
+  id: 'project-3',
+  name: 'Facebook 360',
+  featured_image: 'images/Images_1.png',
+  technologies: ['HTML', 'CSS', 'javascript', 'Github', 'Ruby', 'Bootsrap', 'Node.js'],
+  live_link: '',
+  source_link: '',
+  description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam, fugiat maiores quam amet hic dolorum unde eaque explicabo sapiente asperiores voluptatibus vel. Neque deserunt sunt vel ducimus voluptatem tenetur quam incidunt esse sequi enim labore beatae iure minus dolorem nam commodi libero atque, voluptatum alias accusantium, molestiae maiores voluptatibus error. Cupiditate, enim nobis. Expedita deserunt et eaque quisquam nostrum ducimus quasi, accusantium facilis, quibusdam quia, accusamus excepturi voluptate minus consectetur dolore adipisci delectus! Facere officiis corrupti autem sequi quod atque?',
+},
+{
+  id: 'project-4',
+  name: 'Uber Navigation',
+  featured_image: 'images/availability.png',
+  technologies: ['HTML', 'CSS', 'javascript', 'Github', 'Bootsrap'],
+  live_link: '',
+  source_link: '',
+  description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam, fugiat maiores quam amet hic dolorum unde eaque explicabo sapiente asperiores voluptatibus vel. Neque deserunt sunt vel ducimus voluptatem tenetur quam incidunt esse sequi enim labore beatae iure minus dolorem nam commodi libero atque, voluptatum alias accusantium, molestiae maiores voluptatibus error. Cupiditate, enim nobis. Expedita deserunt et eaque quisquam nostrum ducimus quasi, accusantium facilis, quibusdam quia, accusamus excepturi voluptate minus consectetur dolore adipisci delectus! Facere officiis corrupti autem sequi quod atque?',
+},
+];
+//modal integeration
+let projectButtons=[]
+let buttons=document.querySelectorAll('button')
+buttons.forEach(button=>{
+  let [id]=button.id.split('-')
+  if(id==='project') projectButtons.push(button)
+})
+
 const projectSections = [
   document.getElementById('hello-section'),
   document.getElementById('works-section'),
