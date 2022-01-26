@@ -128,8 +128,14 @@ a {
   background-color: #096;
 }
 
-.to-the-top-button {
+a.to-the-top-button.icon-animation {
   display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 5px;
+  z-index: 3;
+  transform: rotate(180deg);
+  box-shadow: -2px -2px 10px 1px lightgray;
 }
 
 /* ||button-style------------------------------------------------ */
@@ -655,6 +661,8 @@ a.next-button {
     position: fixed;
     z-index: 2;
     top: 0;
+    margin: 0;
+    width: 100%;
     justify-content: center;
   }
 
@@ -711,7 +719,7 @@ a.next-button {
   }
 
   .contact-form .title {
-    padding-top: 20px;
+    padding-top: 40px;
   }
 
   .footer-content {
@@ -748,7 +756,7 @@ a.next-button {
 
   .contact-form .contact-me {
     width: 100%;
-    padding-top: 100px;
+    padding-top: 80px;
     margin-left: 0;
     margin-right: 0;
   }
@@ -819,7 +827,7 @@ a.next-button {
 nav.desktop ul {
   list-style: none;
   margin: 0;
-  width: fit-content;
+  width: 100%;
   padding: 20px 40px;
   border-radius: 0 0 20px 20px;
   display: flex;
@@ -830,6 +838,10 @@ nav.desktop ul {
   font-size: 15px;
   background-color: var(--background-color);
   background-color: transparent;
+}
+
+.nav-border-bottom-blurred-bg {
+  border-bottom: 1px solid #60c095;
   backdrop-filter: blur(8px);
 }
 
