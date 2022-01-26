@@ -24,6 +24,13 @@
   <!-- absolutely positioned elements -->
   <div class="header-hello-background"></div>
 
+  <div class="to-the-top-button">
+    <a aria-label="go to works section"
+      href="#works-section"
+      class="next-button icon-animation">
+    </a>
+  </div>
+
   <div class="mobile-menu">
     <div class="toolbar">
       <button class="cancel" type="button"></button>
@@ -365,6 +372,7 @@
           <input type="text" name="full-name" id="name"
             placeholder="Full name" required minlength="2"
             maxlength="30">
+          <small aria-live="polite"></small>
         </div>
         <div class="email">
           <label for="mail"></label>
@@ -372,11 +380,13 @@
             placeholder="Email" required
             pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
         </div>
+        <small aria-live="polite"></small>
         <div class="message">
           <label for="message"></label>
           <textarea name="message" id="message"
             placeholder="Enter text here" required
             maxlength="500" minlength="10"></textarea>
+          <small aria-live="polite"></small>
         </div>
 
         <button type="submit"
