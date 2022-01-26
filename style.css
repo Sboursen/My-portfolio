@@ -408,7 +408,8 @@ a.next-button {
   gap: 24px;
   padding-top: 60px;
   padding-bottom: calc(60px - 24px);
-  background-image: url("./resources/about-me-desktop-bg-right.svg"),
+  background-image:
+    url("./resources/about-me-desktop-bg-right.svg"),
     url("./resources/about-me-desktop-bg-left.svg");
   background-repeat: no-repeat, no-repeat;
   background-size: calc(10% + 45px) auto, 20% auto;
@@ -608,6 +609,7 @@ a.next-button {
   text-align: center;
   font-weight: lighter;
   font-size: small;
+  color: var(--error-color);
 }
 
 .form-field.error input {
@@ -618,10 +620,6 @@ a.next-button {
   border-color: var(--success-color);
 }
 
-.form-field small {
-  color: var(--error-color);
-}
-
 .form-field.error textarea {
   color: var(--error-color);
 }
@@ -629,6 +627,7 @@ a.next-button {
 .form-field.success textarea {
   border-color: var(--success-color);
 }
+
 /* ||desktop-support-------------------------------------- */
 
 @media only screen and (max-width: 992px) {
@@ -695,11 +694,14 @@ a.next-button {
   }
 
   .contact-form {
-    background-image: url("./resources/contact-me-desktop-bg-left.svg"),
+    background-image:
+      url("./resources/contact-me-desktop-bg-left.svg"),
       url("./resources/contact-me-desktop-bg-right.svg");
     background-repeat: no-repeat, no-repeat;
     background-size: 30% auto, 20% 70%;
-    background-position: left -30px bottom 70px, right -30px bottom 70px;
+    background-position:
+      left -30px bottom 70px,
+      right -30px bottom 70px;
     min-height: 100vh;
     justify-content: space-between;
   }
