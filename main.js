@@ -22,8 +22,8 @@ function showMobileMenu(e) {
 
 function hideMobileMenu(e) {
   if (
-    e.currentTarget.classList.contains('cancel') ||
-    e.currentTarget.parentNode.classList.contains(
+    e.currentTarget.classList.contains('cancel')
+    || e.currentTarget.parentNode.classList.contains(
       'mobile-list',
     )
   ) {
@@ -42,9 +42,7 @@ function hideMobileMenuOnScroll() {
 mobileMenuButton.addEventListener('click', showMobileMenu);
 cancelMobileMenu.addEventListener('click', hideMobileMenu);
 window.addEventListener('scroll', hideMobileMenuOnScroll);
-mobileMenuList.forEach((node) =>
-  node.addEventListener('click', hideMobileMenu),
-);
+mobileMenuList.forEach((node) => node.addEventListener('click', hideMobileMenu));
 
 // |||Scroll spy
 const projectSections = [
@@ -63,8 +61,7 @@ let sectionHeights = projectSections.map((section) => {
 
 const desktopMenu = document.querySelector('.desktop');
 
-const desktopMenuList =
-  document.querySelectorAll('.desktop li');
+const desktopMenuList = document.querySelectorAll('.desktop li');
 
 function spyOnScroll() {
   if (getComputedStyle(desktopMenu).display === 'flex') {
@@ -205,11 +202,9 @@ const projectDetailsCancelButton = document.querySelector(
 function showProjectDetails(e) {
   const projectId = e.currentTarget.id;
 
-  projectDetails.querySelector('.project-title').innerHTML =
-    projectsDetailsData[projectId].title;
+  projectDetails.querySelector('.project-title').innerHTML = projectsDetailsData[projectId].title;
 
-  projectDetails.querySelector('.project-image img').src =
-    projectsDetailsData[projectId].featuredImage;
+  projectDetails.querySelector('.project-image img').src = projectsDetailsData[projectId].featuredImage;
 
   projectDetails.querySelector(
     '.project-languages',
@@ -227,8 +222,7 @@ function showProjectDetails(e) {
 
   projectDetails.querySelector(
     '.project-description',
-  ).textContent =
-    projectsDetailsData[projectId].description;
+  ).textContent = projectsDetailsData[projectId].description;
 
   projectDetails.style.display = 'block';
 }
@@ -237,9 +231,7 @@ function hideProjectDetails() {
   projectDetails.style.display = 'none';
 }
 
-seeProjectButtons.forEach((button) =>
-  button.addEventListener('click', showProjectDetails),
-);
+seeProjectButtons.forEach((button) => button.addEventListener('click', showProjectDetails));
 
 projectDetailsCancelButton.addEventListener(
   'click',
@@ -248,18 +240,15 @@ projectDetailsCancelButton.addEventListener(
 
 // |||Validate contact form
 const isRequired = (value) => value !== '';
-const isBetween = (length, min, max) =>
-  !(length < min || length > max);
+const isBetween = (length, min, max) => !(length < min || length > max);
 const isEmailValid = (email) => {
-  const pattern =
-    /^[a-z0-9._%+-]{3,}@[a-z0-9.-]{3,}(?:\.[a-z]{3,}){1,2}$/;
+  const pattern = /^[a-z0-9._%+-]{3,}@[a-z0-9.-]{3,}(?:\.[a-z]{3,}){1,2}$/;
   return pattern.test(email);
 };
 const contactForm = document.querySelector('form.form');
 const inputs = contactForm.querySelectorAll('input');
 const textarea = contactForm.querySelector('textarea');
-const [nameField, emailField, messageField] =
-  contactForm.children;
+const [nameField, emailField, messageField] = contactForm.children;
 
 function showError(field, message) {
   field.classList.remove('success');
@@ -315,8 +304,7 @@ function checkMessage() {
   let valid = false;
   const min = 3;
   const max = 500;
-  const messageTextArea =
-    messageField.querySelector('#message');
+  const messageTextArea = messageField.querySelector('#message');
   const message = messageTextArea.value.trim();
   if (!isRequired(message)) {
     showError(messageField, 'Message cannot be blank.');
@@ -339,8 +327,7 @@ function validateContactForm(e) {
   const isEmailValid = checkEmail();
   const isMessageValid = checkMessage();
 
-  const isFormValid =
-    isUsernameValid && isEmailValid && isMessageValid;
+  const isFormValid = isUsernameValid && isEmailValid && isMessageValid;
 
   if (isFormValid) {
     contactForm.submit();
@@ -376,8 +363,7 @@ const toTheTopButton = document.querySelector(
   '.to-the-top-button',
 );
 window.addEventListener('scroll', () => {
-  if (window.scrollY > window.innerHeight)
-    toTheTopButton.style.display = 'block';
+  if (window.scrollY > window.innerHeight) toTheTopButton.style.display = 'block';
   else toTheTopButton.style.display = 'none';
 });
 
@@ -385,14 +371,15 @@ window.addEventListener('scroll', () => {
 const desktopNavBar = document.querySelector(
   'nav.desktop ul',
 );
-console.log(desktopNavBar);
+
 window.addEventListener('scroll', () => {
-  if (window.scrollY > 10)
+  if (window.scrollY > 10) {
     desktopNavBar.classList.add(
       'nav-border-bottom-blurred-bg',
     );
-  else
+  } else {
     desktopNavBar.classList.remove(
       'nav-border-bottom-blurred-bg',
     );
+  }
 });
