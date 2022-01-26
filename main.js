@@ -93,7 +93,6 @@ function updateSectionsHeight() {
     );
     return sum;
   });
-  console.log(sectionHeights);
   spyOnScroll();
 }
 
@@ -377,7 +376,23 @@ const toTheTopButton = document.querySelector(
   '.to-the-top-button',
 );
 window.addEventListener('scroll', () => {
-  if (window.scrollY > 300)
+  if (window.scrollY > window.innerHeight)
     toTheTopButton.style.display = 'block';
   else toTheTopButton.style.display = 'none';
+});
+
+// |||desktop navbar blured after scrolling
+const desktopNavBar = document.querySelector(
+  'nav.desktop ul',
+);
+console.log(desktopNavBar);
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 10)
+    desktopNavBar.classList.add(
+      'nav-border-bottom-blurred-bg',
+    );
+  else
+    desktopNavBar.classList.remove(
+      'nav-border-bottom-blurred-bg',
+    );
 });
