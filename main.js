@@ -66,14 +66,6 @@ const desktopMenu = document.querySelector('.desktop');
 const desktopMenuList =
   document.querySelectorAll('.desktop li');
 
-function updateSectionsHeight() {
-  sum = 0;
-  sectionHeights = projectSections.map((section) => {
-    sum += getComputedStyle(section).height;
-    return sum;
-  });
-}
-
 function spyOnScroll() {
   if (getComputedStyle(desktopMenu).display === 'flex') {
     let sectionIndex = 0;
@@ -91,6 +83,18 @@ function spyOnScroll() {
       }
     });
   }
+}
+
+function updateSectionsHeight() {
+  sum = 0;
+  sectionHeights = projectSections.map((section) => {
+    sum += Number(
+      getComputedStyle(section).height.slice(0, -2),
+    );
+    return sum;
+  });
+  console.log(sectionHeights);
+  spyOnScroll();
 }
 
 window.addEventListener('scroll', spyOnScroll);
