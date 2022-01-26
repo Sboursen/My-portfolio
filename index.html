@@ -365,23 +365,24 @@
       <p class="supporting-text">I'm always interested in
         hearing about new projects, so if
         you'd like to chat please get in touch.</p>
+        
       <form action="https://formspree.io/f/mjvlgbrr"
-        method="post" class="form">
-        <div class="full-name">
+        method="post" class="form" novalidate>
+        <div class="form-field">
           <label for="name"></label>
           <input type="text" name="full-name" id="name"
             placeholder="Full name" required minlength="2"
             maxlength="30">
           <small aria-live="polite"></small>
         </div>
-        <div class="email">
+        <div class="form-field">
           <label for="mail"></label>
           <input type="email" name="mail" id="mail"
             placeholder="Email" required
             pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+          <small aria-live="polite"></small>
         </div>
-        <small aria-live="polite"></small>
-        <div class="message">
+        <div class="form-field">
           <label for="message"></label>
           <textarea name="message" id="message"
             placeholder="Enter text here" required
