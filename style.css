@@ -128,6 +128,10 @@ a {
   background-color: #096;
 }
 
+.to-the-top-button {
+  display: none;
+}
+
 /* ||button-style------------------------------------------------ */
 button {
   background: none;
@@ -534,6 +538,7 @@ a.next-button {
 .form div {
   display: flex;
   padding: 12px;
+  flex-direction: column;
 }
 
 .submit-button {
@@ -599,6 +604,13 @@ a.next-button {
 /* Form validation */
 .form-field input:focus {
   outline: #4682b4;
+}
+
+.form-field small {
+  padding: 5px;
+  text-align: center;
+  font-weight: lighter;
+  font-size: small;
 }
 
 .form-field.error input {

@@ -252,30 +252,100 @@ const isEmailValid = (email) => {
   return pattern.test(email);
 };
 const contactForm = document.querySelector('form.form');
-const [nameField, emailField, messageField, submitButton] =
+const [nameField, emailField, messageField] =
   contactForm.children;
-console.log([
-  nameField,
-  emailField,
-  messageField,
-  submitButton,
-]);
 
-const showError = (field, message) => {
+function showError(field, message) {
   field.classList.remove('success');
   field.classList.add('error');
-  const error = field.getElementsByTagName('small');
+  const error = field.querySelector('small');
   console.log(error);
   error.textContent = message;
-};
+}
 
-showError(nameField, 'test');
+function showSuccess(field) {
+  field.classList.remove('error');
+  field.classList.add('success');
+  const error = field.querySelector('small');
+  error.textContent = '';
+}
+
+function checkUsername() {
+  let valid = false;
+  const min = 3;
+  const max = 30;
+  const nameInput = nameField.querySelector('#name');
+  const name = nameInput.value.trim();
+
+  if (!isRequired(name)) {
+    showError(nameField, 'Username cannot be blank.');
+  } else if (!isBetween(name.length, min, max)) {
+    showError(
+      nameField,
+      `Your full name must be between ${min} and ${max} characters.`,
+    );
+  } else {
+    showSuccess(nameField);
+    valid = true;
+  }
+  return valid;
+}
+
+function checkEmail() {
+  let valid = false;
+  const emailInput = emailField.querySelector('#mail');
+  const mail = emailInput.value.trim();
+  if (!isRequired(mail)) {
+    showError(emailField, 'Email cannot be blank.');
+  } else if (!isEmailValid(mail)) {
+    showError(emailField, 'Email is not valid.');
+  } else {
+    showSuccess(emailField);
+    valid = true;
+  }
+  return valid;
+}
+
+function checkMessage() {
+  let valid = false;
+  const min = 3;
+  const max = 500;
+  const messageTextArea =
+    messageField.querySelector('#message');
+  const message = messageTextArea.value.trim();
+  if (!isRequired(message)) {
+    showError(messageField, 'Message cannot be blank.');
+  } else if (!isBetween(message.length, min, max)) {
+    showError(
+      messageField,
+      `Your message must be between ${min} and ${max} characters.`,
+    );
+  } else {
+    showSuccess(messageField);
+    valid = true;
+  }
+  return valid;
+}
 
 function validateContactForm(e) {
   e.preventDefault();
+
+  let isUsernameValid = checkUsername();
+  let isEmailValid = checkEmail();
+  let isMessageValid = checkMessage();
+
+  console.log(
+    isMessageValid,
+    isUsernameValid,
+    isEmailValid,
+  );
+
+  let isFormValid =
+    isUsernameValid && isEmailValid && isMessageValid;
+
+  if (isFormValid) {
+    contactForm.submit();
+  }
 }
 
-submitButton.addEventListener(
-  'submit',
-  validateContactForm,
-);
+contactForm.addEventListener('submit', validateContactForm);
