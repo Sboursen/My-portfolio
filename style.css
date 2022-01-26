@@ -3,6 +3,8 @@
 :root {
   --background-color: #fff;
   --support-text-color: #172b4d;
+  --success-color: #1b9b1b;
+  --error-color: #f00;
 }
 
 * {
@@ -124,6 +126,10 @@ a {
 
 .menu-button {
   background-color: #096;
+}
+
+.to-the-top-button {
+  display: none;
 }
 
 /* ||button-style------------------------------------------------ */
@@ -534,6 +540,7 @@ a.next-button {
 .form div {
   display: flex;
   padding: 12px;
+  flex-direction: column;
 }
 
 .submit-button {
@@ -594,6 +601,35 @@ a.next-button {
   letter-spacing: 0;
   text-align: center;
   height: 200px;
+}
+
+/* Form validation */
+.form-field input:focus {
+  outline: #4682b4;
+}
+
+.form-field small {
+  padding: 5px;
+  text-align: center;
+  font-weight: lighter;
+  font-size: small;
+  color: var(--error-color);
+}
+
+.form-field.error input {
+  border-color: var(--error-color);
+}
+
+.form-field.success input {
+  border-color: var(--success-color);
+}
+
+.form-field.error textarea {
+  color: var(--error-color);
+}
+
+.form-field.success textarea {
+  outline: var(--success-color);
 }
 
 /* ||desktop-support-------------------------------------- */

@@ -18,6 +18,7 @@ Works section     |About me section |Contact me section
 
 - HTML
 - CSS
+- Javascript
 
 ## Live Demo
 
@@ -41,6 +42,12 @@ Works section     |About me section |Contact me section
 - GitHub: @githubridwan
 - Twitter: @twitterridwan
 - LinkedIn: LinkedIn
+
+👤 **Vignesh**
+
+- GitHub: [@vikipretium](https://github.com/vikipretium)
+- Twitter: [@vikipretium](https://twitter.com/vikipretium)
+- LinkedIn: [vikipretium](https://linkedin.com/in/vikipretium)
 
 ## Show your support
 

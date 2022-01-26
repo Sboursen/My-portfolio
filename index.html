@@ -24,6 +24,13 @@
   <!-- absolutely positioned elements -->
   <div class="header-hello-background"></div>
 
+  <div class="to-the-top-button">
+    <a aria-label="go to works section"
+      href="#works-section"
+      class="next-button icon-animation">
+    </a>
+  </div>
+
   <div class="mobile-menu">
     <div class="toolbar">
       <button class="cancel" type="button"></button>
@@ -358,32 +365,38 @@
       <p class="supporting-text">I'm always interested in
         hearing about new projects, so if
         you'd like to chat please get in touch.</p>
+
       <form action="https://formspree.io/f/mjvlgbrr"
         method="post" class="form">
-        <div class="full-name">
+
+        <div class="form-field">
           <label for="name"></label>
           <input type="text" name="full-name" id="name"
-            placeholder="Full name" required minlength="2"
-            maxlength="30">
+            placeholder="Full name">
+          <small aria-live="polite"></small>
         </div>
-        <div class="email">
+
+        <div class="form-field">
           <label for="mail"></label>
           <input type="email" name="mail" id="mail"
-            placeholder="Email" required
-            pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+            placeholder="Email">
+          <small aria-live="polite"></small>
         </div>
-        <div class="message">
+
+        <div class="form-field">
           <label for="message"></label>
           <textarea name="message" id="message"
-            placeholder="Enter text here" required
-            maxlength="500" minlength="10"></textarea>
+            placeholder="Enter text here"></textarea>
+          <small aria-live="polite"></small>
         </div>
 
         <button type="submit"
           class="submit-button button">Get
           in
           touch</button>
+
       </form>
+      
     </div>
 
     <div class="contact-me">
