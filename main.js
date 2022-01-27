@@ -245,6 +245,10 @@ const isEmailValid = (email) => {
   const pattern = /^[a-z0-9._%+-]{3,}@[a-z0-9.-]{3,}(?:\.[a-z]{3,}){1,2}$/;
   return pattern.test(email);
 };
+const isNameValid = (name) => {
+  const pattern = /^[A-Za-z]{3,}(?:\s[A-Za-z]{3,})*$/;
+  return pattern.test(name);
+};
 const contactForm = document.querySelector('form.form');
 const inputs = contactForm.querySelectorAll('input');
 const textarea = contactForm.querySelector('textarea');
@@ -278,6 +282,8 @@ function checkUsername() {
       nameField,
       `Your full name must be between ${min} and ${max} characters.`,
     );
+  } else if (!isNameValid(name)) {
+    showError(nameField, 'Name is not valid.');
   } else {
     showSuccess(nameField);
     valid = true;
@@ -333,21 +339,21 @@ function validateContactForm(e) {
     contactForm.submit();
   }
 }
-contactForm.addEventListener('input', (e) => {
+
+function checkFields(e) {
   switch (e.currentTarget) {
     case nameField:
-      checkUsername();
-      break;
+      return checkUsername();
     case emailField:
-      checkEmail();
-      break;
+      return checkEmail();
     case messageField:
-      checkMessage();
-      break;
+      return checkMessage();
     default:
-      checkMessage();
+      return false;
   }
-});
+}
+
+contactForm.addEventListener('input', checkFields);
 contactForm.addEventListener('submit', validateContactForm);
 inputs.forEach((input) => {
   input.addEventListener('keyup', (e) => {
@@ -356,15 +362,16 @@ inputs.forEach((input) => {
     else if (id === 'mail') checkEmail();
   });
 });
-textarea.addEventListener('keyup', () => checkMessage());
+textarea.addEventListener('keyup', checkMessage);
 
 // |||Floating button to-the-top
 const toTheTopButton = document.querySelector(
   '.to-the-top-button',
 );
 window.addEventListener('scroll', () => {
-  if (window.scrollY > window.innerHeight) toTheTopButton.style.display = 'block';
-  else toTheTopButton.style.display = 'none';
+  if (window.scrollY > window.innerHeight) {
+    toTheTopButton.style.display = 'block';
+  } else toTheTopButton.style.display = 'none';
 });
 
 // |||desktop navbar blured after scrolling
@@ -383,3 +390,59 @@ window.addEventListener('scroll', () => {
     );
   }
 });
+
+// |||Add localstorage to contact form inputs and textarea
+
+function IsStorageAvailable(type) {
+  let storage;
+  try {
+    storage = window[type];
+    const x = '__storage_test__';
+    storage.setItem(x, x);
+    storage.removeItem(x);
+    return true;
+  } catch (error) {
+    return (
+      error instanceof DOMException
+      && (error.code === 22
+        || error.code === 1014
+        || error.name === 'QuotaExceededError'
+        || error.name === 'NS_ERROR_DOM_QUOTA_REACHED')
+      && storage
+      && storage.length !== 0
+    );
+  }
+}
+
+function implementLocalStorage() {
+  if (IsStorageAvailable('localStorage')) {
+    const getItems = () => {
+      if (localStorage.length) {
+        inputs.forEach((input) => Object.keys(localStorage).forEach((key) => {
+          if (key === input.id) {
+            input.value = localStorage[key];
+          }
+        }));
+      }
+    };
+    const storeItems = (e) => {
+      const isFieldValid = checkFields(e);
+      if (isFieldValid) {
+        localStorage.setItem(
+          e.currentTarget.querySelector('input').id,
+          e.currentTarget.querySelector('input').value,
+        );
+      }
+    };
+
+    inputs.forEach((input) => {
+      input.parentNode.addEventListener(
+        'keyup',
+        storeItems,
+      );
+    });
+    window.addEventListener('load', getItems);
+  }
+}
+
+implementLocalStorage();
