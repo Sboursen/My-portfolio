@@ -22,8 +22,8 @@ function showMobileMenu(e) {
 
 function hideMobileMenu(e) {
   if (
-    e.currentTarget.classList.contains('cancel') ||
-    e.currentTarget.parentNode.classList.contains(
+    e.currentTarget.classList.contains('cancel')
+    || e.currentTarget.parentNode.classList.contains(
       'mobile-list',
     )
   ) {
@@ -42,9 +42,7 @@ function hideMobileMenuOnScroll() {
 mobileMenuButton.addEventListener('click', showMobileMenu);
 cancelMobileMenu.addEventListener('click', hideMobileMenu);
 window.addEventListener('scroll', hideMobileMenuOnScroll);
-mobileMenuList.forEach((node) =>
-  node.addEventListener('click', hideMobileMenu),
-);
+mobileMenuList.forEach((node) => node.addEventListener('click', hideMobileMenu));
 
 // |||Scroll spy
 const projectSections = [
@@ -63,8 +61,7 @@ let sectionHeights = projectSections.map((section) => {
 
 const desktopMenu = document.querySelector('.desktop');
 
-const desktopMenuList =
-  document.querySelectorAll('.desktop li');
+const desktopMenuList = document.querySelectorAll('.desktop li');
 
 function spyOnScroll() {
   if (getComputedStyle(desktopMenu).display === 'flex') {
@@ -205,11 +202,9 @@ const projectDetailsCancelButton = document.querySelector(
 function showProjectDetails(e) {
   const projectId = e.currentTarget.id;
 
-  projectDetails.querySelector('.project-title').innerHTML =
-    projectsDetailsData[projectId].title;
+  projectDetails.querySelector('.project-title').innerHTML = projectsDetailsData[projectId].title;
 
-  projectDetails.querySelector('.project-image img').src =
-    projectsDetailsData[projectId].featuredImage;
+  projectDetails.querySelector('.project-image img').src = projectsDetailsData[projectId].featuredImage;
 
   projectDetails.querySelector(
     '.project-languages',
@@ -227,8 +222,7 @@ function showProjectDetails(e) {
 
   projectDetails.querySelector(
     '.project-description',
-  ).textContent =
-    projectsDetailsData[projectId].description;
+  ).textContent = projectsDetailsData[projectId].description;
 
   projectDetails.style.display = 'block';
 }
@@ -237,9 +231,7 @@ function hideProjectDetails() {
   projectDetails.style.display = 'none';
 }
 
-seeProjectButtons.forEach((button) =>
-  button.addEventListener('click', showProjectDetails),
-);
+seeProjectButtons.forEach((button) => button.addEventListener('click', showProjectDetails));
 
 projectDetailsCancelButton.addEventListener(
   'click',
@@ -248,11 +240,9 @@ projectDetailsCancelButton.addEventListener(
 
 // |||Validate contact form
 const isRequired = (value) => value !== '';
-const isBetween = (length, min, max) =>
-  !(length < min || length > max);
+const isBetween = (length, min, max) => !(length < min || length > max);
 const isEmailValid = (email) => {
-  const pattern =
-    /^[a-z0-9._%+-]{3,}@[a-z0-9.-]{3,}(?:\.[a-z]{3,}){1,2}$/;
+  const pattern = /^[a-z0-9._%+-]{3,}@[a-z0-9.-]{3,}(?:\.[a-z]{3,}){1,2}$/;
   return pattern.test(email);
 };
 const isNameValid = (name) => {
@@ -262,8 +252,7 @@ const isNameValid = (name) => {
 const contactForm = document.querySelector('form.form');
 const inputs = contactForm.querySelectorAll('input');
 const textarea = contactForm.querySelector('textarea');
-const [nameField, emailField, messageField] =
-  contactForm.children;
+const [nameField, emailField, messageField] = contactForm.children;
 
 function showError(field, message) {
   field.classList.remove('success');
@@ -321,8 +310,7 @@ function checkMessage() {
   let valid = false;
   const min = 3;
   const max = 500;
-  const messageTextArea =
-    messageField.querySelector('#message');
+  const messageTextArea = messageField.querySelector('#message');
   const message = messageTextArea.value.trim();
   if (!isRequired(message)) {
     showError(messageField, 'Message cannot be blank.');
@@ -345,8 +333,7 @@ function validateContactForm(e) {
   const isEmailValid = checkEmail();
   const isMessageValid = checkMessage();
 
-  const isFormValid =
-    isUsernameValid && isEmailValid && isMessageValid;
+  const isFormValid = isUsernameValid && isEmailValid && isMessageValid;
 
   if (isFormValid) {
     contactForm.submit();
@@ -375,7 +362,7 @@ inputs.forEach((input) => {
     else if (id === 'mail') checkEmail();
   });
 });
-textarea.addEventListener('keyup', (e) => checkMessage());
+textarea.addEventListener('keyup', checkMessage);
 
 // |||Floating button to-the-top
 const toTheTopButton = document.querySelector(
@@ -416,31 +403,29 @@ function IsStorageAvailable(type) {
     return true;
   } catch (error) {
     return (
-      error instanceof DOMException &&
-      (error.code === 22 ||
-        error.code === 1014 ||
-        error.name === 'QuotaExceededError' ||
-        error.name === 'NS_ERROR_DOM_QUOTA_REACHED') &&
-      storage &&
-      storage.length !== 0
+      error instanceof DOMException
+      && (error.code === 22
+        || error.code === 1014
+        || error.name === 'QuotaExceededError'
+        || error.name === 'NS_ERROR_DOM_QUOTA_REACHED')
+      && storage
+      && storage.length !== 0
     );
   }
 }
 
 function implementLocalStorage() {
   if (IsStorageAvailable('localStorage')) {
-    const getItems = function () {
+    const getItems = () => {
       if (localStorage.length) {
-        inputs.forEach((input) =>
-          Object.keys(localStorage).forEach((key) => {
-            if (key === input.id) {
-              input.value = localStorage[key];
-            }
-          }),
-        );
+        inputs.forEach((input) => Object.keys(localStorage).forEach((key) => {
+          if (key === input.id) {
+            input.value = localStorage[key];
+          }
+        }));
       }
     };
-    const storeItems = function (e) {
+    const storeItems = (e) => {
       const isFieldValid = checkFields(e);
       if (isFieldValid) {
         localStorage.setItem(
