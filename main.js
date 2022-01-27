@@ -22,8 +22,8 @@ function showMobileMenu(e) {
 
 function hideMobileMenu(e) {
   if (
-    e.currentTarget.classList.contains('cancel')
-    || e.currentTarget.parentNode.classList.contains(
+    e.currentTarget.classList.contains('cancel') ||
+    e.currentTarget.parentNode.classList.contains(
       'mobile-list',
     )
   ) {
@@ -42,7 +42,9 @@ function hideMobileMenuOnScroll() {
 mobileMenuButton.addEventListener('click', showMobileMenu);
 cancelMobileMenu.addEventListener('click', hideMobileMenu);
 window.addEventListener('scroll', hideMobileMenuOnScroll);
-mobileMenuList.forEach((node) => node.addEventListener('click', hideMobileMenu));
+mobileMenuList.forEach((node) =>
+  node.addEventListener('click', hideMobileMenu),
+);
 
 // |||Scroll spy
 const projectSections = [
@@ -61,7 +63,8 @@ let sectionHeights = projectSections.map((section) => {
 
 const desktopMenu = document.querySelector('.desktop');
 
-const desktopMenuList = document.querySelectorAll('.desktop li');
+const desktopMenuList =
+  document.querySelectorAll('.desktop li');
 
 function spyOnScroll() {
   if (getComputedStyle(desktopMenu).display === 'flex') {
@@ -202,9 +205,11 @@ const projectDetailsCancelButton = document.querySelector(
 function showProjectDetails(e) {
   const projectId = e.currentTarget.id;
 
-  projectDetails.querySelector('.project-title').innerHTML = projectsDetailsData[projectId].title;
+  projectDetails.querySelector('.project-title').innerHTML =
+    projectsDetailsData[projectId].title;
 
-  projectDetails.querySelector('.project-image img').src = projectsDetailsData[projectId].featuredImage;
+  projectDetails.querySelector('.project-image img').src =
+    projectsDetailsData[projectId].featuredImage;
 
   projectDetails.querySelector(
     '.project-languages',
@@ -222,7 +227,8 @@ function showProjectDetails(e) {
 
   projectDetails.querySelector(
     '.project-description',
-  ).textContent = projectsDetailsData[projectId].description;
+  ).textContent =
+    projectsDetailsData[projectId].description;
 
   projectDetails.style.display = 'block';
 }
@@ -231,7 +237,9 @@ function hideProjectDetails() {
   projectDetails.style.display = 'none';
 }
 
-seeProjectButtons.forEach((button) => button.addEventListener('click', showProjectDetails));
+seeProjectButtons.forEach((button) =>
+  button.addEventListener('click', showProjectDetails),
+);
 
 projectDetailsCancelButton.addEventListener(
   'click',
@@ -240,15 +248,22 @@ projectDetailsCancelButton.addEventListener(
 
 // |||Validate contact form
 const isRequired = (value) => value !== '';
-const isBetween = (length, min, max) => !(length < min || length > max);
+const isBetween = (length, min, max) =>
+  !(length < min || length > max);
 const isEmailValid = (email) => {
-  const pattern = /^[a-z0-9._%+-]{3,}@[a-z0-9.-]{3,}(?:\.[a-z]{3,}){1,2}$/;
+  const pattern =
+    /^[a-z0-9._%+-]{3,}@[a-z0-9.-]{3,}(?:\.[a-z]{3,}){1,2}$/;
   return pattern.test(email);
+};
+const isNameValid = (name) => {
+  const pattern = /^[A-Za-z]{3,}(?:\s[A-Za-z]{3,})*$/;
+  return pattern.test(name);
 };
 const contactForm = document.querySelector('form.form');
 const inputs = contactForm.querySelectorAll('input');
 const textarea = contactForm.querySelector('textarea');
-const [nameField, emailField, messageField] = contactForm.children;
+const [nameField, emailField, messageField] =
+  contactForm.children;
 
 function showError(field, message) {
   field.classList.remove('success');
@@ -278,6 +293,8 @@ function checkUsername() {
       nameField,
       `Your full name must be between ${min} and ${max} characters.`,
     );
+  } else if (!isNameValid(name)) {
+    showError(nameField, 'Name is not valid.');
   } else {
     showSuccess(nameField);
     valid = true;
@@ -304,7 +321,8 @@ function checkMessage() {
   let valid = false;
   const min = 3;
   const max = 500;
-  const messageTextArea = messageField.querySelector('#message');
+  const messageTextArea =
+    messageField.querySelector('#message');
   const message = messageTextArea.value.trim();
   if (!isRequired(message)) {
     showError(messageField, 'Message cannot be blank.');
@@ -327,27 +345,28 @@ function validateContactForm(e) {
   const isEmailValid = checkEmail();
   const isMessageValid = checkMessage();
 
-  const isFormValid = isUsernameValid && isEmailValid && isMessageValid;
+  const isFormValid =
+    isUsernameValid && isEmailValid && isMessageValid;
 
   if (isFormValid) {
     contactForm.submit();
   }
 }
-contactForm.addEventListener('input', (e) => {
+
+function checkFields(e) {
   switch (e.currentTarget) {
     case nameField:
-      checkUsername();
-      break;
+      return checkUsername();
     case emailField:
-      checkEmail();
-      break;
+      return checkEmail();
     case messageField:
-      checkMessage();
-      break;
+      return checkMessage();
     default:
-      checkMessage();
+      return false;
   }
-});
+}
+
+contactForm.addEventListener('input', checkFields);
 contactForm.addEventListener('submit', validateContactForm);
 inputs.forEach((input) => {
   input.addEventListener('keyup', (e) => {
@@ -356,15 +375,16 @@ inputs.forEach((input) => {
     else if (id === 'mail') checkEmail();
   });
 });
-textarea.addEventListener('keyup', () => checkMessage());
+textarea.addEventListener('keyup', (e) => checkMessage());
 
 // |||Floating button to-the-top
 const toTheTopButton = document.querySelector(
   '.to-the-top-button',
 );
 window.addEventListener('scroll', () => {
-  if (window.scrollY > window.innerHeight) toTheTopButton.style.display = 'block';
-  else toTheTopButton.style.display = 'none';
+  if (window.scrollY > window.innerHeight) {
+    toTheTopButton.style.display = 'block';
+  } else toTheTopButton.style.display = 'none';
 });
 
 // |||desktop navbar blured after scrolling
@@ -383,3 +403,61 @@ window.addEventListener('scroll', () => {
     );
   }
 });
+
+// |||Add localstorage to contact form inputs and textarea
+
+function IsStorageAvailable(type) {
+  let storage;
+  try {
+    storage = window[type];
+    const x = '__storage_test__';
+    storage.setItem(x, x);
+    storage.removeItem(x);
+    return true;
+  } catch (error) {
+    return (
+      error instanceof DOMException &&
+      (error.code === 22 ||
+        error.code === 1014 ||
+        error.name === 'QuotaExceededError' ||
+        error.name === 'NS_ERROR_DOM_QUOTA_REACHED') &&
+      storage &&
+      storage.length !== 0
+    );
+  }
+}
+
+function implementLocalStorage() {
+  if (IsStorageAvailable('localStorage')) {
+    const getItems = function () {
+      if (localStorage.length) {
+        inputs.forEach((input) =>
+          Object.keys(localStorage).forEach((key) => {
+            if (key === input.id) {
+              input.value = localStorage[key];
+            }
+          }),
+        );
+      }
+    };
+    const storeItems = function (e) {
+      const isFieldValid = checkFields(e);
+      if (isFieldValid) {
+        localStorage.setItem(
+          e.currentTarget.querySelector('input').id,
+          e.currentTarget.querySelector('input').value,
+        );
+      }
+    };
+
+    inputs.forEach((input) => {
+      input.parentNode.addEventListener(
+        'keyup',
+        storeItems,
+      );
+    });
+    window.addEventListener('load', getItems);
+  }
+}
+
+implementLocalStorage();
