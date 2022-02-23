@@ -22,8 +22,8 @@ function showMobileMenu(e) {
 
 function hideMobileMenu(e) {
   if (
-    e.currentTarget.classList.contains('cancel')
-    || e.currentTarget.parentNode.classList.contains(
+    e.currentTarget.classList.contains('cancel') ||
+    e.currentTarget.parentNode.classList.contains(
       'mobile-list',
     )
   ) {
@@ -42,7 +42,9 @@ function hideMobileMenuOnScroll() {
 mobileMenuButton.addEventListener('click', showMobileMenu);
 cancelMobileMenu.addEventListener('click', hideMobileMenu);
 window.addEventListener('scroll', hideMobileMenuOnScroll);
-mobileMenuList.forEach((node) => node.addEventListener('click', hideMobileMenu));
+mobileMenuList.forEach((node) =>
+  node.addEventListener('click', hideMobileMenu),
+);
 
 // |||Scroll spy
 const projectSections = [
@@ -61,7 +63,8 @@ let sectionHeights = projectSections.map((section) => {
 
 const desktopMenu = document.querySelector('.desktop');
 
-const desktopMenuList = document.querySelectorAll('.desktop li');
+const desktopMenuList =
+  document.querySelectorAll('.desktop li');
 
 function spyOnScroll() {
   if (getComputedStyle(desktopMenu).display === 'flex') {
@@ -99,20 +102,20 @@ window.addEventListener('resize', updateSectionsHeight);
 // |||Dynamic project details generation
 const projectsDetailsData = {
   'project-1': {
-    title: 'Tonic',
+    title: 'Chess World Conference CWC',
     featuredImage: './resources/project-image1.png',
     technologies: [
       'HTML',
       'CSS',
       'JavaScript',
       'Github',
-      'Ruby',
-      'Bootsrap',
+      'Figma',
     ],
-    liveLink: '',
-    sourceLink: '',
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam, fugiat maiores quam amet hic dolorum unde eaque explicabo sapiente asperiores voluptatibus vel. Neque deserunt sunt vel ducimus voluptatem tenetur quam incidunt esse sequi enim labore beatae iure minus dolorem nam commodi libero atque, voluptatum alias accusantium, molestiae maiores voluptatibus error. Cupiditate, enim nobis. Expedita deserunt et eaque quisquam nostrum ducimus quasi, accusantium facilis, quibusdam quia, accusamus excepturi voluptate minus consectetur dolore adipisci delectus! Facere officiis corrupti autem sequi quod atque?',
+    liveLink:
+      'https://sboursen.github.io/Chess-World-Championship/',
+    sourceLink:
+      'https://github.com/Sboursen/Chess-World-Championship',
+    description: `This is a website for a fictional Chess world conference. It's the HTML, CSS and basic JavaScript module capstone project.`,
   },
   'project-2': {
     title: 'Multi-Post Stories',
@@ -202,9 +205,11 @@ const projectDetailsCancelButton = document.querySelector(
 function showProjectDetails(e) {
   const projectId = e.currentTarget.id;
 
-  projectDetails.querySelector('.project-title').innerHTML = projectsDetailsData[projectId].title;
+  projectDetails.querySelector('.project-title').innerHTML =
+    projectsDetailsData[projectId].title;
 
-  projectDetails.querySelector('.project-image img').src = projectsDetailsData[projectId].featuredImage;
+  projectDetails.querySelector('.project-image img').src =
+    projectsDetailsData[projectId].featuredImage;
 
   projectDetails.querySelector(
     '.project-languages',
@@ -222,7 +227,8 @@ function showProjectDetails(e) {
 
   projectDetails.querySelector(
     '.project-description',
-  ).textContent = projectsDetailsData[projectId].description;
+  ).textContent =
+    projectsDetailsData[projectId].description;
 
   projectDetails.style.display = 'block';
 }
@@ -231,7 +237,9 @@ function hideProjectDetails() {
   projectDetails.style.display = 'none';
 }
 
-seeProjectButtons.forEach((button) => button.addEventListener('click', showProjectDetails));
+seeProjectButtons.forEach((button) =>
+  button.addEventListener('click', showProjectDetails),
+);
 
 projectDetailsCancelButton.addEventListener(
   'click',
@@ -240,9 +248,11 @@ projectDetailsCancelButton.addEventListener(
 
 // |||Validate contact form
 const isRequired = (value) => value !== '';
-const isBetween = (length, min, max) => !(length < min || length > max);
+const isBetween = (length, min, max) =>
+  !(length < min || length > max);
 const isEmailValid = (email) => {
-  const pattern = /^[a-z0-9._%+-]{3,}@[a-z0-9.-]{3,}(?:\.[a-z]{3,}){1,2}$/;
+  const pattern =
+    /^[a-z0-9._%+-]{3,}@[a-z0-9.-]{3,}(?:\.[a-z]{3,}){1,2}$/;
   return pattern.test(email);
 };
 const isNameValid = (name) => {
@@ -252,7 +262,8 @@ const isNameValid = (name) => {
 const contactForm = document.querySelector('form.form');
 const inputs = contactForm.querySelectorAll('input');
 const textarea = contactForm.querySelector('textarea');
-const [nameField, emailField, messageField] = contactForm.children;
+const [nameField, emailField, messageField] =
+  contactForm.children;
 
 function showError(field, message) {
   field.classList.remove('success');
@@ -310,7 +321,8 @@ function checkMessage() {
   let valid = false;
   const min = 3;
   const max = 500;
-  const messageTextArea = messageField.querySelector('#message');
+  const messageTextArea =
+    messageField.querySelector('#message');
   const message = messageTextArea.value.trim();
   if (!isRequired(message)) {
     showError(messageField, 'Message cannot be blank.');
@@ -333,7 +345,8 @@ function validateContactForm(e) {
   const isEmailValid = checkEmail();
   const isMessageValid = checkMessage();
 
-  const isFormValid = isUsernameValid && isEmailValid && isMessageValid;
+  const isFormValid =
+    isUsernameValid && isEmailValid && isMessageValid;
 
   if (isFormValid) {
     contactForm.submit();
@@ -403,13 +416,13 @@ function IsStorageAvailable(type) {
     return true;
   } catch (error) {
     return (
-      error instanceof DOMException
-      && (error.code === 22
-        || error.code === 1014
-        || error.name === 'QuotaExceededError'
-        || error.name === 'NS_ERROR_DOM_QUOTA_REACHED')
-      && storage
-      && storage.length !== 0
+      error instanceof DOMException &&
+      (error.code === 22 ||
+        error.code === 1014 ||
+        error.name === 'QuotaExceededError' ||
+        error.name === 'NS_ERROR_DOM_QUOTA_REACHED') &&
+      storage &&
+      storage.length !== 0
     );
   }
 }
@@ -418,11 +431,13 @@ function implementLocalStorage() {
   if (IsStorageAvailable('localStorage')) {
     const getItems = () => {
       if (localStorage.length) {
-        inputs.forEach((input) => Object.keys(localStorage).forEach((key) => {
-          if (key === input.id) {
-            input.value = localStorage[key];
-          }
-        }));
+        inputs.forEach((input) =>
+          Object.keys(localStorage).forEach((key) => {
+            if (key === input.id) {
+              input.value = localStorage[key];
+            }
+          }),
+        );
       }
     };
     const storeItems = (e) => {
