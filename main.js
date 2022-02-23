@@ -99,20 +99,20 @@ window.addEventListener('resize', updateSectionsHeight);
 // |||Dynamic project details generation
 const projectsDetailsData = {
   'project-1': {
-    title: 'Tonic',
+    title: 'Chess World Conference CWC',
     featuredImage: './resources/project-image1.png',
     technologies: [
       'HTML',
       'CSS',
       'JavaScript',
       'Github',
-      'Ruby',
-      'Bootsrap',
+      'Figma',
     ],
-    liveLink: '',
-    sourceLink: '',
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam, fugiat maiores quam amet hic dolorum unde eaque explicabo sapiente asperiores voluptatibus vel. Neque deserunt sunt vel ducimus voluptatem tenetur quam incidunt esse sequi enim labore beatae iure minus dolorem nam commodi libero atque, voluptatum alias accusantium, molestiae maiores voluptatibus error. Cupiditate, enim nobis. Expedita deserunt et eaque quisquam nostrum ducimus quasi, accusantium facilis, quibusdam quia, accusamus excepturi voluptate minus consectetur dolore adipisci delectus! Facere officiis corrupti autem sequi quod atque?',
+    liveLink:
+      'https://sboursen.github.io/Chess-World-Championship/',
+    sourceLink:
+      'https://github.com/Sboursen/Chess-World-Championship',
+    description: 'This is a website for a fictional Chess world conference. It\'s the HTML, CSS and basic JavaScript module capstone project.',
   },
   'project-2': {
     title: 'Multi-Post Stories',
@@ -223,6 +223,10 @@ function showProjectDetails(e) {
   projectDetails.querySelector(
     '.project-description',
   ).textContent = projectsDetailsData[projectId].description;
+
+  projectDetails.querySelector('.live-button').href = projectsDetailsData[projectId].liveLink;
+
+  projectDetails.querySelector('.source-button').href = projectsDetailsData[projectId].sourceLink;
 
   projectDetails.style.display = 'block';
 }
