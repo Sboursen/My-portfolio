@@ -65,7 +65,7 @@ const projectsData = {
   },
   'project-1': {
     title: 'Chess World Conference CWC',
-    featuredImage: './resources/project-image1.png',
+    featuredImage: './resources/cwc.png',
     technologies: ['HTML', 'CSS', 'JavaScript', 'Git', 'Figma'],
     liveLink: 'https://sboursen.github.io/Chess-World-Championship/',
     sourceLink: 'https://github.com/Sboursen/Chess-World-Championship',

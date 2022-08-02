@@ -327,6 +327,7 @@ a.next-button {
   gap: 10px;
   border-radius: 10px;
   background-color: var(--background-color);
+  flex-grow: 1;
 }
 
 .project-info ul {
