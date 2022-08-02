@@ -1,3 +1,32 @@
+import projectsData from './projects.js';
+
+// |||Render Projects in the works section
+
+const worksSection = document.getElementById('works-section');
+
+function renderProject(title, image, technologies, projectId) {
+  return `<div class="project-card">
+            <div class="project-image" style="background-image: url('${image}');"></div>
+            <div class="project-info">
+              <h3 class="project-title">${title}
+              </h3>
+              <ul class="project-languages">
+              ${technologies.map((tech) => `<li>${tech}</li>`).join('\n')}
+              </ul>
+              <button id='${projectId}' class="project-button button" type="button">See
+                Project</button>
+            </div>
+          </div>`;
+}
+
+const projectsKeys = Object.keys(projectsData);
+
+projectsKeys.forEach((projectKey) => {
+  const { title, featuredImage, technologies } = projectsData[projectKey];
+  const template = renderProject(title, featuredImage, technologies, projectKey);
+  worksSection.innerHTML += `\n${template}`;
+});
+
 // |||Mobile menu
 const mobileMenuButton = document.querySelector(
   '.mobile .menu-button',
@@ -97,95 +126,7 @@ window.addEventListener('scroll', spyOnScroll);
 window.addEventListener('resize', updateSectionsHeight);
 
 // |||Dynamic project details generation
-const projectsDetailsData = {
-  'project-1': {
-    title: 'Chess World Conference CWC',
-    featuredImage: './resources/project-image1.png',
-    technologies: [
-      'HTML',
-      'CSS',
-      'JavaScript',
-      'Github',
-      'Figma',
-    ],
-    liveLink:
-      'https://sboursen.github.io/Chess-World-Championship/',
-    sourceLink:
-      'https://github.com/Sboursen/Chess-World-Championship',
-    description: 'This is a website for a fictional Chess world conference. It\'s the HTML, CSS and basic JavaScript module capstone project.',
-  },
-  'project-2': {
-    title: 'Multi-Post Stories',
-    featuredImage: './resources/project-image2.png',
-    technologies: ['HTML', 'CSS', 'javascript'],
-    liveLink: '',
-    sourceLink: '',
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam, fugiat maiores quam amet hic dolorum unde eaque explicabo sapiente asperiores voluptatibus vel. Neque deserunt sunt vel ducimus voluptatem tenetur quam incidunt esse sequi enim labore beatae iure minus dolorem nam commodi libero atque, voluptatum alias accusantium, molestiae maiores voluptatibus error. Cupiditate, enim nobis. Expedita deserunt et eaque quisquam nostrum ducimus quasi, accusantium facilis, quibusdam quia, accusamus excepturi voluptate minus consectetur dolore adipisci delectus! Facere officiis corrupti autem sequi quod atque?',
-  },
-  'project-3': {
-    title: 'Facebook 360',
-    featuredImage: './resources/project-image3.png',
-    technologies: [
-      'HTML',
-      'CSS',
-      'javascript',
-      'Github',
-      'Ruby',
-      'Bootsrap',
-      'Node.js',
-    ],
-    liveLink: '',
-    sourceLink: '',
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam, fugiat maiores quam amet hic dolorum unde eaque explicabo sapiente asperiores voluptatibus vel. Neque deserunt sunt vel ducimus voluptatem tenetur quam incidunt esse sequi enim labore beatae iure minus dolorem nam commodi libero atque, voluptatum alias accusantium, molestiae maiores voluptatibus error. Cupiditate, enim nobis. Expedita deserunt et eaque quisquam nostrum ducimus quasi, accusantium facilis, quibusdam quia, accusamus excepturi voluptate minus consectetur dolore adipisci delectus! Facere officiis corrupti autem sequi quod atque?',
-  },
-  'project-4': {
-    title: 'Uber Navigation',
-    featuredImage: './resources/project-image4.png',
-    technologies: [
-      'HTML',
-      'CSS',
-      'javascript',
-      'Github',
-      'Bootsrap',
-    ],
-    liveLink: '',
-    sourceLink: '',
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam, fugiat maiores quam amet hic dolorum unde eaque explicabo sapiente asperiores voluptatibus vel. Neque deserunt sunt vel ducimus voluptatem tenetur quam incidunt esse sequi enim labore beatae iure minus dolorem nam commodi libero atque, voluptatum alias accusantium, molestiae maiores voluptatibus error. Cupiditate, enim nobis. Expedita deserunt et eaque quisquam nostrum ducimus quasi, accusantium facilis, quibusdam quia, accusamus excepturi voluptate minus consectetur dolore adipisci delectus! Facere officiis corrupti autem sequi quod atque?',
-  },
-  'project-5': {
-    title: 'Uber Navigation',
-    featuredImage: './resources/project-image5.png',
-    technologies: [
-      'HTML',
-      'CSS',
-      'javascript',
-      'Github',
-      'Bootsrap',
-    ],
-    liveLink: '',
-    sourceLink: '',
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam, fugiat maiores quam amet hic dolorum unde eaque explicabo sapiente asperiores voluptatibus vel. Neque deserunt sunt vel ducimus voluptatem tenetur quam incidunt esse sequi enim labore beatae iure minus dolorem nam commodi libero atque, voluptatum alias accusantium, molestiae maiores voluptatibus error. Cupiditate, enim nobis. Expedita deserunt et eaque quisquam nostrum ducimus quasi, accusantium facilis, quibusdam quia, accusamus excepturi voluptate minus consectetur dolore adipisci delectus! Facere officiis corrupti autem sequi quod atque?',
-  },
-  'project-6': {
-    title: 'Uber Navigation',
-    featuredImage: './resources/project-image6.png',
-    technologies: [
-      'HTML',
-      'CSS',
-      'javascript',
-      'Github',
-      'Bootsrap',
-    ],
-    liveLink: '',
-    sourceLink: '',
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam, fugiat maiores quam amet hic dolorum unde eaque explicabo sapiente asperiores voluptatibus vel. Neque deserunt sunt vel ducimus voluptatem tenetur quam incidunt esse sequi enim labore beatae iure minus dolorem nam commodi libero atque, voluptatum alias accusantium, molestiae maiores voluptatibus error. Cupiditate, enim nobis. Expedita deserunt et eaque quisquam nostrum ducimus quasi, accusantium facilis, quibusdam quia, accusamus excepturi voluptate minus consectetur dolore adipisci delectus! Facere officiis corrupti autem sequi quod atque?',
-  },
-};
+const projectsDetailsData = projectsData;
 
 const seeProjectButtons = Array.from(
   document.querySelectorAll('[id^="project-"]'),
