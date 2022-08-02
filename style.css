@@ -63,7 +63,7 @@ a {
   height: 32px;
   width: 32px;
   border-radius: 50%;
-  background-color: rgb(56 63 100);
+  background-color: #009966;
   background-image: url('./resources/cancel-icon.svg');
   background-position: center;
 }
@@ -1075,6 +1075,6 @@ header nav.desktop a:visited {
 
 .project-details .project-image img:hover {
   transform: none;
-  border: 2px solid orange;
+  border: 2px solid var(--success-color);
   border-radius: 5vmin;
 }
