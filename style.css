@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
 
 :root {
   --background-color: #fff;
@@ -29,7 +29,7 @@ a {
 .header-hello-background {
   position: absolute;
   top: 0;
-  background-image: url('./resources/headline-section-responsive-background.svg');
+  background-image: url("./resources/headline-section-responsive-background.svg");
   background-repeat: no-repeat;
   background-size: 230% 150vh;
   background-position: bottom -10vh left calc(50% + 40px);
@@ -48,7 +48,7 @@ a {
   z-index: -2;
   flex-direction: column;
   background-color: var(--background-color);
-  backdrop-filter: blur(4px);
+  backdrop-filter: blur(6px);
 }
 
 .toolbar {
@@ -63,8 +63,8 @@ a {
   height: 32px;
   width: 32px;
   border-radius: 50%;
-  background-color: #009966;
-  background-image: url('./resources/cancel-icon.svg');
+  background-color: #096;
+  background-image: url("./resources/cancel-icon.svg");
   background-position: center;
 }
 
@@ -264,7 +264,7 @@ a.next-button {
   width: 36px;
   border: 2px solid lightgrey;
   border-radius: 50%;
-  background-image: url('./resources/next-section-icon.png');
+  background-image: url("./resources/next-section-icon.png");
   background-repeat: no-repeat;
   background-position: 50%;
   padding: 0;
@@ -395,8 +395,9 @@ a.next-button {
   gap: 24px;
   padding-top: 60px;
   padding-bottom: calc(60px - 24px);
-  background-image: url('./resources/about-me-desktop-bg-right.svg'),
-    url('./resources/about-me-desktop-bg-left.svg');
+  background-image:
+    url("./resources/about-me-desktop-bg-right.svg"),
+    url("./resources/about-me-desktop-bg-left.svg");
   background-repeat: no-repeat, no-repeat;
   background-size: calc(10% + 45px) auto, 20% auto;
   background-position: top 20px right, bottom 36px left;
@@ -486,7 +487,7 @@ a.next-button {
   display: flex;
   flex-direction: column;
   gap: 24px;
-  background-image: url('./resources/illustration-contact-form.svg');
+  background-image: url("./resources/illustration-contact-form.svg");
   background-repeat: no-repeat;
   background-size: 25% 25%;
   background-position: right -10px bottom 250px;
@@ -682,8 +683,9 @@ a.next-button {
   }
 
   .contact-form {
-    background-image: url('./resources/contact-me-desktop-bg-left.svg'),
-      url('./resources/contact-me-desktop-bg-right.svg');
+    background-image:
+      url("./resources/contact-me-desktop-bg-left.svg"),
+      url("./resources/contact-me-desktop-bg-right.svg");
     background-repeat: no-repeat, no-repeat;
     background-size: 30% auto, 20% 70%;
     background-position: left -30px bottom 70px, right -30px bottom 70px;
