@@ -103,9 +103,9 @@ function spyOnScroll() {
 
     desktopMenuList.forEach((node, index) => {
       if (index === sectionIndex) {
-        node.style.borderBottom = 'thick solid #0000FF';
+        node.style.backgroundColor = 'rgb(117, 239, 198)';
       } else {
-        node.style.borderBottom = 'none';
+        node.style.backgroundColor = 'transparent';
       }
     });
   }
@@ -319,7 +319,7 @@ window.addEventListener('scroll', () => {
   } else toTheTopButton.style.display = 'none';
 });
 
-// |||desktop navbar blured after scrolling
+// |||desktop navbar blurred after scrolling
 const desktopNavBar = document.querySelector(
   'nav.desktop ul',
 );
