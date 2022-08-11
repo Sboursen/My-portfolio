@@ -400,26 +400,27 @@ a.next-button {
   align-items: center;
   justify-content: end;
   gap: 24px;
-  padding-top: 60px;
+  padding-top: 20px;
   padding-bottom: calc(60px - 24px);
   background-image: url('./resources/about-me-desktop-bg-right.svg'),
     url('./resources/about-me-desktop-bg-left.svg');
   background-repeat: no-repeat, no-repeat;
   background-size: calc(10% + 45px) auto, 20% auto;
-  background-position: top 20px right, bottom 36px left;
+  background-position: top 10px right, bottom left;
   margin: 0;
 }
 
-.text-section > * {
-  margin: 0 calc(0.19 * (100vw - 375px) + 24px);
+.about-me .title {
+  margin-top: 20px;
 }
 
-.text-section .supporting-text {
+.about-me .supporting-text {
   color: var(--support-text-color);
   font-size: 20px;
   font-weight: 400;
   line-height: 32px;
   line-height: 132%;
+  margin: 20px 12px 0;
 }
 
 .text-section .resume-button {
@@ -622,6 +623,12 @@ a.next-button {
 }
 
 /* ||desktop-support-------------------------------------- */
+
+@media only screen and (max-width: 420px) {
+  project-card {
+    max-width: 90%;
+  }
+}
 
 @media only screen and (max-width: 992px) {
   header nav.desktop {
