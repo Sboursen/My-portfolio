@@ -12,6 +12,10 @@
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   position: relative;
   box-sizing: content-box;
@@ -135,6 +139,7 @@ a.to-the-top-button.icon-animation {
   right: 5px;
   z-index: 3;
   transform: rotate(180deg);
+  background-color: var(--success-color);
   box-shadow: -2px -2px 10px 1px lightgray;
 }
 
