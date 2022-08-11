@@ -130,6 +130,7 @@ a {
 
 .menu-button {
   background-color: #096;
+  cursor: pointer;
 }
 
 a.to-the-top-button.icon-animation {
