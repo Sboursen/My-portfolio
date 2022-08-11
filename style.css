@@ -5,6 +5,8 @@
   --support-text-color: #172b4d;
   --success-color: #1b9b1b;
   --error-color: #f00;
+  --effect-color: rgb(54, 179, 126);
+  --hover-effect-color: rgb(164 255 225);
 }
 
 * {
@@ -129,7 +131,12 @@ a {
 }
 
 .menu-button {
-  background-color: #096;
+  background-color: var(--effect-color);
+  animation-name: menu-button-bg-animation;
+  animation-duration: 10s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: ;
   cursor: pointer;
 }
 
@@ -140,7 +147,7 @@ a.to-the-top-button.icon-animation {
   right: 5px;
   z-index: 3;
   transform: rotate(180deg);
-  background-color: var(--success-color);
+  background-color: var(--effect-color);
   box-shadow: -2px -2px 10px 1px lightgray;
 }
 
@@ -245,7 +252,7 @@ nav > div {
 }
 
 .lets-connect {
-  color: rgb(118 132 255);
+  color: var(--effect-color);
   padding: 40px 0 10px;
   align-self: center;
 }
@@ -269,7 +276,7 @@ a.next-button {
   height: 36px;
   width: 36px;
   border: 2px solid lightgrey;
-  background-color: var(--success-color);
+  background-color: var(--effect-color);
   border-radius: 50%;
   background-image: url('./resources/next-section-icon.png');
   background-repeat: no-repeat;
@@ -844,6 +851,18 @@ nav.desktop li {
 }
 
 /* ------------Animations and transitions-------------------- */
+@keyframes menu-button-bg-animation {
+  0% {
+    background-color: var(--effect-color);
+  }
+  50% {
+    background-color: var(--hover-effect-color);
+  }
+  100% {
+    background-color: var(--effect-color);
+  }
+}
+
 header nav.desktop a:visited {
   color: rgb(56 63 100);
 }
@@ -866,13 +885,13 @@ header nav.desktop a:visited {
 }
 
 .icon-animation:hover {
-  background-color: rgb(164 255 225);
+  background-color: var(--hover-effect-color);
   transition: background-color 0.2s;
   transition-timing-function: ease-out;
 }
 
 .icon-animation.next-button:hover {
-  background-color: rgb(164 255 225);
+  background-color: var(--hover-effect-color);
   transition: background-color 0.2s;
   transition-timing-function: ease-out;
 }
