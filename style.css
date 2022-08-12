@@ -439,7 +439,7 @@ a.next-button {
   align-items: center;
   justify-content: end;
   gap: 24px;
-  padding-top: 20px;
+  padding-top: 56px;
   padding-bottom: calc(60px - 24px);
   background-image: url('./resources/about-me-desktop-bg-right.svg'),
     url('./resources/about-me-desktop-bg-left.svg');
@@ -528,6 +528,7 @@ a.next-button {
 }
 
 /* ||contact-form--------------------------------------------- */
+
 .contact-form {
   margin-top: 30px;
   display: flex;
@@ -542,6 +543,13 @@ a.next-button {
 .contact-form > * {
   margin-left: 24px;
   margin-right: 24px;
+}
+
+.contact-form > img {
+  display: block;
+  margin-bottom: calc(62px - 24px);
+  width: min-content;
+  align-self: center;
 }
 
 .footer-content {
@@ -751,7 +759,7 @@ a.next-button {
   }
 
   .contact-form .title {
-    padding-top: 40px;
+    padding-top: 10px;
   }
 
   .footer-content {
