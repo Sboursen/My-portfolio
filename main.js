@@ -1,5 +1,7 @@
 import projectsData from './projects.js';
 
+const MOBILE_SCREEN_BREAKPOINT = 992;
+
 // |||Render Projects in the works section
 
 const worksSection = document.getElementById('works-section');
@@ -314,7 +316,7 @@ const toTheTopButton = document.querySelector(
   '.to-the-top-button',
 );
 window.addEventListener('scroll', () => {
-  if (window.scrollY > window.innerHeight) {
+  if (window.scrollY > window.innerHeight && window.innerWidth > MOBILE_SCREEN_BREAKPOINT) {
     toTheTopButton.style.display = 'block';
   } else toTheTopButton.style.display = 'none';
 });

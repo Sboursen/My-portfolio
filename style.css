@@ -670,6 +670,10 @@ a.next-button {
   header nav.desktop {
     display: none;
   }
+
+  .to-the-top-button {
+    display: none;
+  }
 }
 
 @media only screen and (min-width: 992px) {
