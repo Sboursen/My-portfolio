@@ -130,13 +130,27 @@ a {
   max-width: 25%;
 }
 
+.welcome {
+  display: block;
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+  cursor: pointer;
+}
+
+.welcome img {
+  height: 100%;
+  width: 100%;
+}
+
 .menu-button {
   background-color: var(--effect-color);
   animation-name: menu-button-bg-animation;
   animation-duration: 10s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
-  animation-direction: ;
   cursor: pointer;
 }
 
