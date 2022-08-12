@@ -1,6 +1,6 @@
 const projectsData = {
   'project-7': {
-    title: 'al-mentoria',
+    title: 'Al Mentoria',
     featuredImage: './resources/al-mentoria.png',
     technologies: ['React', 'ReduxToolKit', 'Rails', 'Devise', 'TailWindCss', 'Rspec', 'JEST', 'Postgresql'],
     liveLink: 'https://al-mentoria.herokuapp.com/',
@@ -16,7 +16,7 @@ const projectsData = {
     description: 'The Portefeuille is a budget tracking app. After creating an account, it allows to add your daily transactions given some categories. It also allows you add your own categories and list all the transactions belonging to that particular category.',
   },
   'project-5': {
-    title: 'Planètes-et-astéroïdes',
+    title: 'Planètes et Astéroïdes',
     featuredImage: './resources/planettes.png',
     technologies: ['React', 'Redux', 'Git', 'React testing library', 'The solar system API'],
     liveLink: 'https://planetes-et-asteroides.netlify.app/',
@@ -24,7 +24,7 @@ const projectsData = {
     description: 'Planètes-et-astéroïdes is a web app powered by the The solar system API that displays metrics relative to the planets, satellites, and asteroids that constitute our solar system. In addition to the ability to navigate between the different celestial bodies, it also offers a powerful search by name functionality. It is made as capstone project of the React&Redux module.',
   },
   'project-4': {
-    title: 'math-magicians',
+    title: 'Math Magicians',
     featuredImage: './resources/math-magicians.gif',
     technologies: ['React', 'SCSS', 'Git', 'React testing library', 'LocalStorage'],
     liveLink: 'https://sboursen-math-magicians.netlify.app/',
