@@ -218,6 +218,8 @@ nav {
 }
 
 header nav.mobile {
+  margin: 0;
+  padding: 0 20px;
   position: fixed;
   top: 0;
   height: 48px;

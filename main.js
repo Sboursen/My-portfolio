@@ -315,22 +315,33 @@ window.addEventListener('scroll', () => {
   } else toTheTopButton.style.display = 'none';
 });
 
-// |||desktop navbar blurred after scrolling
-const desktopNavBar = document.querySelector(
-  'nav.desktop ul',
+// |||Header blurred after scrolling
+const desktopHeader = document.querySelector(
+  'header nav ul',
+);
+
+const mobileHeader = document.querySelector(
+  'header nav',
 );
 
 window.addEventListener('scroll', () => {
   if (window.scrollY > 10) {
-    desktopNavBar.classList.add(
+    desktopHeader.classList.add(
+      'nav-border-bottom-blurred-bg',
+    );
+    mobileHeader.classList.add(
       'nav-border-bottom-blurred-bg',
     );
   } else {
-    desktopNavBar.classList.remove(
+    desktopHeader.classList.remove(
+      'nav-border-bottom-blurred-bg',
+    );
+    mobileHeader.classList.remove(
       'nav-border-bottom-blurred-bg',
     );
   }
 });
+
 
 // |||Add localstorage to contact form inputs and textarea
 
