@@ -147,7 +147,7 @@ a {
 
 .menu-button {
   background-color: var(--effect-color);
-  animation-name: menu-button-bg-animation;
+  animation-name: bg-animation;
   animation-duration: 10s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
@@ -254,8 +254,11 @@ nav > div {
 }
 
 .hello span {
-  color: hsl(160deg 100% 30%);
   text-align: center;
+  animation-name: color-animation;
+  animation-duration: 10s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
 }
 
 .supporting-text {
@@ -879,7 +882,7 @@ nav.desktop li {
 }
 
 /* ------------Animations and transitions-------------------- */
-@keyframes menu-button-bg-animation {
+@keyframes bg-animation {
   0% {
     background-color: var(--effect-color);
   }
@@ -888,6 +891,18 @@ nav.desktop li {
   }
   100% {
     background-color: var(--effect-color);
+  }
+}
+
+@keyframes color-animation {
+  0% {
+    color: rgb(54, 179, 126);
+  }
+  50% {
+    color: rgb(197, 233, 218);
+  }
+  100% {
+    color: rgb(54, 179, 126);
   }
 }
 
