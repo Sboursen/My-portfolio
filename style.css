@@ -444,7 +444,7 @@ a.next-button {
   background-image: url('./resources/about-me-desktop-bg-right.svg'),
     url('./resources/about-me-desktop-bg-left.svg');
   background-repeat: no-repeat, no-repeat;
-  background-size: calc(10% + 45px) auto, 20% auto;
+  background-size: calc(10% + 45px) auto, calc(10% + 45px) auto;
   background-position: top 10px right, bottom left;
   margin: 0;
 }
