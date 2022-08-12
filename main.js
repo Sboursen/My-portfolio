@@ -48,6 +48,7 @@ function showMobileMenu(e) {
   if (e.currentTarget.classList.contains('menu-button')) {
     mobileMenu.style.display = 'flex';
     mobileMenu.style['z-index'] = 2;
+    document.body.style.overflow = 'hidden';
   }
 }
 
@@ -60,19 +61,12 @@ function hideMobileMenu(e) {
   ) {
     mobileMenu.style.display = 'none';
     mobileMenu.style['z-index'] = -2;
-  }
-}
-
-function hideMobileMenuOnScroll() {
-  if (mobileMenu.style.display !== 'none') {
-    mobileMenu.style.display = 'none';
-    mobileMenu.style['z-index'] = -2;
+    document.body.style.overflow = 'auto';
   }
 }
 
 mobileMenuButton.addEventListener('click', showMobileMenu);
 cancelMobileMenu.addEventListener('click', hideMobileMenu);
-window.addEventListener('scroll', hideMobileMenuOnScroll);
 mobileMenuList.forEach((node) => node.addEventListener('click', hideMobileMenu));
 
 // |||Scroll spy
