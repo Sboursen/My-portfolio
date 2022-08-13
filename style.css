@@ -155,14 +155,14 @@ a {
 }
 
 a.to-the-top-button.icon-animation {
-  display: none;
+  visibility: hidden;
   position: fixed;
   bottom: 20px;
   right: 5px;
   z-index: 3;
-  transform: rotate(180deg);
   background-color: var(--effect-color);
   box-shadow: -2px -2px 10px 1px lightgray;
+  transition: transform 0.5s ease-in-out;
 }
 
 /* ||button-style------------------------------------------------ */
@@ -685,7 +685,7 @@ a.next-button {
   }
 
   .to-the-top-button {
-    display: none;
+    visibility: hidden;
   }
 }
 

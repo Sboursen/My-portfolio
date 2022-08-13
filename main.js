@@ -311,8 +311,12 @@ const toTheTopButton = document.querySelector(
 );
 window.addEventListener('scroll', () => {
   if (window.scrollY > window.innerHeight && window.innerWidth > MOBILE_SCREEN_BREAKPOINT) {
-    toTheTopButton.style.display = 'block';
-  } else toTheTopButton.style.display = 'none';
+    toTheTopButton.style.visibility = 'visible';
+    toTheTopButton.style.transform = 'rotate(-180deg)';
+  } else {
+    toTheTopButton.style.visibility = 'hidden';
+    toTheTopButton.style.transform = 'rotate(+180deg)';
+  }
 });
 
 // |||Header blurred after scrolling
