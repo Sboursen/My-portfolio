@@ -346,7 +346,6 @@ window.addEventListener('scroll', () => {
   }
 });
 
-
 // |||Add localstorage to contact form inputs and textarea
 
 function IsStorageAvailable(type) {
@@ -360,10 +359,12 @@ function IsStorageAvailable(type) {
   } catch (error) {
     return (
       error instanceof DOMException
-      && (error.code === 22
+      && (
+        error.code === 22
         || error.code === 1014
         || error.name === 'QuotaExceededError'
-        || error.name === 'NS_ERROR_DOM_QUOTA_REACHED')
+        || error.name === 'NS_ERROR_DOM_QUOTA_REACHED'
+      )
       && storage
       && storage.length !== 0
     );
