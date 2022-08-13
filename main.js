@@ -122,6 +122,7 @@ window.addEventListener('scroll', spyOnScroll);
 window.addEventListener('resize', updateSectionsHeight);
 
 // |||Dynamic project details generation
+
 const projectsDetailsData = projectsData;
 
 const seeProjectButtons = Array.from(
@@ -137,6 +138,7 @@ const projectDetailsCancelButton = document.querySelector(
 );
 
 function showProjectDetails(e) {
+  document.body.style.overflowY = 'hidden';
   const projectId = e.currentTarget.id;
 
   projectDetails.querySelector('.project-title').innerHTML = projectsDetailsData[projectId].title;
@@ -170,6 +172,7 @@ function showProjectDetails(e) {
 
 function hideProjectDetails() {
   projectDetails.style.display = 'none';
+  document.body.style.overflowY = 'auto';
 }
 
 seeProjectButtons.forEach((button) => button.addEventListener('click', showProjectDetails));
