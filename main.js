@@ -189,7 +189,7 @@ function showProjectDetails(e) {
 
   projectDetails.querySelector('.source-button').href = projectsDetailsData[projectId].sourceLink;
 
-  projectDetails.style.display = 'block';
+  projectDetails.style.display = 'flex';
 }
 
 function hideProjectDetails() {
