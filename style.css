@@ -73,7 +73,7 @@ a {
   padding: 12px;
   height: 36px;
   width: 36px;
-  border-radius: 50%;
+  border-radius: 10px;
   background-color: #096;
   background-image: url('./resources/cancel-icon.svg');
   background-position: center;
@@ -1174,4 +1174,8 @@ header nav.desktop a:visited {
 .project-details .project-image img:hover {
   transform: scale(1.01);
   transition: transform 200ms ease-out;
+}
+
+div.menu-button.icon-animation {
+  border-radius: 10px;
 }
