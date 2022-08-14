@@ -29,6 +29,28 @@ projectsKeys.forEach((projectKey) => {
   worksSection.innerHTML += `\n${template}`;
 });
 
+const columnCount = getComputedStyle(worksSection).getPropertyValue('grid-template-columns').split(' ').length;
+const lastRowColumnCount = projectsKeys.length % columnCount;
+const forthCellHeight = (getComputedStyle(worksSection).getPropertyValue('grid-template-rows').split(' ')[3]);
+console.log(forthCellHeight);
+function renderPlaceholderProject(lastRowColumnCount) {
+  return `<div class="placeholder-project-card" style="grid-column: ${-1 - (columnCount - lastRowColumnCount)} / -1">
+            <div class="project-title">More Coming Soon</div>
+            <div class="placeholder-project-bg"></div>
+          </div>`;
+}
+
+worksSection.innerHTML += renderPlaceholderProject(lastRowColumnCount);
+worksSection.lastChild.style.height = forthCellHeight;
+
+window.addEventListener('resize', () => {
+  const columnCount = getComputedStyle(worksSection).getPropertyValue('grid-template-columns').split(' ').length;
+  const lastRowColumnCount = projectsKeys.length % columnCount;
+  const forthCellHeight = (getComputedStyle(worksSection).getPropertyValue('grid-template-rows').split(' ')[3]);
+  worksSection.lastChild.style.gridColumn = `${-1 - (columnCount - lastRowColumnCount)} / -1`;
+  worksSection.lastChild.style.height = forthCellHeight;
+});
+
 // |||Mobile menu
 const mobileMenuButton = document.querySelector(
   '.mobile .menu-button',
