@@ -51,10 +51,16 @@ a {
   height: 100vh;
   width: 100%;
   display: none;
+  gap: 10px;
   z-index: -2;
   flex-direction: column;
-  background-color: var(--background-color);
-  backdrop-filter: blur(6px);
+  background-color: white;
+  background-image: url('./resources/contact-me-desktop-bg-left.svg'),
+    url('./resources/contact-me-desktop-bg-right.svg'),
+    url('./resources/about-me-desktop-bg-right.svg');
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+  background-size: 50% auto, 30% 50%, calc(15% + 45px) auto;
+  background-position: left bottom -10px, right bottom, right top 10px;
 }
 
 .toolbar {
