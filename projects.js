@@ -2,7 +2,7 @@ const projectsData = {
   'project-7': {
     title: 'Al Mentoria',
     featuredImage: './resources/al-mentoria.png',
-    technologies: ['React', 'ReduxToolKit', 'Rails', 'Devise', 'TailWindCss', 'Rspec', 'JEST', 'Postgresql'],
+    technologies: ['React', 'ReduxToolKit', 'Ruby on Rail', 'JWT', 'Tailwind CSS', 'RSpec', 'JEST', 'Postgresql', 'Pair-programming'],
     liveLink: 'https://al-mentoria.herokuapp.com/',
     sourceLink: 'https://github.com/UpliftLab',
     description: 'Al Mentoria is a virtual space to connect with mentors that can help you with your technical as well as behavioral issues. If you are stuck somewhere and need a second look at things, make a reservation now.',
@@ -10,9 +10,9 @@ const projectsData = {
   'project-6': {
     title: 'Portefeuille',
     featuredImage: './resources/portfeuille.png',
-    technologies: ['Rails', 'Devise', 'TailWindCss', 'Rspec', 'Daisyui', 'Postgresql'],
-    liveLink: 'https://rails-portefeuille.herokuapp.com/',
-    sourceLink: 'https://github.com/Sboursen/rails-capstone',
+    technologies: ['Ruby on Rail', 'Devise', 'Tailwind CSS', 'Rspec', 'Daisyui', 'Postgresql'],
+    liveLink: 'https://Ruby on Rail-portefeuille.herokuapp.com/',
+    sourceLink: 'https://github.com/Sboursen/Ruby on Rail-capstone',
     description: 'The Portefeuille is a budget tracking app. After creating an account, it allows to add your daily transactions given some categories. It also allows you add your own categories and list all the transactions belonging to that particular category.',
   },
   'project-5': {
@@ -34,7 +34,7 @@ const projectsData = {
   'project-3': {
     title: 'SpaceTravelers',
     featuredImage: './resources/space-travelers.gif',
-    technologies: ['React', 'Redux', 'TailWindCss', 'Git', 'React testing library', 'SpaceX API', 'pair-programming'],
+    technologies: ['React', 'Redux', 'Tailwind CSS', 'Git', 'React testing library', 'SpaceX API', 'Pair-programming'],
     liveLink: 'https://harlexkhal.github.io/SpaceTravelers/',
     sourceLink: 'https://github.com/Sboursen/SpaceTravelers',
     description: 'Space Travelers Hub is a web application made for a company that provides commercial and scientific space travel services. The application allows users (future clients) to book rockets and join selected space missions.',
@@ -42,7 +42,7 @@ const projectsData = {
   'project-2': {
     title: 'Leaderboard',
     featuredImage: './resources/Leaderbord.png',
-    technologies: ['HTML', 'TailWindCss', 'ES6 JavaScript', 'Git', 'Webpack'],
+    technologies: ['HTML', 'Tailwind CSS', 'ES6 JavaScript', 'Git', 'Webpack'],
     liveLink: 'https://sboursen.github.io/Leaderboard/',
     sourceLink: 'https://github.com/Sboursen/Leaderboard',
     description: 'Leaderboard is website that displays the scores submitted by all players. It also allows the current user to submit his/her score. All data is preserved thanks to the external Leaderboard API service.',
