@@ -48,7 +48,7 @@ const projectsData = {
     description: 'Leaderboard is website that displays the scores submitted by all players. It also allows the current user to submit his/her score. All data is preserved thanks to the external Leaderboard API service.',
   },
   'project-1': {
-    title: 'Chess World Conference CWC',
+    title: 'Chess World Conference',
     featuredImage: './resources/cwc.png',
     technologies: ['HTML', 'CSS', 'JavaScript', 'Git', 'Figma'],
     liveLink: 'https://sboursen.github.io/Chess-World-Championship/',
