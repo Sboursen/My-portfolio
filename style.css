@@ -65,18 +65,37 @@ a {
 .toolbar {
   display: flex;
   width: 100%;
-  justify-content: end;
+  justify-content: space-between;
 }
 
 .cancel {
   margin: 11px 22px;
   padding: 12px;
-  height: 32px;
-  width: 32px;
+  height: 36px;
+  width: 36px;
   border-radius: 50%;
   background-color: #096;
   background-image: url('./resources/cancel-icon.svg');
   background-position: center;
+}
+
+.welcome {
+  display: block;
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+  cursor: pointer;
+}
+
+.welcome img {
+  height: 100%;
+  width: 100%;
+}
+
+.mobile-menu .welcome {
+  margin: 11px 22px;
 }
 
 .cancel:hover {
@@ -110,7 +129,7 @@ a {
 
 .mobile-list li {
   display: flex;
-  justify-content: center;  
+  justify-content: center;
   width: 80%;
   border: 2px solid #fff;
   border: 2px solid transparent;
@@ -137,21 +156,6 @@ a {
 .indicator img {
   height: 10px;
   max-width: 25%;
-}
-
-.welcome {
-  display: block;
-  margin-top: auto;
-  margin-bottom: auto;
-  width: 36px;
-  height: 36px;
-  object-fit: contain;
-  cursor: pointer;
-}
-
-.welcome img {
-  height: 100%;
-  width: 100%;
 }
 
 .menu-button {
