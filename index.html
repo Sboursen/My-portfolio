@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="./resources/favicon.ico" type="image/x-icon">
   <title>Soufiane Boursen's Portfolio</title>
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-B0MFY8XEZF"></script>
@@ -29,6 +30,9 @@
 
   <div class="mobile-menu">
     <div class="toolbar">
+      <a class="welcome" href="#">
+        <img src="./resources/logo.svg" alt="logo">
+      </a>
       <button class="cancel" type="button"></button>
     </div>
     <menu class="mobile-list">
@@ -36,7 +40,7 @@
         <a href="#hello-section">Hello</a>
       </li>
       <li>
-        <a href="#works-section">Portfolio</a>
+        <a href="#works-section">Works</a>
       </li>
       <li>
         <a href="#about-section">About</a>
@@ -45,38 +49,39 @@
         <a href="#contact-section">Contact</a>
       </li>
     </menu>
-    <div class="indicator">
-      <img src="./resources/large-indicator.svg" alt="Indicator">
-    </div>
   </div>
 
   <div class="project-details">
     <div class="project-card">
+      <div class="toolbar">
+        <button class="cancel" type="button"></button>
+      </div>
       <div class="project-image">
-        <div class="toolbar">
-          <button class="cancel" type="button"></button>
-        </div>
         <img src="./resources/cwc.png" alt="featured project image">
       </div>
       <div class="project-info">
         <h3 class="project-title">
           blank
         </h3>
+        <img class="indicator" src="./resources/Indicator.svg" alt="Indicator">
         <ul class="project-languages">
         </ul>
         <p class="project-description">
         </p>
         <div class="project-buttons">
-          <a class="project-button button live-button" href="#">
-            <span>Live</span>
+          <a class="project-button button live-button" href="#" target="_blank" rel="noopener noreferrer">
+            <span>See Live</span>
             <img src="./resources/live-icon.svg" alt="Live icon">
           </a>
-          <a class="project-button button source-button" href="#">
-            <span>Source</span>
+          <a class="project-button button source-button" href="#" target="_blank" rel="noopener noreferrer">
+            <span>See Source</span>
             <img src="./resources/github-icon-light.svg" alt="Github icon">
           </a>
+          <button type="button" class="project-button button go-back-button">
+            <span>Go Back</span>
+            <img src="./resources/go-back.svg" alt="go back to the main page">
+          </button>
         </div>
-
       </div>
     </div>
   </div>
@@ -84,7 +89,9 @@
 
   <header>
     <nav class="mobile">
-      <div class="welcome">Welcome</div>
+      <a class="welcome" href="#">
+        <img src="./resources/logo.svg" alt="logo">
+      </a>
       <div class="menu-button icon-animation">
         <img src="./resources/menu-icon.svg" alt="menu">
       </div>
@@ -92,7 +99,7 @@
     <nav class="desktop">
       <ul class="desktop-header-list">
         <li>
-          <a href="#works-section">Portfolio</a>
+          <a href="#works-section">Works</a>
         </li>
         <li>
           <a href="#about-section">About</a>
@@ -114,39 +121,38 @@
         </span>
       </h1>
       <p class="supporting-text">I can help you build a
-        product, a feature or a website
-        Look
-        through some of my works and experiences! If you like
-        what you
+        product, a feature or a website. <br />
+        Look through some of my works and experiences!
+        If you like what you
         see and have a project you need developed,
         don’t hesitate to contact me.</p>
       <div class="contact-me">
         <h2 class="lets-connect">Let's connect</h2>
         <ul>
           <li class="icon-animation">
-            <a href="https://twitter.com/sboursen_dev">
+            <a href="https://twitter.com/sboursen_dev" target="_blank" rel="noopener noreferrer">
               <img src="./resources/twitter-icon.svg" alt="go to twitter">
             </a>
           </li>
           <li class="icon-animation">
-            <a href="https://www.linkedin.com/in/sboursen/">
+            <a href="https://www.linkedin.com/in/sboursen/" target="_blank" rel="noopener noreferrer">
               <img src="./resources/Linkedin-icon.svg" alt="go to linkedin"></a>
 
           </li>
           <li class="icon-animation">
-            <a href="https://medium.com/@dev.sboursen">
+            <a href="https://medium.com/@dev.sboursen" target="_blank" rel="noopener noreferrer">
               <img src="./resources/medium-icon.svg" alt="go to medium">
             </a>
 
           </li>
           <li class="icon-animation">
-            <a href="https://github.com/Sboursen">
+            <a href="https://github.com/Sboursen" target="_blank" rel="noopener noreferrer">
               <img src="./resources/github-icon.svg" alt="go to github">
             </a>
 
           </li>
           <li class="icon-animation">
-            <a href="https://angel.co/u/sboursen">
+            <a href="https://angel.co/u/sboursen" target="_blank" rel="noopener noreferrer">
               <img src="./resources/angellist-icon.svg" alt="go to angellist">
             </a>
           </li>
@@ -164,52 +170,54 @@
     <section class="about-me" id="about-section">
       <div class="text-section">
         <h2 class="title">About me</h2>
-        <p class="supporting-text">R&D engineer turned full-stack web developer.
+        <img src="./resources/Indicator.svg" alt="Indicator">
+        <p class="supporting-text">
+          Full-stack web developer with a background in R&D engineering.
           Proven ability in formulating and implementing digital solutions.
-          Fluent in multiple frameworks and
-          technologies, with a knack for rapidly mastering new ones.
-          Unbridled passion for Machine learning and VR. Pair-programming and remote work aficionado.</p>
-        <a class="resume-button button" href="https://docs.google.com/document/d/1bH3jnwVTEjUpKec6CgNvzpLwWZWISbH9fkFVH9YgsWI/edit?usp=sharing">Get my
-          Resume
-        </a>
+          Fluent in multiple frameworks and technologies, with a knack for rapidly mastering new ones.
+          Unbridled passion for AI and VR.
+          Pair-programming and remote work aficionado.
+        </p>
       </div>
       <div class="about-me-card">
-        <div class="about-me-icon">
-          <img src="./resources/icon-languages.svg" alt="languages icon">
-        </div>
-        <h3 class="card-title">Languages</h3>
+        <h3 class="card-title">Skills</h3>
         <ul class="card-list">
-          <li>JavaScript</li>
-          <li>Ruby</li>
-          <li>Html</li>
-          <li>Css</li>
+          <li>Pair-programming</li>
+          <li>Scrum</li>
+          <li>Remote work</li>
+          <li>Teamwork</li>
+          <li>Problem solving</li>
+          <li>Mentoring</li>
+          <li>Leadership</li>
+          <li>Fast Learner</li>
         </ul>
       </div>
 
       <div class="about-me-card">
-        <div class="about-me-icon">
-          <img src="./resources/icon-frameworks.svg" alt="frameworks icon">
-        </div>
-        <h3 class="card-title">Frameworks</h3>
+        <h3 class="card-title">Tech-stack</h3>
         <ul class="card-list">
-          <li>Bootstrap</li>
-          <li>Ruby on rails</li>
-          <li>RSpec</li>
-          <li>Capybara</li>
-          <li>Selenium</li>
+          <li>HTML&CSS</li>
+          <li>Tailwind CSS</li>
+          <li>ES6 Javascript</li>
+          <li>React</li>
+          <li>Redux Toolkit</li>
+          <li>Ruby</li>
+          <li>Rails</li>
+          <li>PostgreSQL</li>
         </ul>
       </div>
       <div class="about-me-card">
-        <div class="about-me-icon">
-          <img src="./resources/icon-skills.svg" alt="skills icon">
-        </div>
-        <h3 class="card-title">Skills</h3>
+        <h3 class="card-title">Tools & Methods</h3>
         <ul class="card-list">
-          <li>Codekit</li>
+          <li>Git</li>
           <li>Github</li>
-          <li>Codepen</li>
-          <li>Gitlab</li>
-          <li>Bash</li>
+          <li>DevTools</li>
+          <li>Webpack</li>
+          <li>JEST</li>
+          <li>Rspec</li>
+          <li>Debugging</li>
+          <li>Refactoring</li>
+          <li>Test driven development</li>
         </ul>
       </div>
     </section>
@@ -218,11 +226,8 @@
 
   <footer class="contact-form" id="contact-section">
     <h2 class="title">Contact Me</h2>
+    <img src="./resources/Indicator.svg" alt="Indicator">
     <div class="footer-content">
-      <p class="supporting-text">I'm always interested in
-        hearing about new projects, so if
-        you'd like to chat please get in touch.</p>
-
       <form action="https://formspree.io/f/mjvlgbrr" method="post" class="form">
 
         <div class="form-field">
@@ -239,7 +244,7 @@
 
         <div class="form-field">
           <label for="message"></label>
-          <textarea name="message" id="message" placeholder="Enter text here"></textarea>
+          <textarea name="message" id="message" placeholder="Message"></textarea>
           <small aria-live="polite"></small>
         </div>
 
@@ -255,29 +260,29 @@
       <h3 class="lets-connect">Let's connect</h3>
       <ul>
         <li class="icon-animation">
-          <a href="https://twitter.com/sboursen_dev">
+          <a href="https://twitter.com/sboursen_dev" target="_blank" rel="noopener noreferrer">
             <img src="resources/twitter-icon.svg" alt="go to twitter">
           </a>
         </li>
         <li class="icon-animation">
-          <a href="https://www.linkedin.com/in/sboursen/">
+          <a href="https://www.linkedin.com/in/sboursen/" target="_blank" rel="noopener noreferrer">
             <img src="resources/Linkedin-icon.svg" alt="go to linkedin"></a>
 
         </li>
         <li class="icon-animation">
-          <a href="https://medium.com/@dev.sboursen">
+          <a href="https://medium.com/@dev.sboursen" target="_blank" rel="noopener noreferrer">
             <img src="resources/medium-icon.svg" alt="go to medium">
           </a>
 
         </li>
         <li class="icon-animation">
-          <a href="https://github.com/Sboursen">
+          <a href="https://github.com/Sboursen" target="_blank" rel="noopener noreferrer">
             <img src="resources/github-icon.svg" alt="go to github">
           </a>
 
         </li>
         <li class="icon-animation">
-          <a href="https://angel.co/u/sboursen">
+          <a href="https://angel.co/u/sboursen" target="_blank" rel="noopener noreferrer">
             <img src="resources/angellist-icon.svg" alt="go to angellist">
           </a>
 
@@ -285,7 +290,6 @@
       </ul>
       <p class="my-email">dev.sboursen@gmail.com</p>
     </div>
-    <img class="indicator" src="./resources/Light.svg" alt="indicator">
   </footer>
 
   <script src="main.js" type="module"></script>

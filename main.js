@@ -1,5 +1,7 @@
 import projectsData from './projects.js';
 
+const MOBILE_SCREEN_BREAKPOINT = 992;
+
 // |||Render Projects in the works section
 
 const worksSection = document.getElementById('works-section');
@@ -27,6 +29,28 @@ projectsKeys.forEach((projectKey) => {
   worksSection.innerHTML += `\n${template}`;
 });
 
+const columnCount = getComputedStyle(worksSection).getPropertyValue('grid-template-columns').split(' ').length;
+const lastRowColumnCount = projectsKeys.length % columnCount;
+const forthCellHeight = (getComputedStyle(worksSection).getPropertyValue('grid-template-rows').split(' ')[3]);
+
+function renderPlaceholderProject(lastRowColumnCount) {
+  return `<div class="placeholder-project-card" style="grid-column: ${-1 - (columnCount - lastRowColumnCount)} / -1">
+            <div class="project-title">More Coming Soon</div>
+            <div class="placeholder-project-bg"></div>
+          </div>`;
+}
+
+worksSection.innerHTML += renderPlaceholderProject(lastRowColumnCount);
+worksSection.lastChild.style.height = forthCellHeight;
+
+window.addEventListener('resize', () => {
+  const columnCount = getComputedStyle(worksSection).getPropertyValue('grid-template-columns').split(' ').length;
+  const lastRowColumnCount = projectsKeys.length % columnCount;
+  const forthCellHeight = (getComputedStyle(worksSection).getPropertyValue('grid-template-rows').split(' ')[3]);
+  worksSection.lastChild.style.gridColumn = `${-1 - (columnCount - lastRowColumnCount)} / -1`;
+  worksSection.lastChild.style.height = forthCellHeight;
+});
+
 // |||Mobile menu
 const mobileMenuButton = document.querySelector(
   '.mobile .menu-button',
@@ -46,6 +70,7 @@ function showMobileMenu(e) {
   if (e.currentTarget.classList.contains('menu-button')) {
     mobileMenu.style.display = 'flex';
     mobileMenu.style['z-index'] = 2;
+    document.body.style.overflow = 'hidden';
   }
 }
 
@@ -58,19 +83,12 @@ function hideMobileMenu(e) {
   ) {
     mobileMenu.style.display = 'none';
     mobileMenu.style['z-index'] = -2;
-  }
-}
-
-function hideMobileMenuOnScroll() {
-  if (mobileMenu.style.display !== 'none') {
-    mobileMenu.style.display = 'none';
-    mobileMenu.style['z-index'] = -2;
+    document.body.style.overflow = 'auto';
   }
 }
 
 mobileMenuButton.addEventListener('click', showMobileMenu);
 cancelMobileMenu.addEventListener('click', hideMobileMenu);
-window.addEventListener('scroll', hideMobileMenuOnScroll);
 mobileMenuList.forEach((node) => node.addEventListener('click', hideMobileMenu));
 
 // |||Scroll spy
@@ -103,9 +121,9 @@ function spyOnScroll() {
 
     desktopMenuList.forEach((node, index) => {
       if (index === sectionIndex) {
-        node.style.borderBottom = 'thick solid #0000FF';
+        node.style.backgroundColor = 'rgb(117, 239, 198)';
       } else {
-        node.style.borderBottom = 'none';
+        node.style.backgroundColor = 'transparent';
       }
     });
   }
@@ -126,6 +144,7 @@ window.addEventListener('scroll', spyOnScroll);
 window.addEventListener('resize', updateSectionsHeight);
 
 // |||Dynamic project details generation
+
 const projectsDetailsData = projectsData;
 
 const seeProjectButtons = Array.from(
@@ -140,7 +159,12 @@ const projectDetailsCancelButton = document.querySelector(
   '.project-details .cancel',
 );
 
+const projectDetailsGoBackButton = document.querySelector(
+  '.project-details .go-back-button',
+);
+
 function showProjectDetails(e) {
+  document.body.style.overflowY = 'hidden';
   const projectId = e.currentTarget.id;
 
   projectDetails.querySelector('.project-title').innerHTML = projectsDetailsData[projectId].title;
@@ -169,16 +193,22 @@ function showProjectDetails(e) {
 
   projectDetails.querySelector('.source-button').href = projectsDetailsData[projectId].sourceLink;
 
-  projectDetails.style.display = 'block';
+  projectDetails.style.display = 'flex';
 }
 
 function hideProjectDetails() {
   projectDetails.style.display = 'none';
+  document.body.style.overflowY = 'auto';
 }
 
 seeProjectButtons.forEach((button) => button.addEventListener('click', showProjectDetails));
 
 projectDetailsCancelButton.addEventListener(
+  'click',
+  hideProjectDetails,
+);
+
+projectDetailsGoBackButton.addEventListener(
   'click',
   hideProjectDetails,
 );
@@ -314,23 +344,37 @@ const toTheTopButton = document.querySelector(
   '.to-the-top-button',
 );
 window.addEventListener('scroll', () => {
-  if (window.scrollY > window.innerHeight) {
-    toTheTopButton.style.display = 'block';
-  } else toTheTopButton.style.display = 'none';
+  if (window.scrollY > window.innerHeight && window.innerWidth > MOBILE_SCREEN_BREAKPOINT) {
+    toTheTopButton.style.visibility = 'visible';
+    toTheTopButton.style.transform = 'rotate(-180deg)';
+  } else {
+    toTheTopButton.style.visibility = 'hidden';
+    toTheTopButton.style.transform = 'rotate(+180deg)';
+  }
 });
 
-// |||desktop navbar blured after scrolling
-const desktopNavBar = document.querySelector(
-  'nav.desktop ul',
+// |||Header blurred after scrolling
+const desktopHeader = document.querySelector(
+  'header nav ul',
+);
+
+const mobileHeader = document.querySelector(
+  'header nav',
 );
 
 window.addEventListener('scroll', () => {
   if (window.scrollY > 10) {
-    desktopNavBar.classList.add(
+    desktopHeader.classList.add(
+      'nav-border-bottom-blurred-bg',
+    );
+    mobileHeader.classList.add(
       'nav-border-bottom-blurred-bg',
     );
   } else {
-    desktopNavBar.classList.remove(
+    desktopHeader.classList.remove(
+      'nav-border-bottom-blurred-bg',
+    );
+    mobileHeader.classList.remove(
       'nav-border-bottom-blurred-bg',
     );
   }
@@ -349,10 +393,12 @@ function IsStorageAvailable(type) {
   } catch (error) {
     return (
       error instanceof DOMException
-      && (error.code === 22
+      && (
+        error.code === 22
         || error.code === 1014
         || error.name === 'QuotaExceededError'
-        || error.name === 'NS_ERROR_DOM_QUOTA_REACHED')
+        || error.name === 'NS_ERROR_DOM_QUOTA_REACHED'
+      )
       && storage
       && storage.length !== 0
     );
