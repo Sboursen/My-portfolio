@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
 
 :root {
   --background-color: #fff;
   --support-text-color: #172b4d;
   --success-color: #1b9b1b;
   --error-color: #f00;
-  --effect-color: rgb(54, 179, 126);
+  --effect-color: rgb(54 179 126);
   --hover-effect-color: rgb(164 255 225);
 }
 
@@ -35,7 +35,7 @@ a {
 .header-hello-background {
   position: absolute;
   top: 0;
-  background-image: url('./resources/headline-section-responsive-background.svg');
+  background-image: url("./resources/headline-section-responsive-background.svg");
   background-repeat: no-repeat;
   background-size: 230% 150vh;
   background-position: bottom -10vh left calc(50% + 40px);
@@ -54,9 +54,10 @@ a {
   z-index: -2;
   flex-direction: column;
   background-color: white;
-  background-image: url('./resources/contact-me-desktop-bg-left.svg'),
-    url('./resources/contact-me-desktop-bg-right.svg'),
-    url('./resources/about-me-desktop-bg-right.svg');
+  background-image:
+    url("./resources/contact-me-desktop-bg-left.svg"),
+    url("./resources/contact-me-desktop-bg-right.svg"),
+    url("./resources/about-me-desktop-bg-right.svg");
   background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
   background-size: 50% auto, 30% 50%, calc(15% + 45px) auto;
   background-position: left bottom -10px, right bottom, right top 10px;
@@ -75,7 +76,7 @@ a {
   width: 36px;
   border-radius: 10px;
   background-color: #096;
-  background-image: url('./resources/cancel-icon.svg');
+  background-image: url("./resources/cancel-icon.svg");
   background-position: center;
 }
 
@@ -316,7 +317,7 @@ a.next-button {
   border: 2px solid lightgrey;
   background-color: var(--effect-color);
   border-radius: 50%;
-  background-image: url('./resources/next-section-icon.png');
+  background-image: url("./resources/next-section-icon.png");
   background-repeat: no-repeat;
   background-position: 50%;
   padding: 0;
@@ -359,7 +360,7 @@ a.next-button {
   width: 100%;
   border: 1px solid #d0d9d4;
   border-radius: 8px;
-  box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 4px -1px rgb(0 0 0 / 30%);
   transition: all 0.6s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
@@ -375,8 +376,10 @@ a.next-button {
   bottom: 20%;
   right: 20%;
   left: 20%;
-  background-image: url('./resources/icon-frameworks.svg'),
-    url('./resources/icon-languages.svg'), url('./resources/icon-skills.svg');
+  background-image:
+    url("./resources/icon-frameworks.svg"),
+    url("./resources/icon-languages.svg"),
+    url("./resources/icon-skills.svg");
   background-repeat: no-repeat, no-repeat, no-repeat;
   background-size: 30% 30%;
   background-position: left bottom, right bottom, top center;
@@ -447,7 +450,7 @@ a.next-button {
 }
 
 .project-card:hover {
-  box-shadow: 2px 8px 8px -2px rgba(0, 0, 0, 0.2);
+  box-shadow: 2px 8px 8px -2px rgb(0 0 0 / 20%);
   transform: scale(1.01);
 }
 
@@ -474,8 +477,9 @@ a.next-button {
   gap: 24px;
   padding-top: 56px;
   padding-bottom: calc(60px - 24px);
-  background-image: url('./resources/about-me-desktop-bg-right.svg'),
-    url('./resources/about-me-desktop-bg-left.svg');
+  background-image:
+    url("./resources/about-me-desktop-bg-right.svg"),
+    url("./resources/about-me-desktop-bg-left.svg");
   background-repeat: no-repeat, no-repeat;
   background-size: calc(10% + 45px) auto, calc(10% + 45px) auto;
   background-position: top 10px right, bottom left;
@@ -552,7 +556,7 @@ a.next-button {
   display: flex;
   flex-direction: column;
   gap: 24px;
-  background-image: url('./resources/illustration-contact-form.svg');
+  background-image: url("./resources/illustration-contact-form.svg");
   background-repeat: no-repeat;
   background-size: 25% 25%;
   background-position: right -10px bottom 250px;
@@ -771,8 +775,9 @@ a.next-button {
   }
 
   .contact-form {
-    background-image: url('./resources/contact-me-desktop-bg-left.svg'),
-      url('./resources/contact-me-desktop-bg-right.svg');
+    background-image:
+      url("./resources/contact-me-desktop-bg-left.svg"),
+      url("./resources/contact-me-desktop-bg-right.svg");
     background-repeat: no-repeat, no-repeat;
     background-size: 30% auto, 20% 70%;
     background-position: left -30px bottom 70px, right -30px bottom 70px;
@@ -907,9 +912,11 @@ nav.desktop li {
   0% {
     background-color: var(--effect-color);
   }
+
   50% {
     background-color: var(--hover-effect-color);
   }
+
   100% {
     background-color: var(--effect-color);
   }
@@ -917,13 +924,15 @@ nav.desktop li {
 
 @keyframes color-animation {
   0% {
-    color: rgb(54, 179, 126);
+    color: rgb(54 179 126);
   }
+
   50% {
-    color: rgb(197, 233, 218);
+    color: rgb(197 233 218);
   }
+
   100% {
-    color: rgb(54, 179, 126);
+    color: rgb(54 179 126);
   }
 }
 
