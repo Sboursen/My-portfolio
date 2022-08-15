@@ -869,6 +869,7 @@ a.next-button {
     display: flex;
     gap: 5px;
     align-items: center;
+    padding: 10px;
   }
 
   .project-details button span {
@@ -1058,18 +1059,20 @@ header nav.desktop a:visited {
 
 .project-details .project-image img {
   max-width: calc(100% - 12px);
-  max-height: 70vh;
+  max-height: 60vh;
   border: 2px solid white;
   border: 2px solid transparent;
   border-radius: 12px;
 }
 
 .project-details .project-info {
+  position: relative;
   display: grid;
   padding: 12px;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: repeat(5, auto);
-  gap: 10px;
+  column-gap: 10px;
+  row-gap: 16px;
 }
 
 .project-details .project-title {
@@ -1084,12 +1087,13 @@ header nav.desktop a:visited {
 }
 
 .project-details .indicator {
+  position: relative;
+  bottom: 16px;
   grid-column: 1 / 2;
   grid-row: 2;
-  max-width: 60px;
+  max-width: 72px;
   max-height: 12px;
   justify-self: start;
-  margin-bottom: 12px;
 }
 
 .project-details .project-languages {
@@ -1128,6 +1132,7 @@ header nav.desktop a:visited {
   width: 136px;
   max-width: 136px;
   align-items: center;
+  justify-content: center;
 }
 
 .project-details .project-button img {
