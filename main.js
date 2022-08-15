@@ -32,7 +32,7 @@ projectsKeys.forEach((projectKey) => {
 const columnCount = getComputedStyle(worksSection).getPropertyValue('grid-template-columns').split(' ').length;
 const lastRowColumnCount = projectsKeys.length % columnCount;
 const forthCellHeight = (getComputedStyle(worksSection).getPropertyValue('grid-template-rows').split(' ')[3]);
-console.log(forthCellHeight);
+
 function renderPlaceholderProject(lastRowColumnCount) {
   return `<div class="placeholder-project-card" style="grid-column: ${-1 - (columnCount - lastRowColumnCount)} / -1">
             <div class="project-title">More Coming Soon</div>
@@ -159,6 +159,10 @@ const projectDetailsCancelButton = document.querySelector(
   '.project-details .cancel',
 );
 
+const projectDetailsGoBackButton = document.querySelector(
+  '.project-details .go-back-button',
+);
+
 function showProjectDetails(e) {
   document.body.style.overflowY = 'hidden';
   const projectId = e.currentTarget.id;
@@ -200,6 +204,11 @@ function hideProjectDetails() {
 seeProjectButtons.forEach((button) => button.addEventListener('click', showProjectDetails));
 
 projectDetailsCancelButton.addEventListener(
+  'click',
+  hideProjectDetails,
+);
+
+projectDetailsGoBackButton.addEventListener(
   'click',
   hideProjectDetails,
 );
