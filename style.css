@@ -1157,6 +1157,10 @@ header nav.desktop a:visited {
 }
 
 @media only screen and (min-width: 992px) {
+  .project-details .project-info {
+    grid-template-columns: auto 200px;
+  }
+
   .project-details .project-title {
     grid-column: 1/-2;
     grid-row: 1;
@@ -1173,14 +1177,14 @@ header nav.desktop a:visited {
   }
 
   .project-details .project-languages {
-    grid-column: 1/-1;
-    grid-row: 2;
+    grid-column: 1 / 2;
+    grid-row: 3;
     justify-content: flex-start;
   }
 
   .project-details .project-description {
-    grid-column: 1/-1;
-    grid-row: 3/4;
+    grid-column: 1/2;
+    grid-row: 4/5;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -1191,10 +1195,12 @@ header nav.desktop a:visited {
 
   .project-details .project-buttons {
     grid-column: -2/-1;
-    grid-row: 1;
+    grid-row: 1/-1;
     display: flex;
-    justify-content: center;
-    justify-self: right;
+    flex-direction: column;
+    justify-content: end;
+    justify-self: end;
+    align-items: end;
     gap: 24px;
   }
 
