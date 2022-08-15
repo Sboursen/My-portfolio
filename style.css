@@ -727,6 +727,10 @@ a.next-button {
     justify-content: center;
   }
 
+  header .desktop-header-list a {
+    color: rgb(56 63 100);
+  }
+
   .works .title,
   .works > img {
     grid-column: 1 / -1;

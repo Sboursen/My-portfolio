@@ -2,7 +2,7 @@ const projectsData = {
   'project-7': {
     title: 'Al Mentoria',
     featuredImage: './resources/al-mentoria.png',
-    technologies: ['React', 'ReduxToolKit', 'Ruby on Rail', 'JWT', 'Tailwind CSS', 'RSpec', 'JEST', 'Postgresql', 'Pair-programming'],
+    technologies: ['React', 'ReduxToolKit', 'Ruby on Rails', 'JWT', 'Tailwind CSS', 'RSpec', 'JEST', 'Postgresql', 'Pair-programming'],
     liveLink: 'https://al-mentoria.herokuapp.com/',
     sourceLink: 'https://github.com/UpliftLab',
     description: 'Al Mentoria is a virtual space to connect with mentors that can help you with your technical as well as behavioral issues. If you are stuck somewhere and need a second look at things, make a reservation now.',
@@ -10,9 +10,9 @@ const projectsData = {
   'project-6': {
     title: 'Portefeuille',
     featuredImage: './resources/portfeuille.png',
-    technologies: ['Ruby on Rail', 'Devise', 'Tailwind CSS', 'Rspec', 'Daisyui', 'Postgresql'],
-    liveLink: 'https://Ruby on Rail-portefeuille.herokuapp.com/',
-    sourceLink: 'https://github.com/Sboursen/Ruby on Rail-capstone',
+    technologies: ['Ruby on Rails', 'Devise', 'Tailwind CSS', 'Rspec', 'Daisyui', 'Postgresql'],
+    liveLink: 'https://Ruby on Rails-portefeuille.herokuapp.com/',
+    sourceLink: 'https://github.com/Sboursen/Ruby on Rails-capstone',
     description: 'The Portefeuille is a budget tracking app. After creating an account, it allows to add your daily transactions given some categories. It also allows you add your own categories and list all the transactions belonging to that particular category.',
   },
   'project-5': {
