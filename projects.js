@@ -11,8 +11,8 @@ const projectsData = {
     title: 'Portefeuille',
     featuredImage: './resources/portfeuille.png',
     technologies: ['Ruby on Rails', 'Devise', 'Tailwind CSS', 'Daisyui', 'RSpec', 'PostgreSQL', 'Agile'],
-    liveLink: 'https://Ruby on Rails-portefeuille.herokuapp.com/',
-    sourceLink: 'https://github.com/Sboursen/Ruby on Rails-capstone',
+    liveLink: 'https://rails-portefeuille.herokuapp.com/',
+    sourceLink: 'https://github.com/Sboursen/rails-capstone',
     description: 'Portefeuille is a budget tracking app. After creating an account, it allows to add your daily transactions given some categories. It also allows you add your own categories and list all the transactions belonging to that particular category.',
   },
   'project-5': {
