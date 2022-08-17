@@ -1070,10 +1070,6 @@ header nav.desktop a:visited {
 .project-details .project-image img {
   max-width: calc(100% - 12px);
   max-height: calc(100% - 12px);
-  object-fit: contain;
-  width: fit-content;
-  flex-grow: 1;
-  flex-shrink: 0;
   border: 2px solid white;
   border: 2px solid transparent;
   border-radius: 12px;
