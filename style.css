@@ -386,10 +386,9 @@ a.next-button {
   justify-self: flex-start;
   border-radius: 8px;
   margin: 16px;
-  max-height: 256px;
-  height: 256px;
   background-color: transparent;
   display: flex;
+  height: 256px;
   flex-direction: row;
   align-items: center;
   justify-content: center;
@@ -405,9 +404,9 @@ a.next-button {
 .project-info {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
   align-content: center;
-  gap: 10px;
+  gap: 12px;
   border-radius: 10px;
   background-color: var(--background-color);
   flex-grow: 1;
