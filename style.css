@@ -699,7 +699,8 @@ a.next-button {
 /* ||desktop-support-------------------------------------- */
 
 @media only screen and (max-width: 410px) {
-  .project-card {
+  .project-card,
+  .placeholder-project-card {
     max-width: 90%;
     margin-left: 0;
     margin-right: 0;
