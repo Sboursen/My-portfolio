@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
 
 :root {
   --background-color: #fff;
@@ -35,7 +35,7 @@ a {
 .header-hello-background {
   position: absolute;
   top: 0;
-  background-image: url("./resources/headline-section-responsive-background.svg");
+  background-image: url('./resources/headline-section-responsive-background.svg');
   background-repeat: no-repeat;
   background-size: 230% 150vh;
   background-position: bottom -10vh left calc(50% + 40px);
@@ -54,10 +54,9 @@ a {
   z-index: -2;
   flex-direction: column;
   background-color: white;
-  background-image:
-    url("./resources/contact-me-desktop-bg-left.svg"),
-    url("./resources/contact-me-desktop-bg-right.svg"),
-    url("./resources/about-me-desktop-bg-right.svg");
+  background-image: url('./resources/contact-me-desktop-bg-left.svg'),
+    url('./resources/contact-me-desktop-bg-right.svg'),
+    url('./resources/about-me-desktop-bg-right.svg');
   background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
   background-size: 50% auto, 30% 50%, calc(15% + 45px) auto;
   background-position: left bottom -10px, right bottom, right top 10px;
@@ -76,7 +75,7 @@ a {
   width: 36px;
   border-radius: 10px;
   background-color: #096;
-  background-image: url("./resources/cancel-icon.svg");
+  background-image: url('./resources/cancel-icon.svg');
   background-position: center;
 }
 
@@ -317,7 +316,7 @@ a.next-button {
   border: 2px solid lightgrey;
   background-color: var(--effect-color);
   border-radius: 50%;
-  background-image: url("./resources/next-section-icon.png");
+  background-image: url('./resources/next-section-icon.png');
   background-repeat: no-repeat;
   background-position: 50%;
   padding: 0;
@@ -376,10 +375,8 @@ a.next-button {
   bottom: 20%;
   right: 20%;
   left: 20%;
-  background-image:
-    url("./resources/icon-frameworks.svg"),
-    url("./resources/icon-languages.svg"),
-    url("./resources/icon-skills.svg");
+  background-image: url('./resources/icon-frameworks.svg'),
+    url('./resources/icon-languages.svg'), url('./resources/icon-skills.svg');
   background-repeat: no-repeat, no-repeat, no-repeat;
   background-size: 30% 30%;
   background-position: left bottom, right bottom, top center;
@@ -389,11 +386,20 @@ a.next-button {
   justify-self: flex-start;
   border-radius: 8px;
   margin: 16px;
-  min-height: 256px;
+  max-height: 256px;
+  height: 256px;
   background-color: transparent;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-image img {
+  max-width: calc(100% - 12px);
+  max-height: calc(100% - 12px);
+  border-radius: 12px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 .project-info {
@@ -475,9 +481,8 @@ a.next-button {
   gap: 24px;
   padding-top: 56px;
   padding-bottom: calc(60px - 24px);
-  background-image:
-    url("./resources/about-me-desktop-bg-right.svg"),
-    url("./resources/about-me-desktop-bg-left.svg");
+  background-image: url('./resources/about-me-desktop-bg-right.svg'),
+    url('./resources/about-me-desktop-bg-left.svg');
   background-repeat: no-repeat, no-repeat;
   background-size: calc(10% + 45px) auto, calc(10% + 45px) auto;
   background-position: top 10px right, bottom left;
@@ -557,7 +562,7 @@ a.next-button {
   display: flex;
   flex-direction: column;
   gap: 24px;
-  background-image: url("./resources/illustration-contact-form.svg");
+  background-image: url('./resources/illustration-contact-form.svg');
   background-repeat: no-repeat;
   background-size: 25% 25%;
   background-position: right -10px bottom 250px;
@@ -776,9 +781,8 @@ a.next-button {
   }
 
   .contact-form {
-    background-image:
-      url("./resources/contact-me-desktop-bg-left.svg"),
-      url("./resources/contact-me-desktop-bg-right.svg");
+    background-image: url('./resources/contact-me-desktop-bg-left.svg'),
+      url('./resources/contact-me-desktop-bg-right.svg');
     background-repeat: no-repeat, no-repeat;
     background-size: 30% auto, 20% 70%;
     background-position: left -30px bottom 70px, right -30px bottom 70px;
@@ -984,7 +988,6 @@ header nav.desktop a:visited {
   transition-timing-function: ease-out;
 }
 
-.project-image img:hover,
 .about-me-icon:hover,
 .card-list > li:hover,
 .project-languages > li:hover {
@@ -1073,8 +1076,7 @@ header nav.desktop a:visited {
   border: 2px solid white;
   border: 2px solid transparent;
   border-radius: 12px;
-  box-shadow:
-    rgb(50 50 93 / 25%) 0 6px 12px -2px,
+  box-shadow: rgb(50 50 93 / 25%) 0 6px 12px -2px,
     rgb(0 0 0 / 30%) 0 3px 7px -3px;
 }
 

@@ -8,7 +8,9 @@ const worksSection = document.getElementById('works-section');
 
 function renderProject(title, image, technologies, projectId) {
   return `<div class="project-card">
-            <div class="project-image" style="background-image: url('${image}');"></div>
+            <div class="project-image" style="">
+              <img src='${image}' alt="featured project image">
+            </div>
             <div class="project-info">
               <h3 class="project-title">${title}
               </h3>
