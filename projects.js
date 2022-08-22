@@ -1,7 +1,7 @@
 const projectsData = {
   'project-7': {
     title: 'Al Mentoria',
-    featuredImage: './resources/al-mentoria.png',
+    featuredImage: 'al-mentoria.png',
     technologies: ['React', 'ReduxToolKit', 'Ruby on Rails', 'Devise', 'CanCanCan', 'JWT', 'Tailwind CSS', 'RSpec', 'RSwag', 'JEST', 'PostgreSQL', 'Pair-programming', 'Agile'],
     liveLink: 'https://al-mentoria.herokuapp.com/',
     sourceLink: 'https://github.com/UpliftLab',
@@ -9,7 +9,7 @@ const projectsData = {
   },
   'project-6': {
     title: 'Portefeuille',
-    featuredImage: './resources/portfeuille.png',
+    featuredImage: 'portfeuille.png',
     technologies: ['Ruby on Rails', 'Devise', 'Tailwind CSS', 'Daisyui', 'RSpec', 'PostgreSQL', 'Agile'],
     liveLink: 'https://rails-portefeuille.herokuapp.com/',
     sourceLink: 'https://github.com/Sboursen/rails-capstone',
@@ -17,7 +17,7 @@ const projectsData = {
   },
   'project-5': {
     title: 'Planètes et Astéroïdes',
-    featuredImage: './resources/planettes.png',
+    featuredImage: 'planettes.png',
     technologies: ['React', 'Redux', 'Git', 'Axios', 'React Router', 'React testing library', 'The solar system API', 'Agile'],
     liveLink: 'https://planetes-et-asteroides.netlify.app/',
     sourceLink: 'https://github.com/Sboursen/planetes-et-asteroides',
@@ -25,7 +25,7 @@ const projectsData = {
   },
   'project-4': {
     title: 'Math Magicians',
-    featuredImage: './resources/math-magicians.gif',
+    featuredImage: 'math-magicians.gif',
     technologies: ['React', 'SCSS', 'Git', 'React testing library', 'LocalStorage', 'Neomorphism', 'Agile'],
     liveLink: 'https://sboursen-math-magicians.netlify.app/',
     sourceLink: 'https://github.com/Sboursen/math-magicians',
@@ -33,7 +33,7 @@ const projectsData = {
   },
   'project-3': {
     title: 'SpaceTravelers',
-    featuredImage: './resources/space-travelers.gif',
+    featuredImage: 'space-travelers.gif',
     technologies: ['React', 'Redux', 'Tailwind CSS', 'Git', 'React testing library', 'SpaceX API', 'Pair-programming', 'Agile'],
     liveLink: 'https://harlexkhal.github.io/SpaceTravelers/',
     sourceLink: 'https://github.com/Sboursen/SpaceTravelers',
@@ -41,7 +41,7 @@ const projectsData = {
   },
   'project-2': {
     title: 'Leaderboard',
-    featuredImage: './resources/Leaderbord.png',
+    featuredImage: 'Leaderbord.png',
     technologies: ['HTML', 'Tailwind CSS', 'ES6 JavaScript', 'Git', 'Webpack', 'Agile'],
     liveLink: 'https://sboursen.github.io/Leaderboard/',
     sourceLink: 'https://github.com/Sboursen/Leaderboard',
@@ -49,7 +49,7 @@ const projectsData = {
   },
   'project-1': {
     title: 'Chess World Conference',
-    featuredImage: './resources/cwc.png',
+    featuredImage: 'cwc.png',
     technologies: ['HTML', 'CSS', 'ES6 JavaScript', 'Git', 'Figma', 'Agile'],
     liveLink: 'https://sboursen.github.io/Chess-World-Championship/',
     sourceLink: 'https://github.com/Sboursen/Chess-World-Championship',
