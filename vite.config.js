@@ -1,4 +1,3 @@
-// vite.config.js
 export default {
-  // config options
+  base: '/My-portfolio/',
 };
