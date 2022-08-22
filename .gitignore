@@ -1,3 +1,4 @@
+# Design
 resources/Template 4-main-mobile.png
 resources/headline-mobile.png
 resources/toolbar-mobile.png
@@ -5,5 +6,29 @@ resources/about-myself-mobile.png
 resources/works-mobile.png
 resources/Template 4-main-mobile (1).png
 resources/Template-4-desktop.png
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
 node_modules
-.vscode
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+

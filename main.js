@@ -7,8 +7,10 @@ const MOBILE_SCREEN_BREAKPOINT = 992;
 const worksSection = document.getElementById('works-section');
 
 function renderProject(title, image, technologies, projectId) {
+  const imgURL = new URL(`./resources/${image}`, import.meta.url).href;
+
   return `<div class="project-card">
-            <div class="project-image" style="background-image: url('${image}');"></div>
+            <div class="project-image" style="background-image: url('${imgURL}');"></div>
             <div class="project-info">
               <h3 class="project-title">${title}
               </h3>
@@ -169,7 +171,11 @@ function showProjectDetails(e) {
 
   projectDetails.querySelector('.project-title').innerHTML = projectsDetailsData[projectId].title;
 
-  projectDetails.querySelector('.project-image img').src = projectsDetailsData[projectId].featuredImage;
+  const image = projectsDetailsData[projectId].featuredImage;
+
+  const imgURL = new URL(`./resources/${image}`, import.meta.url).href;
+
+  projectDetails.querySelector('.project-image img').src = imgURL;
 
   projectDetails.querySelector(
     '.project-languages',
