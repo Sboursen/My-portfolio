@@ -1,11 +1,14 @@
 {
   "name": "my-portfolio",
   "version": "1.0.0",
-  "description": "![](https://img.shields.io/badge/Microverse-blueviolet)",
-  "main": "index.js",
+  "description": "sboursen portfolio",
+  "type": "module",
   "scripts": {
     "lint": "eslint . && stylelint \"**/*.{css,scss}\" && hint .",
-    "lintfix": "eslint . --fix && stylelint \"**/*.{css,scss}\" --fix && hint ."
+    "lintfix": "eslint . --fix && stylelint \"**/*.{css,scss}\" --fix && hint .",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "repository": {
     "type": "git",
@@ -23,10 +26,11 @@
     "eslint": "^7.32.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.25.4",
-    "hint": "^6.1.9",
+    "hint": "^2.0.0",
     "stylelint": "^14.3.0",
     "stylelint-config-standard": "^24.0.0",
     "stylelint-csstree-validator": "^2.0.0",
-    "stylelint-scss": "^4.1.0"
+    "stylelint-scss": "^4.1.0",
+    "vite": "^3.0.7"
   }
 }
