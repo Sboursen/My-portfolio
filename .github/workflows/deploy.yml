@@ -1,7 +1,8 @@
 name: Build and Deploy
-on: merge
-  branches:
-   - dev
+on: 
+  pull_request:
+    branches:
+      - 'dev'
 permissions:
   contents: write
 jobs:
