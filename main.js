@@ -10,7 +10,10 @@ function renderProject(title, image, technologies, projectId) {
   const imgURL = new URL(`./resources/${image}`, import.meta.url).href;
 
   return `<div class="project-card">
-            <div class="project-image" style="background-image: url('${imgURL}');"></div>
+            <div class="project-image" style="">
+              <img src='${imgURL}' alt="featured project image">
+            </div>
+
             <div class="project-info">
               <h3 class="project-title">${title}
               </h3>
@@ -37,7 +40,11 @@ const forthCellHeight = (getComputedStyle(worksSection).getPropertyValue('grid-t
 
 function renderPlaceholderProject(lastRowColumnCount) {
   return `<div class="placeholder-project-card" style="grid-column: ${-1 - (columnCount - lastRowColumnCount)} / -1">
-            <div class="project-title">More Coming Soon</div>
+            <div class="project-title">
+              <a class="more-at-github animate-charcter" href="https://github.com/Sboursen" target="_blank" rel="noopener noreferrer">
+                More in GitHub!
+              </a>
+            </div>
             <div class="placeholder-project-bg"></div>
           </div>`;
 }
